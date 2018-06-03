@@ -1,0 +1,4 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  //Krux tag, per OMNI-772
+(new Image()).src = 'https://beacon.krxd.net/usermatch.gif?partner=trulia&partner_uid='+_satellite.getVar('trul_anonymousUserID');
+});

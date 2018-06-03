@@ -1,0 +1,224 @@
+/*jshint browser: true, jquery: true, indent: 2, white: true, curly: true, forin: true, noarg: true, immed: true, newcap: true, noempty: true, nomen: true */
+
+(function ($)
+{
+  $.fn.carousel = function (options)
+  {
+    var defaults =
+    {
+      perPage: 3,
+      circular: true,
+      pageMode: false,
+      nextSelector: false,
+      prevSelector: false,
+      slideWidth: null,
+      manageButtonStates: true,
+      disabledClass: 'disabled'
+    };
+
+    options = $.extend(true, {}, defaults, options || {}, $(this).data('carousel:options') || {});
+
+    if (options.pageMode)
+    {
+      options.circular = false;
+    }
+    else if (options.circular)
+    {
+      options.pageMode = false;
+    }
+
+    return this.each(function ()
+    {
+      var carousel = this,
+          slides, pageWidth, pageCount, slideCount,
+          currentPage = -1,
+          currentSlide = -1,
+          atFirstItem = false,
+          atLastItem = false;
+
+      // make options available to external dudes
+      carousel.getOptions = function ()
+      {
+        return options;
+      };
+
+      function calculateSize()
+      {
+        // XXX: hack for BSAE-1409
+        if ($(carousel).closest('#trulia_property_carousel').length)
+        {
+          slides = $(carousel).find('ol.active>li');
+        }
+        else
+        {
+          slides = $(carousel).find('ol>li');
+        }
+
+        slideCount = slides.length;
+        pageCount = Math.ceil(slideCount / options.perPage);
+        pageWidth = (options.slideWidth || slides.first().outerWidth(true)) * options.perPage;
+
+        $(carousel).css({
+          width: pageWidth
+        });
+      }
+
+      function calculateState()
+      {
+        if ((!options.pageMode && currentSlide === slideCount - 1) || (options.pageMode && currentPage === pageCount - 1))
+        {
+          atLastItem = true;
+          $(carousel).trigger('carousel:endOfItems');
+        }
+        else
+        {
+          atLastItem = false;
+        }
+
+        if ((!options.pageMode && currentSlide === 0) || (options.pageMode && currentPage === 0))
+        {
+          atFirstItem = true;
+          $(carousel).trigger('carousel:startOfItems');
+        }
+        else
+        {
+          atFirstItem = false;
+        }
+
+        if (!options.circular && options.manageButtonStates)
+        {
+          if (options.prevSelector)
+          {
+            $(options.prevSelector).toggleClass(options.disabledClass, atFirstItem);
+          }
+          if (options.nextSelector)
+          {
+            $(options.nextSelector).toggleClass(options.disabledClass, atLastItem);
+          }
+        }
+      }
+
+      function goToPage(page, isReset)
+      {
+        if (page === currentPage)
+        {
+          return;
+        }
+
+        $(carousel).find('ol').animate({
+          marginLeft: Math.round(-1 * (pageWidth * page))
+        });
+
+        var visibleSlides = slides.slice(page * options.perPage, page * options.perPage + options.perPage);
+        $(carousel).trigger('carousel:pageChange', [visibleSlides, isReset ? 'r' : (page > currentPage ? 'f' : 'b')]);
+        currentPage = page;
+      }
+
+      function goToSlide(i, isReset, isSetup)
+      {
+        if (options.circular)
+        {
+          currentSlide = i < 0 ? slideCount - 1 : (i >= slideCount ? 0 : i);
+        }
+        else
+        {
+          i = i < 0 || i >= slideCount ? false : i;
+          currentSlide = i !== false ? i : currentSlide - 1;
+        }
+
+        if (i !== false)
+        {
+          goToPage(Math.floor(currentSlide / options.perPage), isReset);
+          if (!options.pageMode)
+          {
+            slides.removeClass('selected');
+            slides.eq(currentSlide).addClass('selected');
+            $(carousel).trigger('carousel:slideChange', [slides.eq(currentSlide), !!isSetup]);
+          }
+        }
+
+        calculateState();
+      }
+
+      if (!options.pageMode)
+      {
+        $(carousel).delegate('ol>li', 'click', function ()
+        {
+          var event = jQuery.Event("carousel:beforeSlideChange"),
+              slideIndex = slides.index($(this));
+
+          $(carousel).trigger(event, [slideIndex]);
+          if (!event.isDefaultPrevented())
+          {
+            goToSlide(slideIndex);
+          }
+        });
+      }
+
+      $(carousel).bind('carousel:itemsChanged', function ()
+      {
+        calculateSize();
+        calculateState();
+      });
+
+      $(carousel).bind('carousel:reset', function ()
+      {
+        goToSlide(0, true);
+      });
+
+      $(carousel).bind('carousel:goToSlide', function (event, slideNumber)
+      {
+        goToSlide(slideNumber);
+      });
+
+      $(carousel).bind('carousel:next', function ()
+      {
+        var event = jQuery.Event("carousel:beforeSlideChange"),
+            nextSlideIndex = currentSlide + options.perPage;
+
+        $(carousel).trigger(event, [nextSlideIndex]);
+        if (!event.isDefaultPrevented())
+        {
+          goToSlide(nextSlideIndex);
+        }
+      });
+
+      $(carousel).bind('carousel:prev', function ()
+      {
+        var event = jQuery.Event("carousel:beforeSlideChange"),
+            prevSlideIndex = currentSlide - options.perPage;
+
+        $(carousel).trigger(event, [prevSlideIndex]);
+        if (!event.isDefaultPrevented())
+        {
+          goToSlide(prevSlideIndex);
+        }
+      });
+
+      if (options.nextSelector)
+      {
+        $(options.nextSelector).click(function ()
+        {
+          if (!$(this).hasClass(options.disabledClass))
+          {
+            $(carousel).trigger('carousel:next');
+          }
+        });
+      }
+
+      if (options.prevSelector)
+      {
+        $(options.prevSelector).click(function ()
+        {
+          if (!$(this).hasClass(options.disabledClass))
+          {
+            $(carousel).trigger('carousel:prev');
+          }
+        });
+      }
+
+      calculateSize();
+      goToSlide(0, undefined, true);
+    });
+  };
+}(jQuery));

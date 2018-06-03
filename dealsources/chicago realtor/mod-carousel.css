@@ -1,0 +1,91 @@
+#tCarouselC,#tCarouselC .tCarouselB,#tCarouselC .tCarouselPr,#tCarouselC h3.tCarouselH,.carousel{position:relative}
+#tCarouselC img{background:0 0!important;border:none!important;margin:0!important;padding:0!important}
+#tCarouselC{z-index:1;font:400 10px Arial,Helvetica,sans-serif!important}
+#tCarouselC a{color:#06c}
+#tCarouselC h3{height:auto!important;border:none!important}
+#tCarouselC .tCarouselB{border:1px solid #CECECE;border-bottom:none;border-top:none;padding:10px 0 5px;background-color:#fff}
+#tCarouselC,#tCarouselC .tCarouselCh,#tCarouselC .tCarouselPr{zoom:1}
+#tCarouselC .tCarouselCh{font-size:12px;font-weight:700;text-align:right}
+#tCarouselC .tCarouselCht{color:#666;font-size:10px}
+#tCarouselC .tCarouselF{border:1px solid #94D9FF;border-bottom:none;text-align:right;padding-top:5px;background-color:#fff}
+#tCarouselC .tCarouselF img{vertical-align:text-bottom;padding:0 5px}
+.hidden{display:none}
+#tCarouselC div ol{margin:0;padding:0;line-height:auto!important}
+#tCarouselC div ol li{float:left;list-style-image:none!important;list-style-type:none!important;margin:1px;overflow:hidden;padding:0;text-align:center;border:0}
+#tCarousel .carousel_listing{margin:0;padding:2px 0;font-size:11px!important;border:0}
+.bordered_img,a.bordered_img,img.bordered_img{padding:1px;border:1px solid #CCC}
+.carousel_prop_address{display:block;overflow:hidden;padding-top:5px;white-space:nowrap;text-overflow:ellipsis;text-decoration:none;font-weight:700}
+.bold{font-weight:700}
+.carousel_for_sale_price{color:#555}
+.first-button-disabled{background-position:-85px -94px!important;cursor:default}
+.second-button-disabled{background-position:-85px -214px!important;cursor:default}
+#tCarousel a.carousel_prop_address:hover{color:#DF7E00!important;text-decoration:underline!important}
+span.trCarouselNext:hover{background-position:-45px -214px!important}
+span.trCarouselBack:hover{background-position:-45px -94px!important}
+span.second-button-disabled:hover{background-position:-85px -214px!important;cursor:default}
+span.first-button-disabled:hover{background-position:-85px -94px!important;cursor:default}
+#tCarouselC h3.tCarouselH{min-height:35px!important;font-size:12px;font-weight:700;cursor:pointer;background:url(//static.trulia-cdn.com/images/tools/slideshow_container.gif) top left no-repeat;padding:0;margin:0}
+#tCarouselC h3.tCarouselH div{background:url(//static.trulia-cdn.com/images/tools/slideshow_container.gif) top right no-repeat;padding:15px 12px 9px 0;margin-left:10px}
+#tCarouselC .tCarouselZ{min-height:13px;background:url(//static.trulia-cdn.com/images/tools/slideshow_container.gif) bottom left no-repeat;padding-left:10px;margin:0}
+#tCarouselC .tCarouselZ div{min-height:13px;background:url(//static.trulia-cdn.com/images/tools/slideshow_container.gif) bottom right no-repeat #fff}
+.cnnCarousel .tCarouselB{border:none!important}
+.cnnCarousel .first-button-disabled{background-position:0 -340px!important}
+.cnnCarousel .second-button-disabled{background-position:-40px -340px!important}
+.cnnCarousel span.trCarouselNext:hover{background-position:-120px -340px!important}
+.cnnCarousel span.trCarouselBack:hover{background-position:-80px -340px!important}
+.cnnCarousel span.second-button-disabled:hover{background-position:-120px -340px!important}
+.cnnCarousel span.first-button-disabled:hover{background-position:-80px -340px!important}
+.cnnCarousel .tCarouselZ,.cnnCarousel .tCarouselZ div{background:0 0!important}
+.cnnCarousel .bordered_img,.cnnCarousel .tCarouselB,.cnnCarousel a.bordered_img,.cnnCarousel img.bordered_img{padding:0!important}
+.cnnCarousel .carousel_prop_address{padding-top:0!important;text-decoration:none!important;font-weight:700!important;white-space:normal!important;font-size:12px!important;font-family:Arial!important;color:#004276!important;width:inherit!important}
+.cnnCarousel a.carousel_prop_address:hover{color:#004276!important;text-decoration:underline!important}
+.carousel{overflow:hidden;float:left;width:885px;height:300px}
+.small_carousel .carousel{height:auto}
+.carousel ol{padding:0;margin:0;list-style:none;width:32000px}
+.carousel ol li{display:inline;float:left;margin:5px}
+.carousel_next,.carousel_prev{height:102px;float:left;width:22px;text-indent:-90000px}
+.carousel_prev{margin:11px 0 0 20px;background-position:-356px -245px;cursor:pointer}
+.carousel_prev:hover{background-position:-396px -245px}
+.carousel_prev.disabled,.carousel_prev.disabled:hover{background-position:-436px -245px;cursor:default}
+.carousel_next{margin:11px 0 0 6px;background-position:-356px -365px;cursor:pointer}
+.carousel_next:hover{background-position:-396px -365px}
+.carousel_next.disabled,.carousel_next.disabled:hover{background-position:-436px -365px;cursor:default}
+.small_carousel .carousel_next,.small_carousel .carousel_prev{background:url(//static.trulia-cdn.com/images/flair/carousel_btns.png) 0 -50px no-repeat;margin:22px 0 0;height:20px;width:20px;text-indent:-90000px}
+.small_carousel .carousel_next{margin-left:5px}
+.small_carousel .carousel_prev,.small_carousel .carousel_prev:hover{margin-right:5px;background-position:0 0}
+.small_carousel .carousel_prev.disabled,.small_carousel .carousel_prev.disabled:hover{background-position:0 -100px}
+.small_carousel .carousel_next.disabled,.small_carousel .carousel_next.disabled:hover{background-position:0 -150px}
+.carousel_listing{border:1px solid #fff;font-size:12px;margin:0 4px;padding:10px 3px 6px}
+.carousel ol li:hover .carousel_listing{border:1px solid #dedede;background-color:#f1f1f1}
+.carousel_listing_inner{padding:0 5px}
+.carousel_listing a.bordered_img{background-color:#fff;width:140px;height:100px;overflow:hidden;display:block;position:relative;text-align:center}
+.carousel_listing a.bordered_img:hover{border:1px solid #590}
+.carousel_listing p{padding:1px 0;margin:0;color:#222}
+.carousel_listing .carousel_prop_address{display:block;overflow:hidden;padding-top:7px;white-space:nowrap}
+.carousel_header_left{float:left}
+.carousel_header_left a{color:#000}
+.carousel_header_right{float:right;font-size:11px;font-weight:400;line-height:14px}
+.generic_ajax_carousel .carousel_listing{border:1px solid #F3F3F3}
+.generic_ajax_carousel ol li:hover .carousel_listing{border:1px solid #ccc;background-color:#fff}
+.small_carousel .carousel ol li{margin:0 3px 0 0}
+.small_carousel .carousel_listing{border:none;font-size:11px;padding:2px 0;margin:0;width:74px;text-align:center}
+.small_carousel .carousel ol li:hover .carousel_listing{border:none}
+.small_carousel .carousel_listing a.bordered_img{width:auto;height:auto}
+#trulia_property_carousel{padding-top:10px;overflow:hidden;height:300px}
+#trulia_property_carousel ol{display:none}
+#trulia_property_carousel ol.active{display:block}
+#trulia_property_carousel ol li{width:175px;margin:0;border:1px solid transparent}
+#large_carousel_header_summary{color:#222;float:right;font-size:10px;margin-top:-22px;margin-right:20px}
+#trulia_property_carousel p#carousel_price_change{color:#222;padding-left:10px}
+#trulia_property_carousel #carousel_price_change.medium_hilite{background-position:0 -7057px}
+#trulia_property_carousel #carousel_price_change.dark_lolite{background-position:-200px -7057px}
+#trulia_property_carousel .photo_count_container{background-color:#fff;color:#fff;height:20px;left:0;position:absolute;text-align:center;top:82px;width:70px}
+#trulia_property_carousel .photo_count{background-color:#590;font-size:11px;font-weight:700;line-height:18px;margin:1px}
+#mylistings .generic_ajax_carousel{background-color:#F3F3F3;border:2px solid #C7C7C7}
+#faves .generic_ajax_carousel{border:1px solid #C7C7C7}
+#faves .generic_ajax_carousel .carousel_listing{border:1px solid #fff}
+#faves .generic_ajax_carousel ol li:hover .carousel_listing{border:1px solid #ccc;background-color:#f3f3f3}
+#image_player_thumbnails ol li.selected{background:#ccc}
+#carousel_photo_list ol li,#image_player_thumbnails ol li{background-image:url(//static.trulia-cdn.com/images/ajax-loader-grey.gif);background-position:center center;background-repeat:no-repeat}
+#image_player_thumbnails ol li{border:1px solid #CCC;padding:3px 3px 1px;margin-top:0;width:70px;height:50px}
+#carousel_photo_list ol li{width:82px;height:66px}

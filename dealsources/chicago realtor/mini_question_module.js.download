@@ -1,0 +1,209 @@
+/*global o_track_ask_submit_qa_event, o_track_qa_event */
+  define(['backbone','trulia.voices', 'library/3rd_party/jquery.autosize/jquery.autosize-min'], function(Backbone) {
+
+  var autosizeOptions = { append: '\n' },
+    hackIEPlaceholder = trulia.browser.isMSIE && trulia.browser.version < 10,  // placeholder needs hacking
+    suffix = '_ask_mini_form',
+    container = $('#recaptcha' + suffix + '_modal');
+
+  trulia.voices = trulia.voices || {};
+
+  trulia.voices.MiniQuestionFormView = Backbone.View.extend({
+    el: $('.askQuestionMiniForm'),
+
+    events: {
+      'focus textarea[name="questionTitle"]': '_openForm',
+      'focus textarea[name="questionTitle"], input[name="questionLocation"]': '_showFocusPlaceholder',
+      'blur textarea[name="questionTitle"], input[name="questionLocation"]': '_revertPlaceholder',
+      'click .detailLink': '_openDetails',
+      'blur input[name="questionLocation"]': '_validateLocation',
+      'click #get_answer' : '_showReCaptcha'
+    },
+
+    initialize: function (options) {
+      if (typeof options  === 'object' && options.el)
+      {
+        this.$el = options.el;
+      }
+      this.config = $.extend({
+        successCTA: false,        // string to display on success popup button
+        successCTAAction: false,  // function(popup, e) function to run when success button pressed. passed popup object
+        autosize: false            // use the autosize plugin on the input boxes
+      }, options);
+
+      this.postInit();
+    },
+
+    postInit: function () {
+      var self = this,
+          frm = this.$el.get(0),
+          titleBox,
+          ugcForm;
+
+      if (!frm)
+      {
+        return false;
+      }
+
+      titleBox = this.$el.find('textarea[name="questionTitle"]');
+
+      // set up the form
+      ugcForm = trulia.voices.UgcFormManager.initForm(frm, {
+        contentType: 'Q',
+        ajaxEndpoint: 'q_ask_question.php',
+        loginFormId: 'login_ask_page',
+        formFieldValidation: {
+          questionTitle: '',
+          questionBody : ''
+        },
+        successHandlerOptions: {
+          ctaButtonLabel: self.config.successCTA
+        }
+      });
+
+      ugcForm.setAjaxFormSubmitSuccessCallback(function (response)
+      {
+        var eventTracking = $(frm).find('input[name="from_where"]').val(),
+            ctaButton,
+            popup;
+
+        eventTracking = eventTracking || 'askQuestionMiniForm';
+
+        popup = ugcForm.showConfirmationPopup(response.popup_header, response.html, {
+          popupId: 'popup_' + frm.id,
+          ctaButtonClickHandler: self.config.successCTAAction
+        });
+
+        // clear out the previous form
+        self.$el.find('input[type="text"], textarea').val('');
+
+        o_track_ask_submit_qa_event(response.data.question_id, eventTracking, 'Q', frm.categoryId.value, frm.questionLocationId.value);
+        $(document).triggerHandler('askQuestionMiniForm:submit', [response.data.question_id, self]);
+      });
+
+      if (self.config.autosize)
+      {
+        titleBox.autosize(autosizeOptions);
+      }
+      else
+      {
+        // there's no autosize for this box, so let's allow scrolling
+        self.$el.find('textarea[name="questionTitle"], .questionBody').css('overflow', 'auto');
+      }
+
+      container.modal({
+        fixed: true,
+        overlay: 'light',
+        closeable: true,
+        width: 490
+      });
+
+      container.find('#askQuestionMiniForm' + suffix + '_submit').on('click', function ()
+      {
+        container.modal('close');
+      });
+
+      container.on('modal:close', function ()
+      {
+        $('input[name=g-recaptcha-response]',frm).val($('#g-recaptcha-response').val());
+        $('#recaptchaWrapper' + suffix).empty();
+        $.ajax({ url: site_root + 'recaptcha/',
+          error: function(response) {
+            $('#recaptchaWrapper').html("Unable to load ReCaptcha. Please close the window and try again.");
+          },
+          success: function (response)
+          {
+            $('#recaptchaWrapper').html( response );
+          }
+        });
+      });
+    },
+
+    _openDetails: function (e) {
+      var self = this;
+
+      e.preventDefault();
+      $(e.target).hide();
+      this.$el.find('.bodyField')
+        .removeClass('hideVisually')
+        .show({
+          complete: function () {
+            if (self.config.autosize)
+            {
+              $(this).find('textarea').autosize(autosizeOptions);
+            }
+          }
+        });
+    },
+
+    _revertPlaceholder: function (e) {
+      $(e.target).attr('placeholder', $(e.target).data('default-placeholder'));
+    },
+
+    _openForm: function (e) {
+      var frm = this.$el.get(0);
+
+      this.$el.find('.categorization:hidden')
+        .slideDown(400, function () {
+          // track voices step 1 evar13
+          var eventTracking = $(frm).find('input[name="from_where"]').val();
+          eventTracking = eventTracking || 'askQuestionMiniForm';
+
+          o_track_qa_event(eventTracking, frm.categoryId.value, 'Q');
+        });
+    },
+
+    _showFocusPlaceholder: function (e) {
+      var textarea = $(e.target);
+
+      // updating placeholder doesn't work on IE, just leave it blank
+      if (hackIEPlaceholder && textarea.val() === textarea.attr('placeholder'))
+      {
+        textarea.val('');
+      }
+
+      textarea.data('default-placeholder', textarea.attr('placeholder'));
+      textarea.attr('placeholder', textarea.data('focus-placeholder'));
+    },
+
+    _showReCaptcha : function (e) {
+      $('#recaptchaWrapper').empty();
+      e.preventDefault();
+      container.modal('open');
+      container.css({ top:'100px' });
+      $.ajax({ url: site_root + 'recaptcha/',
+        error: function(response) {
+          $('#recaptchaWrapper' + suffix).html("Unable to load ReCaptcha. Please close the window and try again.");
+        },
+        success: function (response)
+        {
+          $('#recaptchaWrapper' + suffix).html( response );
+        }
+      });
+    },
+
+    /**
+     * Checks if user selected valid location. If not, reverts to default location
+     */
+    _validateLocation: function (e) {
+      var locationField = $('input[name="questionLocationId"]', this.$el);
+
+      setTimeout(function () {
+        // if our location is empty, revert it to it's default
+        if (locationField && !locationField.val())
+        {
+          if (!hackIEPlaceholder)
+          {
+            // updating placeholder doesn't work on IE, just leave it blank
+            $(e.target).val('');
+          }
+          locationField.val(locationField.data('default'));
+        }
+      }, 250);
+    }
+  });
+
+  var view = new trulia.voices.MiniQuestionFormView();
+
+});
+

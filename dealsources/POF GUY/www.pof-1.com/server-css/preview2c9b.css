@@ -1,0 +1,36 @@
+.areapanel { height:100%; }
+#center.areapanel { min-height:200px; }
+.previewdesign { background:url('../server/images/gradient-small-invert.png') repeat-x #333; color:white; }
+.previewdesign .choices { position:absolute; top:0px; bottom:0px; left:0px; width:78px; margin:8px; border-right:1px solid #444; }
+.previewdesign .options { margin-left:86px; padding:8px; overflow:hidden; }
+.previewdesign .option { position:relative; height:142px; }
+.previewdesign .tools { position:absolute; bottom:0px; }
+.previewdesign .choice { margin-top:10px; margin-bottom:20px; white-space:nowrap; overflow:hidden; color:#ccc; }
+.previewdesign .choice .arrow { display:none; }
+.previewdesign .choice.expanded { font-weight:bold; color:white; }
+.previewdesign .choice.expanded .arrow { display:inline; }
+.designbutton { color:white; border:1px solid #bfbfbf; background-color:transparent; padding:1px 6px 3px; border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px; }
+.designbutton[disabled] { filter:alpha(opacity=35); opacity:0.35; }
+.designbutton:active { background-color:#6789ae; }
+.previewelement { position:relative; }
+.previewelement .contents { position:relative; }
+.previewelement .backdrop { position:absolute; top:0px; bottom:0px; right:0px; left:0px; display:none; background-color:#6789ae; filter:alpha(opacity=50); opacity:0.5; }
+.previewmove .previewelement.moveelement { outline:1px dashed #6789ae; }
+.previewmove .previewelement.moveelement.selected { outline:2px solid #6789ae; }
+.previewmove .previewelement.moveelement.selected .backdrop { display:block; }
+.previewmove .previewelement.moveelement.dragging { visibility:hidden; }
+.previewmove .previewelement.moveelement.ghost { overflow:hidden; }
+.previewedit .editable:hover { outline:1px solid #aaa; cursor:url(http://www.pof-1.com/account/icons/editcursor.png), copy; }
+.previewedit .imageeditor .editable:hover { outline:1px solid #aaa; cursor:copy; }
+.previewedit .editable:focus { outline:1px solid #666; cursor:url(http://www.pof-1.com/account/icons/editcursor.png), copy; }
+.previewedit .editable.active { outline:1px solid #666; cursor:url(http://www.pof-1.com/account/icons/editcursor.png), copy; }
+.previewedit .editable.over { outline:1px solid #666; cursor:url(http://www.pof-1.com/account/icons/editcursor.png), copy; }
+.previewelement.pagebackground {  }
+.previewelement.activeparent { outline:1px dashed red; }
+tr.previewelement.activeparent { border:1px dashed red; }
+.imageeditor .file { position:absolute; margin:5px 5px; display:inline-block; padding:0px 22px 0px 8px; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; background-color:#a8d0f5; line-height:14px; }
+.imageeditor .name { position:relative; }
+.imageeditor .remove { cursor:pointer; position:absolute; right:0px; top:0px; bottom:0px; padding:0px 4px; color:#888; }
+.imageeditor .edge { position:absolute; top:-1px; bottom:-1px; right:-1px; left:-1px; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; border:1px solid #5078b5; }
+.imageeditor .progress { position:absolute; top:0px; bottom:0px; right:0px; width:100%; filter:alpha(opacity=100); opacity:1; background-color:white; display:none; }
+.imageeditor input[type="file"], .previewdesign input[type="file"] { position:absolute; top:0px; left:-10000px !important; border:0px; right:auto !important; }

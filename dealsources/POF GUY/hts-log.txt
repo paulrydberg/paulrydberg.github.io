@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 27 May 2018 01:57:59 at http://www.pof-1.com +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://www.pof-1.com -O1 "C:\My Web Sites\POF GUY" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:58:00	Warning: 	Note: due to www.pof-1.com remote robots.txt rules, links beginning with these path will be forbidden: /account/ (see in the options to disable this)
+01:58:37	Error: 	"Resource Not Found" (404) at link www.pof-1.com/AppleWebKit/ (from www.pof-1.com/server/js/prototype.js?cache=1470679646000)
+
+HTTrack Website Copier/3.49-2 mirror complete in 40 seconds : 160 links scanned, 158 files written (1026958 bytes overall) [454998 bytes received at 11374 bytes/sec], 816450 bytes transferred using HTTP compression in 41 files, ratio 22%, 42.2 requests per connection
+(1 errors, 1 warnings, 0 messages)

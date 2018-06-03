@@ -1,0 +1,139 @@
+/*jshint browser: true, jquery: true, indent: 2, white: true, curly: true, forin: true, noarg: true, immed: true, newcap: true, noempty: true, nomen: true*/
+/*globals trulia, site_root, alert */
+
+$(document).ready(function () {
+  $('.generic_ajax_carousel').each(function () {
+    var $container = $(this),
+        $inner = $container.find('.inner'),
+        $carousel = $container.find('.carousel'),
+        ajaxCarouselOptions = $carousel.data('ajaxCarouselOptions'),
+        pageDataCache = {},
+        currentPage = 1,
+        url = $carousel.data('url'),
+        containerHeight = '';
+        
+    // Don't do anything if there's no data on this carousel (it's not ready)
+    // of it it has already been set up. This allows us to call this JS file
+    // multiple times per page via LABjs and not care about the state of other
+    // carousels.
+    if (!ajaxCarouselOptions || $carousel.data('carousel:initiated'))
+    {
+      return;
+    }
+
+    $carousel.carousel({
+      pageMode: true,
+      perPage: 3,
+      manageButtonStates: false,
+      prevSelector: $container.find('.carousel_prev'),
+      nextSelector: $container.find('.carousel_next')
+    }).data('carousel:initiated', true);
+
+    function renderData(data)
+    {
+      
+      $carousel.find('ol').html(data.new_html_items);
+      $carousel.trigger('carousel:itemsChanged').trigger('carousel:reset');
+
+      $inner.fadeIn(125);
+      $container.height(containerHeight);
+
+      $container.find('.carousel_next')[data.l_next_page_num ? 'removeClass' : 'addClass']('disabled');
+      $container.find('.carousel_prev')[data.l_previous_page_num ? 'removeClass' : 'addClass']('disabled');
+
+      if (ajaxCarouselOptions.pagingStringSelector && data.paging_string)
+      {
+        $(ajaxCarouselOptions.pagingStringSelector).html(data.paging_string);
+      }
+    }
+
+    function fetchPage(pageNumber, isRetry)
+    {
+      $container.find('.carousel_next, .carousel_prev').addClass('disabled');
+      containerHeight = $container.height();
+      $container.height(containerHeight);
+
+      if (pageDataCache['page-' + pageNumber])
+      {
+        $inner.fadeOut(75, function () {
+          renderData(pageDataCache['page-' + pageNumber]);
+        });
+        return;
+      }
+
+      $inner.fadeOut(125);
+
+      var requestData = {
+        lpr: currentPage,
+        surl: ajaxCarouselOptions.searchUrl,
+        bpid: ajaxCarouselOptions.blockedPid,
+        ppid: ajaxCarouselOptions.property.id,
+        propt: ajaxCarouselOptions.property.type,
+        track_code: ajaxCarouselOptions.trackCode
+      };
+
+      if (ajaxCarouselOptions.carouselType)
+      {
+        requestData.carousel_type = ajaxCarouselOptions.carouselType;
+      }
+      if (ajaxCarouselOptions.profileUserId)
+      {
+        requestData.uid = ajaxCarouselOptions.profileUserId;
+      }
+      ajaxUrl = 'q_get_carousel_items.php';
+      if (url)
+      {
+        ajaxUrl = url.ajaxUrl;
+      }
+      $.getJSON(site_root + ajaxUrl, requestData, function (data) {
+        if (data === null)
+        {
+          // This can happen if the user is on another tab, and modifies the data that is
+          // displayed in the carousel. In this case, the paging can become off. If that
+          // happens, blow away the page cache and reload the data at page 0
+          if (!isRetry)
+          {
+            pageDataCache = {};
+            currentPage = 0;
+            fetchPage(0, true);
+          }
+          else
+          {
+            // No infinite loops for us!
+            alert('Sorry, an error was encountered.');
+            $container.html('');
+          }
+          return;
+        }
+        
+        if (typeof ajaxCarouselOptions.cacheData != 'undefined' && ajaxCarouselOptions.cacheData == 0)
+        {
+          renderData(data);
+        }
+        else
+        {
+          pageDataCache['page-' + pageNumber] = data;
+          renderData(pageDataCache['page-' + pageNumber]);
+        }
+      });
+    }
+
+    $container.find('.carousel_prev').addClass('disabled');
+    if (!ajaxCarouselOptions.hasMoreData)
+    {
+      $container.find('.carousel_next').addClass('disabled');
+    }
+
+    $carousel.bind('carousel:next', function () {
+      currentPage += 1;
+      fetchPage(currentPage);
+    });
+
+    $carousel.bind('carousel:prev', function () {
+      currentPage -= 1;
+      fetchPage(currentPage);
+    });
+
+    $inner.fadeIn(125);
+  });
+});
