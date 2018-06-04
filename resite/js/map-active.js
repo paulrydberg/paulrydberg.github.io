@@ -1,5 +1,5 @@
 var map;
-var latlng = new google.maps.LatLng(56.9496, 24.1052);
+var latlng = new google.maps.LatLng(42.1131, -87.8518);
 var stylez = [{
     featureType: "all",
     elementType: "all",
