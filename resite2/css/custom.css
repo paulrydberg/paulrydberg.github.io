@@ -1,0 +1,13 @@
+.center-text {
+    text-align: center;
+}
+
+.margin-top-25 {
+    margin-top: 25px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
