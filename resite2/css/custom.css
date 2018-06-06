@@ -24,3 +24,7 @@
     border-radius: 5px;
 }
 
+.nudge-from-l {
+    position: absolute;
+    left: 0;
+}
