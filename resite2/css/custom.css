@@ -6,8 +6,21 @@
     margin-top: 25px;
 }
 
+.margin-raise-20 {
+    margin-top: -20px;
+}
+
 .scrollable-menu {
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
 }
+
+.custom-bg {
+    background-color: #e3f2fd;
+}
+
+.border-fix {
+    border-radius: 5px;
+}
+
