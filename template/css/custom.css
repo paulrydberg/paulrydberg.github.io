@@ -28,3 +28,42 @@
     position: absolute;
     left: 0;
 }
+
+@media screen and (max-width: 1200px) {
+    #hide-search {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    #hide-unless-search {
+        display: none;
+    }
+}
+
+.nowrap {
+    white-space: pre-wrap;
+}
+
+#search-drop {
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(58, 58, 58);
+}
+
+#search-btn-padding {
+    padding: 0px 5px 0px 5px;
+}
+
+#nudge-search {
+    padding: 0px 5px 0px 5px;
+}
+
+.search-position {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+}
+
+.just-inline {
+    display: inline;
+}

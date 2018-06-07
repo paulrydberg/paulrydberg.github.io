@@ -22,104 +22,145 @@
 
   <body>
 
-    <!-- Navigation -->
+    <!-- Begin Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Nationwide Wholesalers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Deep Discounts...How?</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Choose Your State
-              </a>
-              <div class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
-    
-                <a class="dropdown-item" href="#">Arkansas (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">California (0 - Deals)</a>
-    
-                                                <a class="dropdown-item" href="#">Connecticut (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Delaware (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Florida (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Georgia (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Hawaii (0 - Deals)</a>
-    
-                                                <a class="dropdown-item" href="#">Idaho (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Illinois (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Indiana (0 - Deals)</a>
-    
-                                                <a class="dropdown-item" href="#">Iowa (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Kansas (0 - Deals)</a>
         
-                                                <a class="dropdown-item" href="#">Kentucky (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Louisiana (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Maine (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Maryland (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Massachusetts (0 - Deals)</a>
-    
-                                                <a class="dropdown-item" href="#">Michigan (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Minnesota (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Mississippi (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Missouri (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Montana (0 - Deals)</a>
-                                                
-                                                <a class="dropdown-item" href="#">Nebraska (0 - Deals)</a>
-    
-                                                <a class="dropdown-item" href="#">Nevada (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">New Hampshire (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">New Jersey (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">New Mexico (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">New York (0 - Deals)</a>
-    
-                                                <a class="dropdown-item" href="#">North Carolina (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">North Dakota (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Ohio (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Oklahoma (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Oregon (0 - Deals)</a>
-                                                
-                                                <a class="dropdown-item" href="#">Pennsylvania (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Rhode Island (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">South Carolina (0 - Deals)</a>
-    
-                                                <a class="dropdown-item" href="#">South Dakota (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Tennessee (0 - Deals)</a>
-        
-                                                <a class="dropdown-item" href="#">Texas (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Utah (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Vermont (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">Virginia (0 - Deals)</a>
-                                                <a class="dropdown-item" href="#">West Virginia (0 - Deals)</a>
-                                                    
-                                                <a class="dropdown-item" href="#">Wisconsin (0 - Deals)</a>
-                                                
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Wyoming (0 - Deals)</a>
+
+
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <button type="button" class="btn btn-success active" href="#">Home
+            <span class="sr-only">(current)</span></button>
+          <button type="button" class="btn btn-success" href="#">About Us</button>
+          <button type="button" class="btn btn-success" href="#">Contact</button>
+          <button type="button" class="btn btn-success" href="#">Deep Discounts...How?</button>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              State Listings
+            </button>
+            <div class="dropdown-menu scrollable-menu" aria-labelledby="btnGroupDrop1">
+              <!-- Start States -->
+              <div>
+                  <a class="dropdown-item" href="#">Arkansas (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">California (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Connecticut (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Delaware (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Florida (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Georgia (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Hawaii (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Idaho (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Illinois (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Indiana (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Iowa (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Kansas (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Kentucky (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Louisiana (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Maine (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Maryland (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Massachusetts (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Michigan (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Minnesota (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Mississippi (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Missouri (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Montana (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Nebraska (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Nevada (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">New Hampshire (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">New Jersey (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">New Mexico (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">New York (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">North Carolina (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">North Dakota (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Ohio (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Oklahoma (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Oregon (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Pennsylvania (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Rhode Island (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">South Carolina (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">South Dakota (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Tennessee (0 - Deals)</a>
+
+                  <a class="dropdown-item" href="#">Texas (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Utah (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Vermont (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">Virginia (0 - Deals)</a>
+                  <a class="dropdown-item" href="#">West Virginia (0 - Deals)</a>
+                      
+                  <a class="dropdown-item" href="#">Wisconsin (0 - Deals)</a>
+                                                                  
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Wyoming (0 - Deals)</a>
               </div>
-            </li>
+              <!-- End States -->
+              
+            </div>            
+          </div>
+          
+        </div>
+
+
+        <div class="btn" id="hide-unless-search">
+            <button id="btnGroupDrop1" type="button" class="btn btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Search
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1" id="search-drop">
+                <!-- Start Search -->
+                <div class="">
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search ZIP, City, or State" aria-label="Search">
+                      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Go</button>
+                    </form>
+                  </div>
+                <!-- End Search -->
+                
+              </div>            
+            </div>
+
+
+        
+
           </ul>
+
+          <!-- End Navigation Buttons -->
+
+          <!-- Begin Search Bar -->
+        <div id="hide-search">
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search ZIP, City, or State" aria-label="Search">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
+        </div>
       </div>
+      <!-- End Search Bar -->
     </nav>
+    <!-- End Navbar -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- hide-unless-search -->
 
     <!-- Page Content -->
     <div class="container">
