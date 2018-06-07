@@ -70,3 +70,26 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .hide-search {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .hide-unless-search {
+        display: none;
+    }
+}
+
+.just-hide {
+    display: none;
+}
+
+#move-temp-nav {
+    /* padding: 0px 10px 0px 10px; */
+    
+    top: 0%;
+    left: -25%;
+}
