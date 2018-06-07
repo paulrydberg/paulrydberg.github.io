@@ -29,17 +29,7 @@
     left: 0;
 }
 
-@media screen and (max-width: 1200px) {
-    #hide-search {
-        display: none;
-    }
-}
 
-@media screen and (min-width: 1201px) {
-    #hide-unless-search {
-        display: none;
-    }
-}
 
 .nowrap {
     white-space: pre-wrap;
@@ -66,4 +56,17 @@
 
 .just-inline {
     display: inline;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #hide-search {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    #hide-unless-search {
+        display: none;
+    }
 }
