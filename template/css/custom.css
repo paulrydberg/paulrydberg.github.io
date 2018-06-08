@@ -93,3 +93,72 @@
     top: 0%;
     left: -25%;
 }
+
+/* .move-burger {
+    position: relative;
+    left: -0px;
+} */
+
+.smaller-font {
+    font-size: 90%
+}
+
+.move-featured {
+    position: relative;
+    top: -10px;
+}
+
+.move-bid-time {
+    position: relative;
+    top: -17px;
+}
+
+.move-bid-button {
+    position: relative;
+    top: -17px;
+}
+
+.newest-deal-padding {
+    padding: 80px 0px 0px 0px;
+}
+
+.move-newest-text {
+    position: relative;
+    top: 70px;
+    z-index: 5;
+}
+
+.move-newest-section {
+    position: relative;
+    top: -40px;
+}
+
+.payment-info {
+    position: relative;
+    top: -13px;
+    font-size: 0.63em
+}
+
+.bid-area {
+    position: relative;
+    top: 8px;
+}
+
+/* Newest Deals Page Selector */
+#newest-deals-scroll {
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    left: 25%;
+    margin: auto;
+    width: 50%;
+}
+
+.centerthis {
+    margin: auto;
+    width: 50%;
+}
+
+.invisible-things {
+    visibility: hidden;
+}
