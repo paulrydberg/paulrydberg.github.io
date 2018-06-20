@@ -12,7 +12,6 @@ const phrases = [
     'agony',
     'zebra',
     'yield',
-    'which',
     'voice',
     'until',
     'table',
