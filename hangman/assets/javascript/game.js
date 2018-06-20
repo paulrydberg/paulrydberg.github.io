@@ -42,6 +42,9 @@ let phraseInput = phrases[randomizer];
 let rightPhrase = [];
 let wrongPhrase = [];
 let underscore = [];
+let correctLetters = 0;
+let win = 0;
+let loss = 0;
 
 // DOM edit
 let underscoreWright = document.getElementsByClassName('underscores');
@@ -85,8 +88,12 @@ document.addEventListener('keypress', (event) => {
     } else {
     wrongPhrase.push(letterGuess);
     wrongPhraseWright[0].innerHTML = wrongPhrase;
-}
+    }
+
+
 });
 
 
+
+underscore[0].innerHTML = underscoreMaker().join(' ');
 

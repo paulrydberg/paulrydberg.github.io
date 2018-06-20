@@ -13,19 +13,31 @@
     <div class="container">
         <header>
             <h1>HangMan Game</h1>
+            <hr>
+            <h3>Press the keys on your keyboard to guess.</h3>
         </header>
-        <div class="underscores">Press the keys on your keyboard to guess. All words are 5 letters long with no repeating letters.
-            <div>
+        <div class="underscores">
+            
                 _ _ _ _ _
-            </div>
+            
         </div>
-        <div class="rightGuess">Right Guesses</div>
-        <div class="wrongGuess">Wrong Guesses</div>
+        <div class="mybox">Right Guesses
+            <div class="rightGuess"></div>
+        </div>
+        <div class="mybox">Wrong Guesses
+            <div class="wrongGuess"></div>
+        </div>
 
     </div>
 
-    <div id="list">
-        
+    <div class="mybox">
+        <p id="correctLetters"></p>
+        <div>
+            <p>Wins: <span><p id="win"></p></span></p>
+        </div>
+        <div>
+            <p>Losses: <span><p id="loss"></p></span></p>
+        </div>
     </div>
 
 

@@ -1,6 +1,6 @@
 header {
     border: 2px solid black;
-    height: 100px;
+    height: 200px;
     width: 80%;
     font-size: 50px;
     text-align: center;
@@ -12,14 +12,24 @@ header {
     border: 2px solid black;
     height: 150px;
     width: 80%;
-    font-size: 40px;
+    font-size: 80px;
     text-align: center;
     margin: 5px auto;
 
 }
 
-.rightGuess {
+
+.mybox {
     border: 2px solid black;
+    height: 150px;
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.rightGuess {
+    /* border: 2px solid black; */
     height: 150px;
     width: 80%;
     font-size: 20px;
@@ -29,7 +39,7 @@ header {
 }
 
 .wrongGuess {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 150px;
     width: 80%;
     font-size: 20px;
