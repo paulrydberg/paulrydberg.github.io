@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <title>WOLFbot | All In One Solution</title>
+  </head>
+  <body>
+<div class="container-fluid">
+    <div class="">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <!-- LEFT SIDE OF PAGE -->
+                    <div class="col-sm-8 bg-dark">
+                        <!-- NAV ABOVE CHART -->
+                        <div class="ourNav shadow-lg bg-dark">
+                            <div id="nudgeTitle">
+                                <h1>WOLFbot <span id="pairTitle">| BINANCE: USDT/BTC</span></h1>
+                                
+                                
+
+                                
+                                
+                                
+
+
+                            </div>
+                            
+                            
+                        </div>
+                        <!-- navLinks -->
+                        <div class="bg-dark float-right navLinks2">
+                        <ul class="nav nav-tabs bg-dark">
+                                <li class="nav-item">
+                                  <a class="nav-link active" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#">Settings</a>
+                                      </li>
+                                      
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Trading Options</a>
+                                  <div class="dropdown-menu scrollable-menu dropdown-bg">
+
+                                        <form id="coinSearch" class="form-inline my-2 my-lg-0 dropdown-bg">
+                                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        </form>
+
+                                        <div class="btn-group" id="nudgeAssetOption" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary buttonColorChange">Crypto</button>  
+                                            <button type="button" class="btn btn-secondary buttonColorChange" data-toggle="tooltip" data-html="true" title="<em>Not Avaialble Yet</em>">
+                                              Stocks
+                                            </button>
+                                            <button type="button" class="btn btn-secondary buttonColorChange" data-toggle="tooltip" data-html="true" title="<em>Not Avaialble Yet</em>">
+                                              Commodities
+                                            </button>
+                                            
+                                          </div>
+
+                                          
+
+
+                                        <div class="btn-group btn-group-lg" id="nudgePairOption" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary buttonColorChange">USDT</button>
+                                            <button type="button" class="btn btn-secondary buttonColorChange">BTC</button>
+                                            <button type="button" class="btn btn-secondary buttonColorChange">ETH</button>
+                                          </div>
+     
+                                            
+
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1.png" alt="BTC Logo"> </span>Bitcoin (BTC)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png" alt="ETH Logo"> </span>Ethereum (ETH)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/52.png" alt="XRP Logo"> </span>Ripple (XRP)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1831.png" alt="BCH Logo"> </span>Bitcoin Cash (BCH)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png" alt="EOS Logo"> </span>EOS (EOS)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/2.png" alt="LTC Logo"> </span>Litecoin (LTC)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/512.png" alt="XLM Logo"> </span>Stellar (XLM)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/2010.png" alt="ADA Logo"> </span>Cardano (ADA)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1720.png" alt="MIOTA Logo"> </span>IOTA (MIOTA)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1958.png" alt="TRX Logo"> </span>TRON (TRX)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1376.png" alt="NEO Logo"> </span>NEO (NEO)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/131.png" alt="DASH Logo"> </span>Dash (DASH)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/328.png" alt="XMR Logo"> </span>Monero (XMR)</a>
+                                        <a class="dropdown-item text-white coinText" href="#"><span><img src="https://s2.coinmarketcap.com/static/img/coins/32x32/1839.png" alt="BNB Logo"> </span>Binance Coin (BNB)</a>
+                                        
+                                  </div>
+                                </li>
+                                
+                              </ul>
+                            </div>
+                        <!-- END OF NAV ABOVE CHART -->
+
+
+                        <!-- START OF CHART -->
+                        <div class="ourChart shadow-lg bg-dark">
+                            <div class="shadow-lg" id="movechart">
+                                    <img id="smallerGraph" src="http://i1027.photobucket.com/albums/y333/EugeneZee/EJukovskiyScreenshot_2016-05-27_10-52-30_zps25szzvfy.png~original" 
+                                    alt="TradingView Chart">
+
+
+                                    <!-- FORM AREA START -->
+                                    <div id="mainpagebuysell">
+
+                                        
+                                            <div class="row">
+                                                <div class="col-6" id="moveStratOptions">
+                                                    
+                                                    <div class="btn-group btn-group-md" id="moveAutoManual" role="group" aria-label="Basic example">
+                                                        <button type="button" class="btn btn-success" data-toggle="tooltip" data-html="true" title="<em>You <b><u>Need</u></b> To Install Our Desktop App For This To Work.</em> <em><b><u>Please Visit</u> </em>OurWebsite.Com/Desktop</b>">
+                                                          Automatic Trading <span>(Active)</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-html="true" title="<em>This Will Disable Automated Trading On This Asset Until You Turn It Back On</em>">
+                                                          <a href="./Manual Mode.html">Manual Trading Mode <span>(OFF)</span></a>
+                                                        </button>
+                                                    </div>
+
+                                                    <form class="form-inline">
+                                                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+                                                            <select class="custom-select my-1 mr-sm-2 form-control-sm zeroPadding" id="stratChoose">
+                                                              <option selected>Choose trading strategy</option>
+                                                              <option value="1">WOLFbot Stop Limit Strategy</option>
+                                                              
+                                                              <option value="2">User Uploaded Strategy #1</option>
+                                                              <option value="3">User Uploaded Strategy #2</option>
+                                                            </select>
+                                                          
+                                                            <div class="row">
+                                                                    <div class="col" id="nudgeRight">
+
+                                                                            <div class="custom-control custom-radio custom-control-inline moveRadioSection">
+                                                                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                                                                    <label data-toggle="tooltip" data-html="true" 
+                                                                                    title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
+                                                                                    class="custom-control-label tradeSettingsRadio" for="customRadioInline1"><span class="moveFixedPercent">
+                                                                                      <b>Fixed Amount</b></span></label>
+                                                                                  </div>
+                                                                                  
+                                                                                  <div class="custom-control custom-radio custom-control-inline">
+                                                                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                                                                    <label data-toggle="tooltip" data-html="true" 
+                                                                                    title="<em>Each Trade Will Be Entered With A Specified Percentage From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
+                                                                                    class="custom-control-label tradeSettingsRadio" for="customRadioInline2"><span class="moveFixedPercent">
+                                                                                      <b>Percentage %</b></span></label>
+                                                                                  </div>
+
+
+
+
+
+                                                                                  <!-- data-toggle="tooltip" data-html="true" 
+                                                                                    title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>"  
+                                                                                   -->
+
+
+
+                                                                            <div class="input-group" id="moveAmountAgain moveAmount">
+
+                                                                                    
+                                                                                    <div class="input-group-prepend dropup">
+                                                                                      
+                                                                                      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                                      </button>
+                                                                                      <div class="dropdown-menu scrollable-amount">
+                                                                                          <span>
+                                                                                              <a class="dropdown-item" href="#">Set Fixed Amounts</a>    
+                                                                                             <div class="dropdown-divider"></div>
+                                                                                             </span>
+                                                                                            <a class="dropdown-item" href="#">Spend 100%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 95%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 90%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 85%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 80%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 75%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 70%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 65%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 60%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 55%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 50%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 45%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 40%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 35%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 30%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 25%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 20%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 15%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 10%</a>
+                                                                                            <a class="dropdown-item" href="#">Spend 5%</a>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                    <label for="amountToBuy"></label>
+                                                                                    <input type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" placeholder="Amount To Buy">
+                                                                                  </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <div class="custom-control custom-radio custom-control-inline moveRadioSection">
+                                                                            <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+                                                                            <label data-toggle="tooltip" data-html="true" 
+                                                                            title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
+                                                                            class="custom-control-label tradeSettingsRadio" for="customRadioInline3"><span class="moveFixedPercent">
+                                                                              <b>Fixed Amount</b></span></label>
+                                                                          </div>
+                                                                          
+                                                                          <div class="custom-control custom-radio custom-control-inline">
+                                                                            <input type="radio" id="customRadioInline4" name="customRadioInline4" class="custom-control-input">
+                                                                            <label data-toggle="tooltip" data-html="true" 
+                                                                            title="<em>Each Trade Will Be Entered With A Specified Percentage From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
+                                                                            class="custom-control-label tradeSettingsRadio" for="customRadioInline4"><span class="moveFixedPercent">
+                                                                              <b>Percentage %</b></span></label>
+                                                                          </div>
+                                                                                  
+                                                                            <div class="input-group" id="moveAmountAgain moveAmount">
+                                                                                    <div class="input-group-prepend dropup">
+                                                                                      
+                                                                                      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                                      </button>
+                                                                                      <div class="dropdown-menu scrollable-amount">
+                                                                                          <span>
+                                                                                              <a class="dropdown-item" href="#">Set Fixed Amounts</a>    
+                                                                                             <div class="dropdown-divider"></div>
+                                                                                             </span>
+                                                                                            <a class="dropdown-item" href="#">Sell 100%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 95%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 90%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 85%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 80%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 75%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 70%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 65%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 60%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 55%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 50%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 45%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 40%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 35%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 30%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 25%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 20%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 15%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 10%</a>
+                                                                                            <a class="dropdown-item" href="#">Sell 5%</a>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                    <label for="amountToSell"></label>
+                                                                                    <input type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" placeholder="Amount To Sell">
+                                                                                  </div>
+                                                                                  
+                                                                    </div>
+                                                                    
+                                                                  </div>
+                                                                  
+                                                                  
+                                                                      
+                                                                  
+                                                                  
+
+                                                                  
+                                                                  
+                                                                  <div class="custom-control custom-checkbox my-1 mr-sm-2 pyramidBuyBox topzindex" id="dontGoLongMove">
+                                                                  <input type="checkbox" class="custom-control-input" id="customControlInline27">
+                                                                  <label class="custom-control-label smallerText" for="customControlInline27">Go Short After (Or Instead Of) Selling.</label>
+                                                                  <!-- Go Short After Or Instead Of Selling. -->
+                                                                    </div>
+
+                                                                    <div class="custom-control custom-checkbox my-1 mr-sm-2 pyramidBuyBox" id="dontGoLongMove">
+                                                                        <input type="checkbox" class="custom-control-input" id="customControlInline21">
+                                                                        <label class="custom-control-label smallerText" for="customControlInline21">Don't Go Long, Just Close Short Positions.</label>
+                                                                        <!-- Go Short After Or Instead Of Selling. -->
+                                                                          </div>
+
+                                                                    
+                                                                  
+                                                          </form>
+
+
+                                                          
+
+                                                </div>
+                                                
+                                                    <div class="col">
+                                                       
+                                                            <form>
+                                                    
+                                                    
+                                                    
+    
+                                                                    <div class="form-row">
+                                                                            <div class="form-group">
+
+
+                                                                                <div class="custom-control custom-checkbox my-1 mr-sm-2 pyramidBuyBox" id="applyChanges">
+                                                                                    <input type="checkbox" class="custom-control-input" id="customControlInline2">
+                                                                                    <label class="custom-control-label smallerText" for="customControlInline2">Enable Pyramid Buying</label>
+                                                                                  
+                                                                                
+                                                                                </div>
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                              
+                                                                              
+                                                                                <div class="input-group" id="moveBuyValuesBox">
+                                                                                    <div class="input-group-prepend dropup">
+                                                                                      
+                                                                                      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                                      </button>
+                                                                                      <div class="dropdown-menu scrollable-amount bg-dark">
+                                                                                          
+                                                                                        
+                                                                                        <label for="buyCoinAmount"></label>
+                                                                                          <input type="text" class="form-control form-control-sm tradeValues pyramidBuySettings" 
+                                                                                          id="pyramidBuyValues" placeholder="Initial Buy -- $ or %">
+
+
+                                                                                          <table class="table table-hover table-dark centertext">
+                                                                                              <thead>
+                                                                                                <tr class="smallerText">
+                                                                                                  <th scope="col">Increase By</th>
+                                                                                                  <th scope="col">Decrease By</th>
+                                                                                                </tr>
+                                                                                              </thead>
+                                                                                              <tbody>
+                                                                                                <tr>
+                                                                                                  <td class="winHighlight">+5%</td>
+                                                                                                  <td class="lossHighlight">-5%</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class="winHighlight">+10%</td>
+                                                                                                  <td class="lossHighlight">-10%</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class="winHighlight">+15%</td>
+                                                                                                  <td class="lossHighlight">-15%</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class="winHighlight">+20%</td>
+                                                                                                    <td class="lossHighlight">-20%</td>
+                                                                                                  </tr>
+                                                                                                  <tr>
+                                                                                                      <td class="winHighlight">+25%</td>
+                                                                                                      <td class="lossHighlight">-25%</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td class="winHighlight">+30%</td>
+                                                                                                        <td class="lossHighlight">-30%</td>
+                                                                                                      </tr>
+                                                                                                      <tr>
+                                                                                                          <td class="winHighlight">+35%</td>
+                                                                                                          <td class="lossHighlight">-35%</td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td class="winHighlight">+40%</td>
+                                                                                                            <td class="lossHighlight">-40%</td>
+                                                                                                          </tr>
+                                                                                                          <tr>
+                                                                                                              <td class="winHighlight">+45%</td>
+                                                                                                              <td class="lossHighlight">-45%</td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td class="winHighlight">+50%</td>
+                                                                                                                <td class="lossHighlight">-50%</td>
+                                                                                                              </tr>
+                                                                                              </tbody>
+                                                                                            </table>
+
+
+                                                                                      </div>
+                                                                                    </div>
+
+
+
+
+                                                                                    
+
+                                                                                    <label for="amountToBuy"></label>
+                                                                                    <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                                                                                    title="<em>Use The Arrow To Left To Set Your Initial Buy Amount & To Set Increase/Decreasing Position Size Per Buy.</em>" 
+                                                                                    type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" 
+                                                                                    id="" placeholder="Pyramid Buy Values">
+
+
+
+
+
+
+                                                                                  </div>
+
+                                                                                  
+
+
+
+                                                                              <div class="input-group" id="moveGainValuesBox">
+                                                                                    <div class="input-group-prepend dropup">
+                                                                                      
+                                                                                      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                                      </button>
+                                                                                      <div class="dropdown-menu scrollable-amount">
+                                                                                          <span>
+                                                                                              <a class="dropdown-item" href="#">Set Fixed Amounts</a>    
+                                                                                             <div class="dropdown-divider"></div>
+                                                                                             </span>
+                                                                                             <a class="dropdown-item" href="#">1% Gain</a>
+                                                                                             <a class="dropdown-item" href="#">2% Gain</a>  
+                                                                                             <a class="dropdown-item" href="#">3% Gain</a>
+                                                                                             <a class="dropdown-item" href="#">4% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">5% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">6% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">7% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">8% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">9% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">10% Gain</a>
+                                                                                               <span>
+                                                                                                  <div class="dropdown-divider"></div>
+                                                                                                <a class="dropdown-item" href="#">Set Custom Percentages</a>    
+                                                                                               <div class="dropdown-divider"></div>
+                                                                                               </span>
+                                                                                               <a class="dropdown-item" href="#">15% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">20% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">25% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">30% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">35% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">40% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">45% Gain</a>
+                                                                                               <a class="dropdown-item" href="#">50% Gain</a>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                    <label for="amountToBuy"></label>
+                                                                                    <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                                                                                    title="<em>This Prevent WOLFbot From Selling Below A Specified Amount. It Is Recommended You Set This To ZERO Percent (0%) If You Are Using The WOLFbot Stop-Limit Strategy. We Don't Believe In Holding Bags. If You Are Using Your Own Strategy Feel Free To Utilize This Feature.</em>" 
+                                                                                    type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" 
+                                                                                    placeholder="Gain Override">
+                                                                                  </div>
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+
+                                                                              
+                                                                              
+                                                                              
+                                                                          </div>
+                                                                          </div>
+                                                                          
+                                                                        </form>
+                                                    </div>
+                                                    <div class="col">
+                                                            <form>
+                                                                    <div class="form-row">
+                                                                                                                    
+                                                                                                                 
+                                                                          <div class="form-group">
+                                                                              <div class="custom-control custom-checkbox my-1 mr-sm-2 pyramidBuyBox" id="applyChanges">
+                                                                                  <input type="checkbox" class="custom-control-input" id="customControlInline7">
+                                                                                  <label class="custom-control-label smallerText" for="customControlInline7">Enable Pyramid Selling</label>
+                                                                                
+                                                                              
+                                                                              </div>
+                                                                              
+                                                                              
+                                                                              
+                                                                              
+                                                                            
+                                                                            
+                                                                              <div class="input-group" id="moveBuyValuesBox">
+                                                                                  <div class="input-group-prepend dropup">
+                                                                                    
+                                                                                    <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                      <span class="sr-only">Toggle Dropdown</span>
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu scrollable-amount bg-dark">
+                                                                                        
+                                                                                      
+                                                                                      <label for="buyCoinAmount"></label>
+                                                                                        <input type="text" class="form-control form-control-sm tradeValues pyramidBuySettings" 
+                                                                                        id="pyramidBuyValues" placeholder="Initial Buy -- $ or %">
+
+
+                                                                                        <table class="table table-hover table-dark centertext">
+                                                                                            <thead>
+                                                                                              <tr class="smallerText">
+                                                                                                <th scope="col">Increase By</th>
+                                                                                                <th scope="col">Decrease By</th>
+                                                                                              </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                              <tr>
+                                                                                                <td class="winHighlight">+5%</td>
+                                                                                                <td class="lossHighlight">-5%</td>
+                                                                                              </tr>
+                                                                                              <tr>
+                                                                                                  <td class="winHighlight">+10%</td>
+                                                                                                <td class="lossHighlight">-10%</td>
+                                                                                              </tr>
+                                                                                              <tr>
+                                                                                                  <td class="winHighlight">+15%</td>
+                                                                                                <td class="lossHighlight">-15%</td>
+                                                                                              </tr>
+                                                                                              <tr>
+                                                                                                  <td class="winHighlight">+20%</td>
+                                                                                                  <td class="lossHighlight">-20%</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td class="winHighlight">+25%</td>
+                                                                                                    <td class="lossHighlight">-25%</td>
+                                                                                                  </tr>
+                                                                                                  <tr>
+                                                                                                      <td class="winHighlight">+30%</td>
+                                                                                                      <td class="lossHighlight">-30%</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td class="winHighlight">+35%</td>
+                                                                                                        <td class="lossHighlight">-35%</td>
+                                                                                                      </tr>
+                                                                                                      <tr>
+                                                                                                          <td class="winHighlight">+40%</td>
+                                                                                                          <td class="lossHighlight">-40%</td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td class="winHighlight">+45%</td>
+                                                                                                            <td class="lossHighlight">-45%</td>
+                                                                                                          </tr>
+                                                                                                          <tr>
+                                                                                                              <td class="winHighlight">+50%</td>
+                                                                                                              <td class="lossHighlight">-50%</td>
+                                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                          </table>
+
+
+                                                                                    </div>
+                                                                                  </div>
+
+
+
+
+                                                                                  
+
+                                                                                  <label for="amountToBuy"></label>
+                                                                                  <input data-toggle="tooltip" data-placement="right" data-html="true" 
+                                                                                  title="<em>Use The Arrow To Left To Set Your Initial Sell Amount & To Set Increase/Decreasing Position Size Per Sell.</em>" 
+                                                                                  type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" 
+                                                                                  id="" placeholder="Pyramid Sell Values">
+
+
+
+
+
+
+                                                                                </div>
+                                                                                  
+                                                                                  <div class="input-group" id="moveStopLossValuesBox">
+                                                                                        <div class="input-group-prepend dropup">
+                                                                                          
+                                                                                          <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                                                          </button>
+                                                                                          <div class="dropdown-menu scrollable-amount">
+                                                                                              <span>
+                                                                                               <a class="dropdown-item" href="#">Set Fixed Amounts</a>    
+                                                                                              <div class="dropdown-divider"></div>
+                                                                                              </span>
+                                                                                              <a class="dropdown-item" href="#">1% Stop-Loss</a>
+                                                                                              <a class="dropdown-item" href="#">2% Stop-Loss</a>  
+                                                                                              <a class="dropdown-item" href="#">3% Stop-Loss</a>
+                                                                                              <a class="dropdown-item" href="#">4% Stop-Loss</a>
+                                                                                                <a class="dropdown-item" href="#">5% Stop-Loss</a>
+                                                                                                <a class="dropdown-item" href="#">6% Stop-Loss</a>
+                                                                                                <a class="dropdown-item" href="#">7% Stop-Loss</a>
+                                                                                                <a class="dropdown-item" href="#">8% Stop-Loss</a>
+                                                                                                <a class="dropdown-item" href="#">9% Stop-Loss</a>
+                                                                                                <a class="dropdown-item" href="#">10% Stop-Loss</a>
+                                                                                                <span>
+                                                                                                    <div class="dropdown-divider"></div>
+                                                                                                  <a class="dropdown-item" href="#">Set Custom Percentages</a>    
+                                                                                                 <div class="dropdown-divider"></div>
+                                                                                                 </span>
+                                                                                                <a class="dropdown-item" href="#">15% Stop-Loss</a>
+                                                                                                
+                                                                                          </div>
+                                                                                        </div>
+                                                                                        <label for="amountToSell"></label>
+                                                                                        
+                                                                                        <input  data-toggle="tooltip" data-placement="right" data-html="true" 
+                                                                                        title="<em>This Stop-Loss Will Override Any Stop-Loss Built Into the Strategy You're Using. </u></b></em> <em> This Is NOT To Be Confused With A 'Stop-Limit' Order.<b><u></u></em></b>" 
+                                                                                        type="text" class="form-control takeAwayPadding" 
+                                                                                        aria-label="Text input with segmented dropdown button" placeholder="Stop Loss Override">
+                                                                                      </div>
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+                                                                                    
+                                                                              </div>
+
+
+                                                                              
+                                                                              
+                                                              
+                                                              
+                                                                          </div>
+
+                                                                          
+                                                        
+                                                  
+                                                                              
+                                                                          
+                                                                          
+                                                                      </form>
+
+                                                                      
+                                                                      <button type="submit" class="btn btn-primary btn-sm my-1 float-right" id="applyChangesButton">Apply Changes</button>
+                                                                      
+                                                                      
+                                                    </div>
+
+                                                    
+                                                    
+                                                    
+                                                  </div>
+
+
+                                                  
+
+
+
+                                                  <div class="custom-control custom-checkbox my-1 mr-sm-2" id="applyChangesBoxes">
+                                                      <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                                      <label class="custom-control-label float-right" for="customControlInline">Save as default settings for this coin</label>
+                                                    
+                                                  
+                                                  </div>
+
+                                                  <div class="custom-control custom-checkbox my-1 mr-sm-2" id="applyChangesBoxes">
+                                                      <input type="checkbox" class="custom-control-input" id="customControlInlineGlobalSave">
+                                                      <label class="custom-control-label float-right" for="customControlInlineGlobalSave">Save as default settings for all coins</label>
+                                                    
+                                                                                                
+                                                  </div>
+                                          
+                                                  
+                                          
+                                                  
+                                                  
+
+
+
+
+
+
+
+
+                                                  
+                                                 </div>
+
+                                                 
+                                                 
+                                                 <!-- FORM AREA END -->
+                            </div>
+
+                            
+                            
+                                
+                        </div>
+                        <!-- END OF CHART -->
+
+                        <!-- START OF PROFITS/LOSSES -->
+                        <div class="ourPL shadow-lg bg-dark centertext">
+                          <div>
+                            
+                          </div>
+
+
+
+
+                          <div>
+                              <table class="table table-hover table-dark table-sm shadow-lg">
+                                  <thead>
+                                    <tr>
+                                      <th colspan="6">
+                                        
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="6" class="shadow-lg">
+                                          <h2>
+                                              Open Positions
+                                          </h2>
+                                        </th>
+                                      </tr>
+                                    <tr>
+                                      <th scope="col">Trade #</th>
+                                      <th scope="col">Date/Time</th>
+                                      <th scope="col">Details</th>
+                                      <th scope="col">Cost</th>
+                                      <th scope="col">Current -/+ Percentage</th>
+                                      <th scope="col">Pair</th>
+                                      
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class="">
+                                      <th scope="row">4356</th>
+                                      <td>6/23/2018</td>
+                                      <td class="">
+                                        <span class="smallerText">Bought</span>
+                                        <span class="boughtHighlight">0.234252</span>
+                                        <span class="smallerText">BTC</span>
+                                        <span>---</span>
+                                        <span class="smallerText">With</span>
+                                        <span class="withHighlight">1,500</span>
+                                        <span class="smallerText">USDT</span>
+                                      </td>
+                                      <td>
+                                        <span class="smallerText">6,000</span>
+                                        <span>USDT</span>
+                                        <span class="smallerText">per</span>
+                                        <span>BTC</span>
+                                      </td>
+                                      <td class="winHighlight">20% Profit</td>
+                                      <td>BTC/USDT</td>
+                                      
+                                    </tr>
+                                    
+                                    
+
+                                    <tr class="">
+                                        <th scope="row">4356</th>
+                                        <td>6/23/2018</td>
+                                        <td class="">
+                                          <span class="smallerText">Bought</span>
+                                          <span class="boughtHighlight">1.234252</span>
+                                          <span class="smallerText">ETH</span>
+                                          <span>---</span>
+                                          <span class="smallerText">With</span>
+                                          <span class="withHighlight">0.1083475232</span>
+                                          <span class="smallerText">BTC</span>
+                                        </td>
+                                        <td>
+                                          <span class="smallerText">0.3245235</span>
+                                          <span>BTC</span>
+                                          <span class="smallerText">per</span>
+                                          <span>ETH</span>
+                                        </td>
+                                        <td class="winHighlight">20% Profit</td>
+                                        <td>BTC/USDT</td>
+                                        
+                                      </tr>
+
+
+                                    <tr class="">
+                                      <th scope="row">4356</th>
+                                      <td>6/23/2018</td>
+                                      <td class="">
+                                        <span class="smallerText">Bought</span>
+                                        <span class="boughtHighlight">0.234252</span>
+                                        <span class="smallerText">BTC</span>
+                                        <span>---</span>
+                                        <span class="smallerText">With</span>
+                                        <span class="withHighlight">1,500</span>
+                                        <span class="smallerText">USDT</span>
+                                      </td>
+                                      <td>
+                                        <span class="smallerText">6,000</span>
+                                        <span>USDT</span>
+                                        <span class="smallerText">per</span>
+                                        <span>BTC</span>
+                                      </td>
+                                      <td class="winHighlight">20% Profit</td>
+                                      <td>BTC/USDT</td>
+                                      
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            
+                            <div>
+                            <table class="table table-hover table-dark table-sm shadow-lg">
+                                <thead>
+                                  <tr>
+                                    <th colspan="6">
+                                      
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                      <th colspan="6" class="shadow-lg">
+                                        <h2>
+                                            Profits/Losses
+                                        </h2>
+                                      </th>
+                                    </tr>
+                                  <tr>
+                                    <th scope="col">Trade #</th>
+                                    <th scope="col">Date/Time</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Percentage</th>
+                                    <th scope="col">Pair</th>
+                                    <th scope="col">Trade Data</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="">
+                                    <th scope="row">4356</th>
+                                    <td>6/23/2018</td>
+                                    <td class="winHighlight">$400 USDT Profit</td>
+                                    <td class="winHighlight">20% Profit</td>
+                                    <td>BTC/USDT</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/22/2018</td>
+                                    <td class="lossHighlight">$15 USDT Loss</td>
+                                    <td class="lossHighlight">3% Loss</td>
+                                    <td>XYZ/BTC</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/22/2018</td>
+                                    <td class="winHighlight">$250 USD Profit</td>
+                                    <td class="winHighlight">15% Profit</td>
+                                    <td>APPL/USD</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/23/2018</td>
+                                    <td class="winHighlight">$400 USDT Profit</td>
+                                    <td class="winHighlight">20% Profit</td>
+                                    <td>BTC/USDT</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/22/2018</td>
+                                    <td class="lossHighlight">$15 USDT Loss</td>
+                                    <td class="lossHighlight">3% Loss</td>
+                                    <td>XYZ/BTC</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/22/2018</td>
+                                    <td class="winHighlight">$250 USD Profit</td>
+                                    <td class="winHighlight">15% Profit</td>
+                                    <td>APPL/USD</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/23/2018</td>
+                                    <td class="winHighlight">$400 USDT Profit</td>
+                                    <td class="winHighlight">20% Profit</td>
+                                    <td>BTC/USDT</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/22/2018</td>
+                                    <td class="lossHighlight">$15 USDT Loss</td>
+                                    <td class="lossHighlight">3% Loss</td>
+                                    <td>XYZ/BTC</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/22/2018</td>
+                                    <td class="winHighlight">$250 USD Profit</td>
+                                    <td class="winHighlight">15% Profit</td>
+                                    <td>APPL/USD</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                  <tr class="">
+                                      <th scope="row">4356</th>
+                                  <td>6/22/2018</td>
+                                  <td class="winHighlight">$250 USD Profit</td>
+                                  <td class="winHighlight">15% Profit</td>
+                                  <td>APPL/USD</td>
+                                  <td><a href="#">View</a></td>
+                                </tr>
+                                  
+                                </tbody>
+                              </table>
+                              </div>
+                              <div id="PLpagination">
+                              <nav class="paginationColors float-right" aria-label="...">
+                                <ul class="pagination pagination-sm">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item active">
+                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                      </li>
+                                </ul>
+                              </nav>
+                            </div>
+                            
+                        </div>
+                        <!-- END OF PROFITS/LOSSES -->
+                    </div>
+
+
+                    <!-- RIGHT SIDE OF PAGE -->
+                    <div class="col-sm-4 bg-dark">
+                        <!-- TOP OF LEADERBOARD -->
+                        <div class="leaderBoard shadow-lg bg-dark" id="nudgeLeaderboard">
+                            <h2 class="shadow-lg">
+                                Leaderboard
+                            </h2>
+                        </div>
+
+                        <!-- WHERE LEADERBOARD ACTUALLY STARTS -->
+
+
+                    <div>
+                        <table class="table table-hover table-dark table-sm shadow-lg">
+                            <thead>
+                              <tr>
+                                <th style="width: 35%" scope="col">Trader Name</th>
+                                <th style="width: 20%" scope="col">30-Day $</th>
+                                <th style="width: 20%" scope="col">30-Day %</th>
+                                <th style="width: 25%" scope="col">30-Day Graph</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">1.
+                                    <span>
+                                        Wolf-Strategy Users
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>343,543</span></td>
+                                <td class=""><span>5,800</span>%</td>
+                                <td class="">
+                                    <div>
+                                      <!-- Use sparklines jquery for graphs -->
+                                        <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1.png" 
+                                        alt="CoinMarketCapExample">
+                                    </div>
+                                    
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">2.
+                                  <span>
+                                      John Doe
+                                  </span>
+                                </span>
+                              </th>
+                                <td class="">$<span>43,543</span></td>
+                                <td class=""><span>500</span>%</td>
+                                <td class="">
+                                    <div>
+                                        <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/52.png" 
+                                        alt="CoinMarketCapExample">
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">3.
+                                    <span>
+                                        John Doe
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>3,543</span></td>
+                                <td class=""><span>1,000</span>%</td>
+                                <td class="">
+                                    <div>
+                                            <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1765.png" 
+                                            alt="CoinMarketCapExample">
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"<span class="traderNameFont">4.
+                                    <span>
+                                        John Doe
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>5,543</span></td>
+                                <td class=""><span>200</span>%</td>
+                                <td class="">
+                                        <div>
+                                                <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/825.png" 
+                                                alt="CoinMarketCapExample">
+                                        </div>
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">5.
+                                    <span>
+                                        John Doe
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>3,543</span></td>
+                                <td class=""><span>1,000</span>%</td>
+                                <td class="">
+                                    <div>
+                                            <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1.png" 
+                                            alt="CoinMarketCapExample">
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">6.
+                                    <span>
+                                        John Doe
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>5,543</span></td>
+                                <td class=""><span>100</span>%</td>
+                                <td class="">
+                                    <div>
+                                            <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/52.png" 
+                                            alt="CoinMarketCapExample">
+                                    </div>
+                            </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">7.
+                                    <span>
+                                        John Doe
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>93,543</span></td>
+                                <td class=""><span>1,500</span>%</td>
+                                <td class="">
+                                    <div>
+                                            <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1765.png" 
+                                            alt="CoinMarketCapExample">
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">8.
+                                    <span>
+                                        John Doe
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>43,543</span></td>
+                                <td class=""><span>1,000</span>%</td>
+                                <td class="">
+                                    <div>
+                                            <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/825.png" 
+                                            alt="CoinMarketCapExample">
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row"><span class="traderNameFont">9.
+                                    <span>
+                                        John Doe
+                                    </span>
+                                  </span>
+                                </th>
+                                <td class="">$<span>43,543</span></td>
+                                <td class=""><span>1,000</span>%</td>
+                                <td class="">
+                                    <div>
+                                            <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/825.png" 
+                                            alt="CoinMarketCapExample">
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr class="">
+                                    <th scope="row"><span class="traderNameFont">10.
+                                        <span>
+                                            John Doe
+                                        </span>
+                                      </span>
+                                    </th>
+                                    <td class="">$<span>43,543</span></td>
+                                <td class=""><span>1,000</span>%</td>
+                                    <td class="">
+                                        <div>
+                                                <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/825.png" 
+                                                alt="CoinMarketCapExample">
+                                        </div>
+                                    </td>
+                                  </tr>
+
+
+
+                                  <tr class="">
+                                      <th scope="row"><span class="traderNameFont">11.
+                                          <span>
+                                              John Doe
+                                          </span>
+                                        </span>
+                                      </th>
+                                      <td class="">$<span>43,543</span></td>
+                                      <td class=""><span>1,000</span>%</td>
+                                      <td class="">
+                                          <div>
+                                                  <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1.png" 
+                                                  alt="CoinMarketCapExample">
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="">
+                                      <th scope="row"><span class="traderNameFont">12.
+                                          <span>
+                                              John Doe
+                                          </span>
+                                        </span>
+                                      </th>
+                                      <td class="">$<span>43,543</span></td>
+                                      <td class=""><span>1,000</span>%</td>
+                                      <td class="">
+                                          <div>
+                                                  <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/52.png" 
+                                                  alt="CoinMarketCapExample">
+                                          </div>
+                                  </td>
+                                    </tr>
+                                    <tr class="">
+                                      <th scope="row"><span class="traderNameFont">13.
+                                          <span>
+                                              John Doe
+                                          </span>
+                                        </span>
+                                      </th>
+                                      <td class="">$<span>43,543</span></td>
+                                      <td class=""><span>1,000</span>%</td>
+                                      <td class="">
+                                          <div>
+                                                  <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/1765.png" 
+                                                  alt="CoinMarketCapExample">
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="">
+                                      <th scope="row"><span class="traderNameFont">14.
+                                          <span>
+                                              John Doe
+                                          </span>
+                                        </span>
+                                      </th>
+                                      <td class="">$<span>43,543</span></td>
+                                      <td class=""><span>1,000</span>%</td>
+                                      <td class="">
+                                          <div>
+                                                  <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/825.png" 
+                                                  alt="CoinMarketCapExample">
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr class="">
+                                      <th scope="row"><span class="traderNameFont">15.
+                                          <span>
+                                              John Doe
+                                          </span>
+                                        </span>
+                                      </th>
+                                      <td class="">$<span>43,543</span></td>
+                                      <td class=""><span>1,000</span>%</td>
+                                      <td class="">
+                                          <div>
+                                                  <img class="smallerGraph" src="https://s2.coinmarketcap.com/generated/sparklines/web/7d/usd/825.png" 
+                                                  alt="CoinMarketCapExample">
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    
+                              
+                            </tbody>
+                          </table>
+                          </div>
+                          <div id="PLpagination">
+                              <nav class="float-right" aria-label="...">
+                                <ul class="pagination pagination-sm">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item active">
+                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                      </li>
+                                </ul>
+                              </nav>
+                            </div>
+                        <!-- END OF LEADERBOARD -->
+
+                        <!-- TOP COINS -->
+                        <div class="topCoins shadow-lg">
+                            <!-- TOP OF TOP COINS -->
+                        <div class="leaderBoard shadow-lg bg-dark" id="nudgeTopCoins">
+                            <h2 class="shadow-lg">
+                                Top Coins
+                            </h2>
+                        </div>
+
+                        <!-- WHERE TOP COINS ACTUALLY STARTS -->
+
+
+                    <div>
+                        <table class="table table-hover table-dark table-sm shadow-lg">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Market Cap</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Change (24h)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="">
+                                <th scope="row">1</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">2</th>
+                                <td class=""><span>Ethereum</span></td>
+                                <td class="">$<span>19,098,609,785</span></td>
+                                <td class="">$<span>0.486647</span></td>                                 
+                                <td class=""><span>-1.54</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">3</th>
+                                <td class=""><span>Ripple</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">4</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">5</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">6</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">7</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">8</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">9</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              <tr class="">
+                                <th scope="row">10</th>
+                                <td class=""><span>Bitcoin</span></td>
+                                <td class="">$<span>104,441,089,833</span></td>
+                                <td class="">$<span>6,103.49</span></td>                                 
+                                <td class=""><span>-1.10</span>%</td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                          </div>
+                          <div id="PLpagination">
+                              <nav class="float-right" aria-label="...">
+                                <ul class="pagination pagination-sm">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item active">
+                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                      </li>
+                                </ul>
+                              </nav>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>
