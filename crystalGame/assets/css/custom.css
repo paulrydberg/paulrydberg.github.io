@@ -1,0 +1,106 @@
+body {
+    font-family: "Lato", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+
+.bg-image {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        #7ed56f6b,
+         #28b48550), 
+         url(../images/bg.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+}
+
+.crystal-picture {
+    width: 100px;
+}
+
+.red-crystal {
+    margin-top: 5px;
+    width: 120px;
+}
+
+.nudgeRight {
+    margin-left: 25px;
+    /* font-size: 12px; */
+}
+
+#makeSmaller {
+    font-size: 2.7vh;
+}
+
+#music-credits {
+    font-size: 1.5vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    width: 80%;
+}
+
+#nudgeMusicText {
+    margin-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.fromLeft {
+    animation: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+.fromRight {
+    animation: moveInRight 3s ease-out;
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.bg-image {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        #7ed56f6b,
+         #28b48550), 
+         url(../images/bg.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+}
