@@ -1,0 +1,43 @@
+@import '../../styles/utils';
+
+.item {
+	opacity: 0;
+	transform: translateY(-10px);
+	transition-delay: 0.001s;
+	transition: opacity @ease-out-cubic @dur * 1.25, transform @ease-out-cubic @dur;
+}
+
+.menu {
+	display: none;
+	position: absolute;
+	padding: 15px 0;
+	overflow: hidden;
+	text-align: left;
+	line-height: 1;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: rgba(0, 0, 0, .2) 0px 1px 2px 1px;
+	user-select: none;
+	pointer-events: none;
+	transform-origin: 10px 10px;
+
+	&.isOpening,
+	&.isOpened,
+	&.isClosing {
+		display: block;
+	}
+
+	&.isOpened {
+		pointer-events: initial;
+	}
+
+	&.isClosing .item {
+		transform: translateY(0);
+		.faster;
+	}
+
+	&.isItemsShowing .item {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

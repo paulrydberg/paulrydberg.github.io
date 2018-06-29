@@ -198,25 +198,25 @@
                                                                                       </div>
                                                                                     </div>
                                                                                     <label for="amountToBuy"></label>
-                                                                                    <input type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" placeholder="Amount To Buy">
+                                                                                    <input type="text" class="form-control takeAwayPadding topzindex" aria-label="Text input with segmented dropdown button" placeholder="Amount To Buy">
                                                                                   </div>
                                                                     </div>
                                                                     <div class="col">
-                                                                        <div class="custom-control custom-radio custom-control-inline moveRadioSection">
-                                                                            <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
-                                                                            <label data-toggle="tooltip" data-html="true" 
-                                                                            title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
-                                                                            class="custom-control-label tradeSettingsRadio" for="customRadioInline3"><span class="moveFixedPercent">
-                                                                              <b>Fixed Amount</b></span></label>
-                                                                          </div>
-                                                                          
-                                                                          <div class="custom-control custom-radio custom-control-inline">
-                                                                            <input type="radio" id="customRadioInline4" name="customRadioInline4" class="custom-control-input">
-                                                                            <label data-toggle="tooltip" data-html="true" 
-                                                                            title="<em>Each Trade Will Be Entered With A Specified Percentage From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
-                                                                            class="custom-control-label tradeSettingsRadio" for="customRadioInline4"><span class="moveFixedPercent">
-                                                                              <b>Percentage %</b></span></label>
-                                                                          </div>
+                                                                      <div class="custom-control custom-radio custom-control-inline moveRadioSection">
+                                                                        <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+                                                                        <label data-toggle="tooltip" data-html="true" 
+                                                                        title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
+                                                                        class="custom-control-label tradeSettingsRadio" for="customRadioInline3"><span class="moveFixedPercent">
+                                                                          <b>Fixed Amount</b></span></label>
+                                                                      </div>
+                                                                      
+                                                                      <div class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio" id="customRadioInline4" name="customRadioInline3" class="custom-control-input">
+                                                                        <label data-toggle="tooltip" data-html="true" 
+                                                                        title="<em>Each Trade Will Be Entered With A Specified Percentage From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
+                                                                        class="custom-control-label tradeSettingsRadio" for="customRadioInline4"><span class="moveFixedPercent">
+                                                                          <b>Percentage %</b></span></label>
+                                                                      </div>
                                                                                   
                                                                             <div class="input-group" id="moveAmountAgain moveAmount">
                                                                                     <div class="input-group-prepend dropup">
@@ -252,7 +252,7 @@
                                                                                       </div>
                                                                                     </div>
                                                                                     <label for="amountToSell"></label>
-                                                                                    <input type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" placeholder="Amount To Sell">
+                                                                                    <input type="text" class="form-control takeAwayPadding topzindex" aria-label="Text input with segmented dropdown button" placeholder="Amount To Sell">
                                                                                   </div>
                                                                                   
                                                                     </div>
@@ -326,16 +326,61 @@
 
                                                                                           <table class="table table-hover table-dark centertext">
                                                                                               <thead>
+                                                                                                  <tr>
+                                                                                                      <td colspan="2" class="">
+                                                                                                        <div>
+                                                                                                            <div>
+                                                                                                                Repeat Buy
+                                                                                                            </div>
+
+
+                                                                                                            <div>
+
+                                                                                                            
+                                                                                                            <form action="">
+                                                                                                                <select class="form-control form-control-sm">
+                                                                                                                    <option>Small select</option>
+                                                                                                                  </select>
+                                                                                                            </form>
+
+
+                                                                                                          </div>
+                                                                                                          
+                                                                                                        </div>
+                                                                                                      
+                                                                                                        <div>
+                                                                                                            Spending A Total Of
+                                                                                                        </div>
+                                                                                                        <div>
+                                                                                                          
+                                                                                                          
+                                                                                                            <form action="">
+                                                                                                                <div class="form-inline">
+                                                                                                                    <label for="PyramidBuyNumber"></label>
+                                                                                                                    <input type="" class="form-control form-control-sm" id="PyramidBuyNumber" placeholder="% or $">
+                                                                                                                  </div>
+                                                                                                                </form>
+
+
+                                                                                                        </div>
+
+                                                                                                        <div>
+                                                                                                          Of Capital.
+                                                                                                        </div>
+                                                                                                        </td>
+                                                                                                      
+                                                                                                    </tr>
                                                                                                 <tr class="smallerText">
                                                                                                   <th scope="col">Increase By</th>
                                                                                                   <th scope="col">Decrease By</th>
                                                                                                 </tr>
                                                                                               </thead>
                                                                                               <tbody>
+                                                                                                
                                                                                                 <tr>
-                                                                                                  <td class="winHighlight">+5%</td>
-                                                                                                  <td class="lossHighlight">-5%</td>
-                                                                                                </tr>
+                                                                                                    <td class="winHighlight">+5%</td>
+                                                                                                    <td class="lossHighlight">-5%</td>
+                                                                                                  </tr>
                                                                                                 <tr>
                                                                                                     <td class="winHighlight">+10%</td>
                                                                                                   <td class="lossHighlight">-10%</td>
@@ -485,17 +530,33 @@
                                                                                       
                                                                                       <label for="buyCoinAmount"></label>
                                                                                         <input type="text" class="form-control form-control-sm tradeValues pyramidBuySettings" 
-                                                                                        id="pyramidBuyValues" placeholder="Initial Buy -- $ or %">
+                                                                                        id="pyramidBuyValues" placeholder="Initial Sell -- $ or %">
 
 
                                                                                         <table class="table table-hover table-dark centertext">
                                                                                             <thead>
+                                                                                                
+                                                                                                  <tr>
+                                                                                                      <td colspan="2" class="">
+                                                                                                        <div>
+                                                                                                            Repeat Sell X Times
+                                                                                                        </div>
+                                                                                                        <div>
+                                                                                                            To Sell Y%.
+                                                                                                        </div>
+                                                                                                        </td>
+                                                                                                      
+                                                                                                    </tr>
                                                                                               <tr class="smallerText">
                                                                                                 <th scope="col">Increase By</th>
                                                                                                 <th scope="col">Decrease By</th>
                                                                                               </tr>
                                                                                             </thead>
                                                                                             <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="winHighlight">+0%</td>
+                                                                                                    <td class="lossHighlight">-0%</td>
+                                                                                                  </tr>
                                                                                               <tr>
                                                                                                 <td class="winHighlight">+5%</td>
                                                                                                 <td class="lossHighlight">-5%</td>

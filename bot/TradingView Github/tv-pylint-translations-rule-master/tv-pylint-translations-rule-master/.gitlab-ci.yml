@@ -1,0 +1,15 @@
+stages:
+  - test
+
+tests:
+  stage: test
+  except:
+  - tags
+  tags:
+    - frontend
+  script:
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+    - ./venv/bin/pip install .
+    - ./venv/bin/pytest test -v

@@ -132,7 +132,11 @@ a:hover {
 .ourChart {
     /* background-color: rgba(251, 255, 0, 0.322); */
     position: relative;
-    height: 700px;
+    height: 715px;
+}
+
+#ourChart {
+    height: 737px;
 }
 
 #movechart {
@@ -181,6 +185,15 @@ a:hover {
     left: 50%;
     transform: translate(-50%, -50%); */
 
+}
+
+#orderTypeManual {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#makeManualModeLonger {
+    margin-bottom: 100px;
 }
 
 .scrollable-menu {

@@ -101,14 +101,14 @@
 
 
                         <!-- START OF CHART -->
-                        <div class="ourChart shadow-lg bg-dark">
+                        <div class="ourChart shadow-lg bg-dark" id="ourChart">
                             <div class="shadow-lg" id="movechart">
                                     <img id="smallerGraph" src="http://i1027.photobucket.com/albums/y333/EugeneZee/EJukovskiyScreenshot_2016-05-27_10-52-30_zps25szzvfy.png~original" 
                                     alt="TradingView Chart">
 
 
                                     <!-- FORM AREA START -->
-                                    <div id="mainpagebuysell">
+                                    <div class="" id="mainpagebuysell">
 
                                         
                                             <div class="row">
@@ -123,153 +123,7 @@
                                                         </button>
                                                     </div>
 
-                                                    <form class="form-inline">
-                                                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
-                                                            <select class="custom-select my-1 mr-sm-2 form-control-sm zeroPadding" id="stratChoose">
-                                                              <option selected>Choose trading strategy</option>
-                                                              <option value="1">WOLFbot Stop Limit Strategy</option>
-                                                              
-                                                              <option value="2">User Uploaded Strategy #1</option>
-                                                              <option value="3">User Uploaded Strategy #2</option>
-                                                            </select>
-                                                          
-                                                            <div class="row">
-                                                                    <div class="col" id="nudgeRight">
-
-                                                                            <div class="custom-control custom-radio custom-control-inline moveRadioSection">
-                                                                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                                                                    <label data-toggle="tooltip" data-html="true" 
-                                                                                    title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
-                                                                                    class="custom-control-label tradeSettingsRadio" for="customRadioInline1"><span class="moveFixedPercent">
-                                                                                      <b>Fixed Amount</b></span></label>
-                                                                                  </div>
-                                                                                  
-                                                                                  <div class="custom-control custom-radio custom-control-inline">
-                                                                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                                                                    <label data-toggle="tooltip" data-html="true" 
-                                                                                    title="<em>Each Trade Will Be Entered With A Specified Percentage From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
-                                                                                    class="custom-control-label tradeSettingsRadio" for="customRadioInline2"><span class="moveFixedPercent">
-                                                                                      <b>Percentage %</b></span></label>
-                                                                                  </div>
-
-
-
-
-
-                                                                                  <!-- data-toggle="tooltip" data-html="true" 
-                                                                                    title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>"  
-                                                                                   -->
-
-
-
-                                                                            <div class="input-group" id="moveAmountAgain moveAmount">
-
-                                                                                    
-                                                                                    <div class="input-group-prepend dropup">
-                                                                                      
-                                                                                      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                                        <span class="sr-only">Toggle Dropdown</span>
-                                                                                      </button>
-                                                                                      <div class="dropdown-menu scrollable-amount">
-                                                                                          <span>
-                                                                                              <a class="dropdown-item" href="#">Set Fixed Amounts</a>    
-                                                                                             <div class="dropdown-divider"></div>
-                                                                                             </span>
-                                                                                            <a class="dropdown-item" href="#">Spend 100%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 95%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 90%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 85%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 80%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 75%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 70%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 65%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 60%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 55%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 50%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 45%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 40%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 35%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 30%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 25%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 20%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 15%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 10%</a>
-                                                                                            <a class="dropdown-item" href="#">Spend 5%</a>
-                                                                                      </div>
-                                                                                    </div>
-                                                                                    <label for="amountToBuy"></label>
-                                                                                    <input type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" placeholder="Amount To Buy">
-                                                                                  </div>
-                                                                    </div>
-                                                                    <div class="col">
-                                                                        <div class="custom-control custom-radio custom-control-inline moveRadioSection">
-                                                                            <input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
-                                                                            <label data-toggle="tooltip" data-html="true" 
-                                                                            title="<em>Each Trade Will Be Entered With A Fixed Amount From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
-                                                                            class="custom-control-label tradeSettingsRadio" for="customRadioInline3"><span class="moveFixedPercent">
-                                                                              <b>Fixed Amount</b></span></label>
-                                                                          </div>
-                                                                          
-                                                                          <div class="custom-control custom-radio custom-control-inline">
-                                                                            <input type="radio" id="customRadioInline4" name="customRadioInline4" class="custom-control-input">
-                                                                            <label data-toggle="tooltip" data-html="true" 
-                                                                            title="<em>Each Trade Will Be Entered With A Specified Percentage From Your Available Funds <b><u>To change all coins to this value please visit the settings page.</u></b></em> <em><b><u></u></em></b>" 
-                                                                            class="custom-control-label tradeSettingsRadio" for="customRadioInline4"><span class="moveFixedPercent">
-                                                                              <b>Percentage %</b></span></label>
-                                                                          </div>
-                                                                                  
-                                                                            <div class="input-group" id="moveAmountAgain moveAmount">
-                                                                                    <div class="input-group-prepend dropup">
-                                                                                      
-                                                                                      <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                                        <span class="sr-only">Toggle Dropdown</span>
-                                                                                      </button>
-                                                                                      <div class="dropdown-menu scrollable-amount">
-                                                                                          <span>
-                                                                                              <a class="dropdown-item" href="#">Set Fixed Amounts</a>    
-                                                                                             <div class="dropdown-divider"></div>
-                                                                                             </span>
-                                                                                            <a class="dropdown-item" href="#">Sell 100%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 95%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 90%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 85%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 80%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 75%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 70%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 65%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 60%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 55%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 50%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 45%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 40%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 35%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 30%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 25%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 20%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 15%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 10%</a>
-                                                                                            <a class="dropdown-item" href="#">Sell 5%</a>
-                                                                                      </div>
-                                                                                    </div>
-                                                                                    <label for="amountToSell"></label>
-                                                                                    <input type="text" class="form-control takeAwayPadding" aria-label="Text input with segmented dropdown button" placeholder="Amount To Sell">
-                                                                                  </div>
-                                                                    </div>
-                                                                  </div>
-
-                                                            
-
-                                                                  <br>
-
-                                                                      <div class="custom-control custom-checkbox my-1 mr-sm-2" id="applyChanges">
-                                                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                                                            <label class="custom-control-label" for="customControlInline">Save as default settings for this coin</label>
-                                                                          
-                                                                        
-                                                                        </div>
-                                                          
-                                                            <button type="submit" id="applyButtonMove" class="btn btn-primary btn-sm my-1">Apply Changes</button>
-                                                          </form>
+                                                   
 
 
                                                           
@@ -285,12 +139,17 @@
     
                                                                     <div class="form-row">
                                                                             <div class="form-group col">
+                                                                                <div class="btn-group btn-group-sm" id="orderTypeManual" role="group" aria-label="Basic example">
+                                                                                    <button type="button" class="btn btn-secondary">Stop-Limit</button>
+                                                                                    <button type="button" class="btn btn-secondary">Limit</button>
+                                                                                    <button type="button" class="btn btn-secondary">Market</button>
+                                                                                  </div>
                                                                               <label for="stopPrice"></label>
-                                                                              <input type="text" class="form-control form-control-md tradeValues" id="stopPrice" placeholder="Stop Price">
+                                                                              <input type="text" class="form-control form-control-md tradeValues topzindex" id="stopPrice" placeholder="Stop Price">
                                                                               
                                                                               
                                                                               <label for="pricePerPair"></label>
-                                                                              <input type="text" class="form-control form-control-md tradeValues" id="coinExecutionPrice" placeholder="Limit Price">
+                                                                              <input type="text" class="form-control form-control-md tradeValues topzindex" id="coinExecutionPrice" placeholder="Limit Price">
                                                                               <div class="input-group" id="moveAmount">
                                                                                     <div class="input-group-prepend dropup">
                                                                                       
@@ -343,20 +202,27 @@
                                                                               <div class="feeInfo">
                                                                                 Buy BTC with USDT
                                                                               </div>
-                                                                              <div class="feeInfo">
+                                                                              <div id="" class="feeInfo">
                                                                                 Est. Fee: 0% USDT
                                                                               </div>
                                                                             </div>
                                                                           </div>
                                                                           </div>
                                                                         </form>
+                                                                        
                                                     </div>
+
                                                     <div class="col">
                                                             <form>
                                                                     <div class="form-row">
                                                                                                                     
                                                                                                                  
                                                                           <div class="form-group col">
+                                                                              <div class="btn-group btn-group-sm" id="orderTypeManual" role="group" aria-label="Basic example">
+                                                                                  <button type="button" class="btn btn-secondary">Stop-Limit</button>
+                                                                                  <button type="button" class="btn btn-secondary">Limit</button>
+                                                                                  <button type="button" class="btn btn-secondary">Market</button>
+                                                                                </div>
                                                                                   <label for="stopPrice"></label>
                                                                                   <input type="text" class="form-control form-control-md tradeValues" id="stopPrice" placeholder="Stop Price">
                                                                                   
@@ -445,138 +311,253 @@
 
                         <!-- START OF PROFITS/LOSSES -->
                         <div class="ourPL shadow-lg bg-dark centertext">
-                          <div>
-                            
-                          </div>
-                            
                             <div>
-                            <table class="table table-hover table-dark table-sm shadow-lg">
-                                <thead>
-                                  <tr>
-                                    <th colspan="6">
+                              
+                            </div>
+  
+  
+  
+  
+                            <div>
+                                <table class="table table-hover table-dark table-sm shadow-lg">
+                                    <thead>
+                                      <tr>
+                                        <th colspan="6">
+                                          
+                                        </th>
+                                      </tr>
+                                      <tr>
+                                          <th colspan="6" class="shadow-lg">
+                                            <h2>
+                                                Open Positions
+                                            </h2>
+                                          </th>
+                                        </tr>
+                                      <tr>
+                                        <th scope="col">Trade #</th>
+                                        <th scope="col">Date/Time</th>
+                                        <th scope="col">Details</th>
+                                        <th scope="col">Cost</th>
+                                        <th scope="col">Current -/+ Percentage</th>
+                                        <th scope="col">Pair</th>
+                                        
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="">
+                                        <th scope="row">4356</th>
+                                        <td>6/23/2018</td>
+                                        <td class="">
+                                          <span class="smallerText">Bought</span>
+                                          <span class="boughtHighlight">0.234252</span>
+                                          <span class="smallerText">BTC</span>
+                                          <span>---</span>
+                                          <span class="smallerText">With</span>
+                                          <span class="withHighlight">1,500</span>
+                                          <span class="smallerText">USDT</span>
+                                        </td>
+                                        <td>
+                                          <span class="smallerText">6,000</span>
+                                          <span>USDT</span>
+                                          <span class="smallerText">per</span>
+                                          <span>BTC</span>
+                                        </td>
+                                        <td class="winHighlight">20% Profit</td>
+                                        <td>BTC/USDT</td>
+                                        
+                                      </tr>
                                       
-                                    </th>
-                                  </tr>
-                                  <tr>
-                                      <th colspan="6" class="shadow-lg">
-                                        <h2>
-                                            Profits/Losses
-                                        </h2>
+                                      
+  
+                                      <tr class="">
+                                          <th scope="row">4356</th>
+                                          <td>6/23/2018</td>
+                                          <td class="">
+                                            <span class="smallerText">Bought</span>
+                                            <span class="boughtHighlight">1.234252</span>
+                                            <span class="smallerText">ETH</span>
+                                            <span>---</span>
+                                            <span class="smallerText">With</span>
+                                            <span class="withHighlight">0.1083475232</span>
+                                            <span class="smallerText">BTC</span>
+                                          </td>
+                                          <td>
+                                            <span class="smallerText">0.3245235</span>
+                                            <span>BTC</span>
+                                            <span class="smallerText">per</span>
+                                            <span>ETH</span>
+                                          </td>
+                                          <td class="winHighlight">20% Profit</td>
+                                          <td>BTC/USDT</td>
+                                          
+                                        </tr>
+  
+  
+                                      <tr class="">
+                                        <th scope="row">4356</th>
+                                        <td>6/23/2018</td>
+                                        <td class="">
+                                          <span class="smallerText">Bought</span>
+                                          <span class="boughtHighlight">0.234252</span>
+                                          <span class="smallerText">BTC</span>
+                                          <span>---</span>
+                                          <span class="smallerText">With</span>
+                                          <span class="withHighlight">1,500</span>
+                                          <span class="smallerText">USDT</span>
+                                        </td>
+                                        <td>
+                                          <span class="smallerText">6,000</span>
+                                          <span>USDT</span>
+                                          <span class="smallerText">per</span>
+                                          <span>BTC</span>
+                                        </td>
+                                        <td class="winHighlight">20% Profit</td>
+                                        <td>BTC/USDT</td>
+                                        
+                                      </tr>
+                                      
+                                    </tbody>
+                                  </table>
+                                  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                              
+                              <div>
+                              <table class="table table-hover table-dark table-sm shadow-lg">
+                                  <thead>
+                                    <tr>
+                                      <th colspan="6">
+                                        
                                       </th>
                                     </tr>
-                                  <tr>
-                                    <th scope="col">Trade #</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Percentage</th>
-                                    <th scope="col">Pair</th>
-                                    <th scope="col">Trade Data</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr class="">
-                                    <th scope="row">4356</th>
-                                    <td>6/23/2018</td>
-                                    <td class="winHighlight">$400 USDT Profit</td>
-                                    <td class="winHighlight">20% Profit</td>
-                                    <td>BTC/USDT</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/22/2018</td>
-                                    <td class="lossHighlight">$15 USDT Loss</td>
-                                    <td class="lossHighlight">3% Loss</td>
-                                    <td>XYZ/BTC</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/22/2018</td>
-                                    <td class="winHighlight">$250 USD Profit</td>
-                                    <td class="winHighlight">15% Profit</td>
-                                    <td>APPL/USD</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/23/2018</td>
-                                    <td class="winHighlight">$400 USDT Profit</td>
-                                    <td class="winHighlight">20% Profit</td>
-                                    <td>BTC/USDT</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/22/2018</td>
-                                    <td class="lossHighlight">$15 USDT Loss</td>
-                                    <td class="lossHighlight">3% Loss</td>
-                                    <td>XYZ/BTC</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/22/2018</td>
-                                    <td class="winHighlight">$250 USD Profit</td>
-                                    <td class="winHighlight">15% Profit</td>
-                                    <td>APPL/USD</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/23/2018</td>
-                                    <td class="winHighlight">$400 USDT Profit</td>
-                                    <td class="winHighlight">20% Profit</td>
-                                    <td>BTC/USDT</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/22/2018</td>
-                                    <td class="lossHighlight">$15 USDT Loss</td>
-                                    <td class="lossHighlight">3% Loss</td>
-                                    <td>XYZ/BTC</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
-                                        <th scope="row">4356</th>
-                                    <td>6/22/2018</td>
-                                    <td class="winHighlight">$250 USD Profit</td>
-                                    <td class="winHighlight">15% Profit</td>
-                                    <td>APPL/USD</td>
-                                    <td><a href="#">View</a></td>
-                                  </tr>
-                                  <tr class="">
+                                    <tr>
+                                        <th colspan="6" class="shadow-lg">
+                                          <h2>
+                                              Profits/Losses
+                                          </h2>
+                                        </th>
+                                      </tr>
+                                    <tr>
+                                      <th scope="col">Trade #</th>
+                                      <th scope="col">Date/Time</th>
+                                      <th scope="col">Amount</th>
+                                      <th scope="col">Percentage</th>
+                                      <th scope="col">Pair</th>
+                                      <th scope="col">Trade Data</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class="">
                                       <th scope="row">4356</th>
-                                  <td>6/22/2018</td>
-                                  <td class="winHighlight">$250 USD Profit</td>
-                                  <td class="winHighlight">15% Profit</td>
-                                  <td>APPL/USD</td>
-                                  <td><a href="#">View</a></td>
-                                </tr>
-                                  
-                                </tbody>
-                              </table>
+                                      <td>6/23/2018</td>
+                                      <td class="winHighlight">$400 USDT Profit</td>
+                                      <td class="winHighlight">20% Profit</td>
+                                      <td>BTC/USDT</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/22/2018</td>
+                                      <td class="lossHighlight">$15 USDT Loss</td>
+                                      <td class="lossHighlight">3% Loss</td>
+                                      <td>XYZ/BTC</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/22/2018</td>
+                                      <td class="winHighlight">$250 USD Profit</td>
+                                      <td class="winHighlight">15% Profit</td>
+                                      <td>APPL/USD</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/23/2018</td>
+                                      <td class="winHighlight">$400 USDT Profit</td>
+                                      <td class="winHighlight">20% Profit</td>
+                                      <td>BTC/USDT</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/22/2018</td>
+                                      <td class="lossHighlight">$15 USDT Loss</td>
+                                      <td class="lossHighlight">3% Loss</td>
+                                      <td>XYZ/BTC</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/22/2018</td>
+                                      <td class="winHighlight">$250 USD Profit</td>
+                                      <td class="winHighlight">15% Profit</td>
+                                      <td>APPL/USD</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/23/2018</td>
+                                      <td class="winHighlight">$400 USDT Profit</td>
+                                      <td class="winHighlight">20% Profit</td>
+                                      <td>BTC/USDT</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/22/2018</td>
+                                      <td class="lossHighlight">$15 USDT Loss</td>
+                                      <td class="lossHighlight">3% Loss</td>
+                                      <td>XYZ/BTC</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                          <th scope="row">4356</th>
+                                      <td>6/22/2018</td>
+                                      <td class="winHighlight">$250 USD Profit</td>
+                                      <td class="winHighlight">15% Profit</td>
+                                      <td>APPL/USD</td>
+                                      <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr class="">
+                                        <th scope="row">4356</th>
+                                    <td>6/22/2018</td>
+                                    <td class="winHighlight">$250 USD Profit</td>
+                                    <td class="winHighlight">15% Profit</td>
+                                    <td>APPL/USD</td>
+                                    <td><a href="#">View</a></td>
+                                  </tr>
+                                    
+                                  </tbody>
+                                </table>
+                                </div>
+                                <div id="PLpagination">
+                                <nav class="paginationColors float-right" aria-label="...">
+                                  <ul class="pagination pagination-sm">
+                                      <li class="page-item disabled">
+                                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active">
+                                          <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">Next</a>
+                                        </li>
+                                  </ul>
+                                </nav>
                               </div>
-                              <div id="PLpagination">
-                              <nav class="paginationColors float-right" aria-label="...">
-                                <ul class="pagination pagination-sm">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                      </li>
-                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                      <li class="page-item active">
-                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                                      </li>
-                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                      <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
-                                      </li>
-                                </ul>
-                              </nav>
-                            </div>
-                            
-                        </div>
+                              
+                          </div>
                         <!-- END OF PROFITS/LOSSES -->
                     </div>
 
