@@ -1,5 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-www.pof-1.com	TRUE	/	FALSE	1999999999	sitecookie	3256aade4538dbf1dc2149b0d969d2c6
-www.pof-1.com	TRUE	/	FALSE	1999999999	account-proxy	7
-
