@@ -1,0 +1,36 @@
+@import '../../styles/utils';
+
+.item {
+	display: flex;
+	align-items: center;
+	padding: 10px 25px 10px 20px;
+	min-width: 75px;
+	background-color: #fff;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background-color ease @dur;
+
+	&:hover {
+		background-color: @color-hover;
+		.faster;
+	}
+
+	&:active {
+		background-color: @color-active;
+		.faster;
+	}
+}
+
+.icon {
+	margin-right: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 25px;
+	height: 22px;
+
+	svg {
+		display: block;
+		fill: @color-secondary;
+	}
+}
