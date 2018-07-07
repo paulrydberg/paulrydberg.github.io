@@ -7,11 +7,12 @@ $(document).ready(function() {
 
 $(function(){
     $("#submit").click(function(){      
-        var q1 = $('input[name="q1"]:radio:checked').val();
-        var q2 = $('input[name="q2"]:radio:checked').val();
-        var q3 = $('input[name="q3"]:radio:checked').val();
-        var q4 = $('input[name="q4"]:radio:checked').val();
-        var q5 = $('input[name="q5"]:radio:checked').val();
+        var q1, q2, q3, q4, q5, grade;
+        q1 = $('input[name="q1"]:radio:checked').val();
+        q2 = $('input[name="q2"]:radio:checked').val();
+        q3 = $('input[name="q3"]:radio:checked').val();
+        q4 = $('input[name="q4"]:radio:checked').val();
+        q5 = $('input[name="q5"]:radio:checked').val();
 
         q1 == 'true' ? q1 = 1: q1 = 0;
         q2 == 'true' ? q2 = 1: q2 = 0;
@@ -21,13 +22,16 @@ $(function(){
 
         wins = q1 + q2 + q3 + q4 + q5
         losses = 5 - q1 - q2 - q3 - q4 - q5
+        grade = (wins / 5)*100
         
         $("#actualGame").hide();
         $("#results").show();
         $("#correct").empty();
         $("#incorrect").empty();
+        $("#grade").empty();
         $("#correct").append(wins);
         $("#incorrect").append(losses);
+        $("#grade").append(grade);
         
     });
     
