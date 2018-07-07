@@ -70,13 +70,16 @@ function stop() {
 
     wins = q1 + q2 + q3 + q4 + q5
     losses = 5 - q1 - q2 - q3 - q4 - q5
+    grade = (wins / 5)*100
     
     $("#actualGame").hide();
     $("#results").show();
     $("#correct").empty();
     $("#incorrect").empty();
+    $("#grade").empty();
     $("#correct").append(wins);
     $("#incorrect").append(losses);
+    $("#grade").append(grade);
 }
 
 run();
