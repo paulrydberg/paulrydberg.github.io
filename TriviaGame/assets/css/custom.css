@@ -1,0 +1,115 @@
+body {
+    background-image: linear-gradient(
+        to right bottom,
+        #7ed56fc5,
+         #28b485bb), 
+         url(../images/bg.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+#beginbox {
+    background-color: rgba(0, 0, 255, 0.308);
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+
+#actualGame {
+    display: none;
+    background-color: rgba(21, 255, 0, 0.308);
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+
+#results {
+    display: none;
+    background-color: rgba(21, 255, 0, 0.308);
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+
+#title {
+    padding: 17% 0;
+    animation: moveInRight 1s ease-out;
+}
+
+
+
+.bttn:link,
+.bttn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+}
+
+.bttn:hover {
+    transform: translateY(-3px);
+}
+
+.bttn:active {
+    translate: translateY(-1px);
+}
+
+.bttn-white {
+    background-color: #fff;
+    color: #777;
+
+}
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.radioButtons {
+    font-family: 'Old Standard TT', serif;
+}
+
+.smallerQuestions {
+    padding: 0px 30px 10px 30px;
+    font-size: 2vh;
+}
+
+#paddedScore {
+    padding: 30px 30px 0px 30px;
+}
+
+#gameTitle {
+    padding-top: 25px;
+}
+/* 
+font-family: 'Shrikhand', cursive;
+font-family: 'Old Standard TT', serif;
+font-family: 'Permanent Marker', cursive;
+*/

@@ -1,0 +1,175 @@
+header {
+    background-color: #333333;
+    height: 50px;
+    margin: 0px;
+    padding: 10px;
+}
+
+.name {
+    font-family: italic;
+    color: rgb(255, 255, 255);
+    float: left;
+    width: 30%;
+    font-size: 24px;
+    height: 0px;
+    margin: 3px;
+    padding: 0px;
+}
+
+.outside-name {
+    background-color: #3798f3;
+}
+
+.nav {
+    column-count: 3;
+    column-rule-width: 1px;
+    column-rule-color: rgb(255, 255, 255);
+    column-rule-style: solid;
+    column-width: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    float: right;
+    width: 20%;
+    font-size: 16px;
+    height: 0px;
+    margin: 13px;
+    padding: 0px;
+}
+
+.border {
+    border-style: none none solid none;
+    border-width: 1px;
+    height: 5px;
+    margin: 0px;
+    padding: 1px;
+}
+
+
+
+h1 {
+    font-family: italic;
+    color: #eee;
+    font-size: 28px;
+    margin: 10px;
+    padding: 0;
+}
+h2 {
+    font-family: italic;
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+    
+}
+body {
+    background-color: #efeee7;
+    font-family: 'Georgia','Times New Roman','Times,serif';
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    color: #333333;
+}
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+#main-bio {
+    float: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#about-me {
+    float: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#content-info {
+    float: left;
+    width: 30%;
+    margin: 0px;
+    padding: 0px;
+}
+#bio-image {
+    float: left;
+    width: 200px;
+    margin-right: 25px;
+    border-radius: 7px;
+    
+}
+
+#portfolio-image {
+    float: left;
+    width: 200px;
+    margin: 15px;
+    border-radius: 7px;
+    
+}
+
+.pic-tran {
+    transition: opacity 300ms ease-in-out 1s;
+}
+
+.tran {
+    transition: [property] [duration] [timing] [delay];
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #333333;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #333333;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #333333;
+}
+
+a:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #333333;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container-two {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
