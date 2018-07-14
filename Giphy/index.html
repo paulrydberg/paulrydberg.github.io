@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap-framework/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="./assets/css/custom.css">
+
+
+    <title>Giphy API</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-8">
+                <h1 id="move-header">Get Your Giphy On!!! Woop Woop!</h1>
+                <div id="keywords-list"></div>
+            </div>
+            <div class="col">
+                <form id="keyword-form">
+                    <br>
+                    <label for="keyword-input">Add a button... or else...</label>
+                    <br>
+                    <input type="text" id="keyword-input" class="myButtons" placeholder="Your text here...">
+                    <br>
+
+                    <!-- Button triggers new keyword to be added -->
+                    <input id="add-keyword" class="btn btn-dark" type="submit" value="Add Button">
+                </form>
+            </div>
+        </div>
+
+        <div id="gifs-appear-here"></div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script src="./assets/js/app.js"></script>
+
+    <!-- <script type="text/javascript">
+        var keywordArray = ["Kittens", "Nature", "Awesome", "Teenage Mutant Ninja Turtles"];
+        var trending = false;
+        var search = '';
+        var numberOfPictures = 10;
+
+        // $.ajax({
+        //     url: queryURL,
+        //     method: "GET"
+        // }).then(function (response) {
+        //     console.log(response);
+        //     console.log(response.data);
+        // });
+
+        function whenCustomButtonClicked() {
+            var keyword = $(this).attr("data-name");
+            var apiKey = 'GqNNmS1MwQucP8B8uCRTvrhVTIpPFQ1j'
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+                keyword + "&api_key=" + apiKey + "&limit=10";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+                .then(function (response) {
+                    var results = response.data;
+                    console.log(results);
+                    $("#gifs-appear-here").empty();
+
+                    for (var i = 0; i < results.length; i++) {
+                        //console.log(results[i]);
+                        var dataStill = results[i].images.fixed_height_still.url;
+                        var dataAnimate = results[i].images.fixed_height.url;
+                        var gifDiv = $('<span data-still="' + dataStill + '" data-animate="' + dataAnimate + '" data-state="still" >');
+
+                        var rating = results[i].rating;
+                        var ratingDiv = $("<div>").text("Rating: " + rating);
+                        var keywordImage = $("<img>");
+                        keywordImage.addClass("pointerHover");
+                        //keywordImage.attr("src", results[i].images.fixed_height_still.url);
+                        keywordImage.attr("src", results[i].images.fixed_height.url);
+                        gifDiv.prepend(ratingDiv);
+                        gifDiv.prepend(keywordImage);
+                        gifDiv.addClass("forceInline");
+                        gifDiv.addClass("pictureSpacing");
+
+                        //gifDiv.addClass(results[i].id);
+                        $("#gifs-appear-here").prepend(gifDiv);
+                    }
+
+                });
+
+        }
+
+        function makeAnimated() {
+            var animatedURL = $(this).attr("data-animate");
+            var animatedURL2 = $(this).data('animate');
+            //console.log(animatedURL);
+            console.log(animatedURL2);
+            //alert($(this).data('animate'));
+
+            //console.log('test');
+            //var replaceAnimated = $("<img>");
+            //console.log(replaceAnimated);
+
+
+
+            //adds source to img and alt
+            //replaceAnimated.attr("src", animatedURL);
+            //replaceAnimated.attr("alt", "now its moving");
+
+        }
+        //console.log(makeAnimated);
+
+
+        $(".gif").on("click", function () {
+            // STEP ONE: study the html above.
+            var animatedURL = $(this).attr("data-animate");
+            var test = $(this).data('animate');
+            console.log(test);
+        });
+
+
+
+        function renderButtons() {
+            $("#keywords-list").empty();
+            for (var i = 0; i < keywordArray.length; i++) {
+                var addButton = $("<button>");
+                var addDiv = $("<div>");
+                addDiv.addClass("forceInline");
+                addButton.addClass("keyword-button");
+                addButton.addClass("btn");
+                addButton.addClass("btn-dark");
+                addButton.attr("data-name", keywordArray[i]);
+                addButton.text(keywordArray[i]);
+                $("#keywords-list").append(addDiv);
+                $(addDiv).append(addButton);
+            }
+        }
+
+        $("#add-keyword").on("click", function (event) {
+            event.preventDefault();
+            var keyword = $("#keyword-input").val().trim();
+            var nothingTyped = 'Please Type Something'
+
+            if (keyword == '') {
+                //alert(nothingTyped);
+                console.log(nothingTyped);
+            } else {
+                keywordArray.push(keyword);
+                renderButtons();
+            }
+        });
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        $(document).on("click", ".keyword-button", whenCustomButtonClicked);
+        $(document).on("click", $(".gif"), makeAnimated);
+
+        // $(document).ready(function () {
+        //     $(".gif").on('click', function () {
+        //         alert($(this).data('animate'));
+        //     });
+        // });
+
+        //$(".gif").on("click", makeAnimated);
+
+        renderButtons();
+
+
+
+
+
+    </script> -->
+</body>
+
+</html>
