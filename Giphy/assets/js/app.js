@@ -6,6 +6,7 @@ var keywordArray = [
 ];
 
 function whenCustomButtonClicked() {
+  $("#gifs-appear-here").empty();
   var keyword = $(this).attr("data-name");
   var apiKey = "GqNNmS1MwQucP8B8uCRTvrhVTIpPFQ1j";
   var queryURL =
@@ -21,34 +22,41 @@ function whenCustomButtonClicked() {
   }).then(function(response) {
     var results = response.data;
     console.log(results);
-    $("#gifs-appear-here").empty();
 
     for (var i = 0; i < results.length; i++) {
       //console.log(results[i]);
-      var dataStill = results[i].images.fixed_height_still.url;
-      var dataAnimate = results[i].images.fixed_height.url;
-      var gifDiv = $(
-        '<span data-still="' +
-          dataStill +
-          '" data-animate="' +
-          dataAnimate +
-          '" data-state="still" >'
-      );
+      var gifDiv = $("<div>");
 
       var rating = results[i].rating;
       var ratingDiv = $("<div>").text("Rating: " + rating);
       var keywordImage = $("<img>");
       keywordImage.addClass("pointerHover");
-      //keywordImage.attr("src", results[i].images.fixed_height_still.url);
-      keywordImage.attr("src", results[i].images.fixed_height.url);
+      keywordImage.addClass("gif");
+      keywordImage.attr("src", results[i].images.fixed_height_still.url);
+      keywordImage.attr("data-animate", results[i].images.fixed_height.url);
+      keywordImage.attr("data-still", results[i].images.fixed_height_still.url);
+      keywordImage.attr("data-state", "still");
+      keywordImage.attr("alt", "GIF-images");
+
       gifDiv.prepend(ratingDiv);
       gifDiv.prepend(keywordImage);
       gifDiv.addClass("forceInline");
       gifDiv.addClass("pictureSpacing");
 
       //gifDiv.addClass(results[i].id);
-      $("#gifs-appear-here").prepend(gifDiv);
+      $("#gifs-appear-here").append(gifDiv);
     }
+    $(".gif").on("click", function(event) {
+      var state = $(this).attr("data-state");
+
+      if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    });
   });
 }
 
@@ -84,47 +92,6 @@ $("#add-keyword").on("click", function(event) {
   }
 });
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 $(document).on("click", ".keyword-button", whenCustomButtonClicked);
 
-//$(document).on("click", $(".gif"), function() {
-$(".gif").on("click", function() {
-  var test = $(this).data("animate");
-  console.log(test);
-});
-
-//$(".gif").on("click", makeAnimated);
-
 renderButtons();
-
-// $(".gif").on("click", function() {
-//   // STEP ONE: study the html above.
-//   //var animatedURL = $(this).attr("data-animate");
-//   var test = $(this).data("animate");
-//   console.log(test);
-// });
-
-// function makeAnimated() {
-//   var animatedURL = $(this).attr("data-animate");
-//   var animatedURL2 = $(this).data("animate");
-//   //console.log(animatedURL);
-//   console.log(animatedURL2);
-//   //alert($(this).data('animate'));
-
-//   //console.log('test');
-//   //var replaceAnimated = $("<img>");
-//   //console.log(replaceAnimated);
-
-//   //adds source to img and alt
-//   //replaceAnimated.attr("src", animatedURL);
-//   //replaceAnimated.attr("alt", "now its moving");
-// }
-// //console.log(makeAnimated);
-
-// $(".gif").on("click", function() {
-//   // STEP ONE: study the html above.
-//   var animatedURL = $(this).attr("data-animate");
-//   var test = $(this).data("animate");
-//   console.log(test);
-// });
