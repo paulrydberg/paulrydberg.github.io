@@ -43,6 +43,8 @@
 
 		function startConverting() {
 			if ('webkitSpeechRecognition' in window) {
+				var webkitSpeechRecognition = new webkitSpeechRecognition();
+				var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition || null;
 				var speechRecognizer = SpeechRecognition
 				speechRecognizer.continuous = true;
 				speechRecognizer.interimResults = true;
