@@ -60,27 +60,27 @@ database
   .on(
     "child_added",
     function(snapshot) {
-      var sv = snapshot.val();
+      var databaseRecalled = snapshot.val();
 
       var currentTime = moment();
-      var trainStartConverted = moment(sv.trainFirstTime, "HH:mm").subtract(
-        1,
-        "years"
-      );
+      var trainStartConverted = moment(
+        databaseRecalled.trainFirstTime,
+        "HH:mm"
+      ).subtract(1, "years");
       var diffTime = moment(currentTime).diff(
         moment(trainStartConverted),
         "minutes"
       );
-      var remainder = diffTime % sv.trainFrequency;
-      var minutes = sv.trainFrequency - remainder;
+      var remainder = diffTime % databaseRecalled.trainFrequency;
+      var minutes = databaseRecalled.trainFrequency - remainder;
       var nextTrain = moment(
         moment(currentTime).add(minutes, "minutes")
       ).format("hh:mm");
 
       var tr = $("<tr>");
-      tr.append("<td>" + sv.trainName + "</td>");
-      tr.append("<td>" + sv.destination + "</td>");
-      tr.append("<td>" + sv.trainFrequency + "</td>");
+      tr.append("<td>" + databaseRecalled.trainName + "</td>");
+      tr.append("<td>" + databaseRecalled.destination + "</td>");
+      tr.append("<td>" + databaseRecalled.trainFrequency + "</td>");
       tr.append("<td>" + nextTrain + "</td>");
       tr.append("<td>" + minutes + "</td>");
 
