@@ -1,0 +1,93 @@
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+body {
+  color: rgb(255, 255, 255);
+  font-family: "Inconsolata", monospace;
+  background-image: linear-gradient(to bottom, #00000088, #000000),
+    url(../images/trainYard.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.topheader {
+  color: rgb(255, 255, 255);
+  background-color: rgba(31, 33, 36, 0.212);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.322);
+  margin-top: -3px;
+}
+
+.justborder {
+  border-style: solid;
+  border-width: 1px;
+  background-color: rgba(31, 33, 36, 0.212);
+  border-color: rgba(255, 255, 255, 0.322);
+  border-radius: 5px;
+}
+
+.myBg {
+  background-color: rgba(31, 33, 36, 0);
+}
+
+.center-text {
+  text-align: center;
+}
+.justhide {
+  display: none;
+}
+#submit {
+  margin-top: 20px;
+}
+.noSpacing {
+  margin: 0px;
+  padding: 0px;
+}
+.slightPadding {
+  padding: 15px;
+}
+.topMarginSlight {
+  margin-top: 15px;
+}
+.moveRight {
+  /* margin-left: 165px; */
+  margin-left: 12%;
+}
+.moveButton {
+  margin-left: 33.5%;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  color: #000000;
+}
+
+.btn:active {
+  translate: translateY(-1px);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  padding: 10px;
+}
+
+.clock {
+  left: 27.3%;
+  width: 600px;
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./assets/css/flipclock.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+
+
+    <title>Train Times | Paul Rydberg</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col jumbotron center-text topheader">
+                <h1 class="text-flicker-in-glow">Don't Miss Your Train!</h1>
+                <div class="clock">
+                    <!-- http://flipclockjs.com/ -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col justborder">
+                <table class="table table-dark table-hover table-sm topMarginSlight center-text myBg">
+                    <thead>
+                        <tr>
+                            <th colspan="5" class="center-text">
+                                <h4 class="text-flicker-in-glow">Current Train Schedule</h4>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="text-flicker-in-glow">Train Name</th>
+                            <th class="text-flicker-in-glow">Destination</th>
+                            <th class="text-flicker-in-glow">Frequency (Min)</th>
+                            <th class="text-flicker-in-glow">Next Arrival</th>
+                            <th class="text-flicker-in-glow">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contentForTable" class="text-flicker-in-glow">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+
+
+        <div class="row">
+            <div class="col relative noSpacing slightPadding moveRight">
+                <label class="justhide">Train Name</label>
+                <input type="text" name="trainName" id="trainName" placeholder="Train Name" class="shadow-pop-tr slightPadding">
+
+                <label class="justhide">Train Destination</label>
+                <input type="text" name="trainDestination" id="trainDestination" placeholder="Train Destination" class="slightPadding shadow-pop-tr">
+
+                <label class="justhide">First Train (Military Time)</label>
+                <input type="text" name="trainFirstTime" id="trainFirstTime" placeholder="First Train (Military Time)" class="slightPadding shadow-pop-tr">
+
+                <label class="justhide">Frequency (Min)</label>
+                <input type="text" name="trainFrequency" id="trainFrequency" placeholder="Frequency (Min)" class="slightPadding shadow-pop-tr">
+
+                <br>
+                <a href="#" type="submit" name="submit" id="submit" class="absolute shadow-pop-tr moveButton btn btn-white">Add Train</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/flipclock.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+
+</html>
