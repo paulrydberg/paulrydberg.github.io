@@ -29,8 +29,6 @@
 	</style>
 </head>
 
-
-
 <body>
 	<h4 align="center">Speech to text converter in JS</h4>
 	<div id="result"></div>
@@ -38,8 +36,6 @@
 		<i class="fa fa-microphone"></i>
 	</button>
 	<script type="text/javascript">
-
-		var TrashTalk = [];
 
 		var r = document.getElementById('result');
 
@@ -60,12 +56,8 @@
 						transcript.replace("\n", "<br>");
 						if (event.results[i].isFinal) {
 							finalTranscripts += transcript;
-							setTimeout(console.log("finalTranscripts" + finalTranscripts), 10000);
-
-
 						} else {
 							interimTranscripts += transcript;
-							setTimeout(console.log("interimTranscripts" + interimTranscripts), 10000);
 						}
 					}
 					r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
