@@ -8,7 +8,7 @@
 
 .content {
   position: fixed;
-  font-family: "Roboto Mono", monospace;
+  font-family: "VT323", monospace;
   top: 0;
   /* background: rgba(0, 0, 0, 0.5); */
   color: #f1f1f1;
@@ -16,6 +16,14 @@
   height: 180px;
   padding: 20px;
   font-stretch: expanded;
+}
+
+/* .fadeFont {
+  animation: fadeIt 2s;
+} */
+
+.showIt {
+  opacity: 100%;
 }
 
 #myBtn {
@@ -48,6 +56,7 @@
 
 .heading {
   font-size: 7vh;
+  letter-spacing: 7px;
 }
 
 .subHeading {
@@ -75,6 +84,18 @@
 #overallMenu {
   left: 0%;
   top: 200px;
+}
+
+@keyframes fadeIt {
+  0% {
+    color: #f1f1f100;
+  }
+  100% {
+    color: #f1f1f1;
+  }
+  0% {
+    color: #f1f1f100;
+  }
 }
 
 /*

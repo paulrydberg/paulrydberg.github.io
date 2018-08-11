@@ -1,94 +1,73 @@
-//setInterval(changeFont);
-
-// $(document).ready(function() {
-// //   $(".changeFont").on({
-// //     mouseenter: function() {
-// //       $(this).css({
-// //         "font-family": "Montserrat, sans-serif"
-// //       });
-// //     }
-// //   });
-// $(this).css({"font-family": "Montserrat, sans-serif"
-// });
-
-// $(document).ready(function() {
-//   console.log("Javascript Loaded");
-
-//   function displayOut() {
-//     var x = document.getElementById("changeFont");
-
-//     setTimeout(function() {
-//       $(x).css({ "font-family": "Montserrat, sans-serif" });
-//     }, 1000);
-//   }
-
-//   displayOut();
-//   //setTimeout(displayOut());
-//   //console.log("Timeout Activated");
-// });
-
-//console.log("Javascript Loaded");
+//////////////////////////////////////////////////////////////////
+// FONT SWITCHING START
 
 var fontArray = [
-  { "font-family": "Roboto Mono, monospace" },
-  { "font-family": "Inconsolata, monospace" },
-  { "font-family": "Source Code Pro, monospace" },
-  { "font-family": "PT Mono, monospace" },
-  { "font-family": "Ubuntu Mono, monospace" },
-  { "font-family": "Space Mono, monospace" },
-  { "font-family": "Cousine, monospace" },
   { "font-family": "VT323, monospace" },
-  { "font-family": "Anonymous Pro, monospace" },
-  { "font-family": "Nanum Gothic Coding, monospace" },
-  { "font-family": "Fira Mono, monospace" },
-  { "font-family": "Share Tech Mono, monospace" },
-  { "font-family": "Cutive Mono, monospace" },
-  { "font-family": "Oxygen Mono, monospace" },
-  { "font-family": "Overpass Mono, monospace" },
-  { "font-family": "IBM Plex Mono, monospace" }
+  { "font-family": "Londrina Shadow, cursive" },
+  { "font-family": "Fredericka the Great, cursive" },
+  { "font-family": "Cabin Sketch, cursive" },
+  { "font-family": "Bangers, cursive" },
+  { "font-family": "Megrim, cursive" },
+  { "font-family": "Barrio, cursive" },
+  { "font-family": "Love Ya Like A Sister, cursive" }
 ];
 
-// function displayOut() {
-//   var x = document.getElementById("changeFont");
-//   //fontSwitch();
+var divToChange = document.getElementById("changeFont");
 
-//   //function fontSwitch() {
-//   for (let i = 0; i < fontArray.length; i++) {
-//     //$(x).css(fontArray[i]);
-//     var change = $(x).css(fontArray[i]);
-//     setTimeout(change);
-
-//     //}
-//   }
-// }
-
-//displayOut();
-
-function stuffAppear() {
-  var i = 0;
+function cycleFonts() {
+  var i;
   for (i = 0; i < fontArray.length; i++) {
-    setupRepeat(i);
+    changeCSS(i);
+    //restoreOpacity();
   }
 }
 
-function setupRepeat(i) {
-  apperance(i);
-  function apperance(i) {
-    var x = document.getElementById("changeFont");
-    setTimeout(function() {
-      $(x).css(fontArray[i]);
-      if (i === fontArray.length - 1) {
-        //console.log("repeat");
-        repeatIt();
-      }
-    }, 0 + i * 100);
-  }
-}
+function changeCSS(i) {
+  setTimeout(function() {
+    $(divToChange).css(fontArray[i]);
+    //$(divToChange).addClass("showIt");
+    //$(divToChange).fadeTo(2000, 0.0);
+    // $(divToChange).fadeTo(0 + i * 1, 1.0);
+    // setTimeout(restoreOpacity(), 1000);
 
-stuffAppear();
+    if (i === fontArray.length - 1) {
+      //console.log("repeat");
+      repeatIt();
+    }
+  }, 0 + i * 2000);
+}
 
 function repeatIt() {
-  stuffAppear();
+  //$(divToChange).fadeTo(1, 0.9);
+
+  cycleFonts();
 }
 
-var x = document.getElementById("changeFont");
+//cycleFonts();
+
+function restoreOpacity() {
+  console.log("test");
+  $(divToChange)
+    .hide()
+    .fadeIn(1);
+}
+
+//$.when(cycleFonts()).done(restoreOpacity());
+
+function fontStart() {
+  cycleFonts();
+  Promise.this(function() {
+    cycleFonts();
+  })
+    .done(function() {
+      console.log("yo");
+    })
+    .done(function() {
+      console.log("k");
+    });
+}
+
+fontStart();
+
+//////////////////////////////////////////////////////////////////
+// FONT SWITCHING END
