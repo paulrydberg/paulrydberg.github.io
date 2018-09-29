@@ -1,111 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crystals Collector</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystals Collector</title>
 
-  <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added link to the jQuery Library -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="./assets/plugins/jquery/jquery.js"></script>
 
-  <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/css/custom.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!-- Added a link to Bootstrap-->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
 </head>
+
 <body>
 
 
 
-  <div class="container bg-image">
+    <div class="container bg-image">
 
-    <div class="">
-        <h1 class="text-center shadow fromLeft" style="font-size: 7vh;" id="checkVal">Crystals Collector!</h1>
-        <h2 class="shadow fromRight" style="font-size: 4vh;">1. You will be given a random number at the start of the game.</h2>
-        <h2 class="shadow fromLeft" style="font-size: 3.5vh;">2. There are four crystals below. By clicking on a crystal you will add a 
-             specific amount of points to your total score.</h2>
-        <h2 class="shadow fromRight" style="font-size: 3vh;">3. You win the game by matching your total score to the random
-             number, you lose the game if your total score goes above the 
-             random number.</h2>
-        <h2 class="shadow fromLeft" style="font-size: 2.5vh;">4. The value of each crystal is hidden from you until you
-             click on it.</h2>
-        <h2 class="shadow fromRight" style="font-size: 2vh;">5. Each time when the game starts, the game will change the
-             value of each crystal.</h2>
-    </div>
+        <div class="">
+            <h1 class="text-center shadow fromLeft" style="font-size: 7vh;" id="checkVal">Crystals Collector!</h1>
+            <h2 class="shadow fromRight" style="font-size: 4vh;">1. You will be given a random number at the start of the
+                game.
+            </h2>
+            <h2 class="shadow fromLeft" style="font-size: 3.5vh;">2. There are four crystals below. By clicking on a crystal
+                you will add a specific amount of points to your total score.</h2>
+            <h2 class="shadow fromRight" style="font-size: 3vh;">3. You win the game by matching your total score to the
+                random number, you lose the game if your total score goes above the random number.</h2>
+            <h2 class="shadow fromLeft" style="font-size: 2.5vh;">4. The value of each crystal is hidden from you until you
+                click on it.</h2>
+            <h2 class="shadow fromRight" style="font-size: 2vh;">5. Each time when the game starts, the game will change
+                the value of each crystal.</h2>
+        </div>
 
-    <br>
+        <br>
 
-    <div class="row">
-        <div class="col">
-            <!-- Row atop crystals start -->
-            <div class="row nudgeRight">
-                <div class="col">
-                    <h2 class="shadow fromLeft" id="makeSmaller">
-                        Number to match: <span id="matchNumber"></spanid>
-                    </h2>
+        <div class="row">
+            <div class="col">
+                <!-- Row atop crystals start -->
+                <div class="row nudgeRight">
+                    <div class="col">
+                        <h2 class="shadow fromLeft" id="makeSmaller">
+                            Number to match: <span id="matchNumber"></spanid>
+                        </h2>
+                    </div>
+                    <div class="col">
+                        <p class="shadow fromRight"><span id="result">You haven't won or lost yet.<br>Play your first game!</span></p>
+                        <p class="shadow fromLeft">Wins: <span id="wins"></span></p>
+                        <p class="shadow fromRight">Losses: <span id="losses"></span></p>
+                    </div>
+                    <p id="doAThing"></p>
                 </div>
-                <div class="col">
-                    <p class="shadow fromRight"><span id="result">You haven't won or lost yet.<br>Play your first game!</span></p>
-                    <p class="shadow fromLeft">Wins: <span id="wins"></span></p>
-                    <p class="shadow fromRight">Losses: <span id="losses"></span></p>
-                </div>
-            </div>
-            <!-- Row atop crystals end -->
+                <!-- Row atop crystals end -->
 
-            <!-- Crystal select start -->
-            <div class="row fromLeft">
-                <div class="col">
-                    <img id="blueGem" class="crystal-picture shadow" src="./assets/images/blueGem.png" alt="Blue Crystal">
+                <!-- Crystal select start -->
+                <div class="row fromLeft">
+                    <div class="col">
+                        <img id="blueGem" class="crystal-picture shadow" src="./assets/images/blueGem.png" alt="Blue Crystal">
+                    </div>
+                    <div class="col">
+                        <img id="greenGem" class="crystal-picture shadow" src="./assets/images/greenGem.png" alt="Green Crystal">
+                    </div>
+                    <div class="col">
+                        <img id="purpleGem" class="crystal-picture shadow" src="./assets/images/purpleGem.png" alt="Purple Crystal">
+                    </div>
+                    <div class="col">
+                        <img id="redGem" class="crystal-picture red-crystal shadow" src="./assets/images/redGem.png" alt="Red Crystal">
+                    </div>
                 </div>
-                <div class="col">
-                    <img id="greenGem" class="crystal-picture shadow" src="./assets/images/greenGem.png" alt="Green Crystal">
-                </div>
-                <div class="col">
-                    <img id="purpleGem" class="crystal-picture shadow" src="./assets/images/purpleGem.png" alt="Purple Crystal">
-                </div>
-                <div class="col">
-                    <img id="redGem" class="crystal-picture red-crystal shadow" src="./assets/images/redGem.png" alt="Red Crystal">
-                </div>
-            </div>
-            <!-- Crystal select end -->
+                <!-- Crystal select end -->
 
 
-            <br>
+                <br>
 
-            <div class="row nudgeRight fromRight">
+                <div class="row nudgeRight fromRight">
                     <h2 class="shadow">
                         Your total score is:
                     </h2>
-                <div class="col shadow">
-                    <h2 class="shadow" id="totalScore"></h2>
+                    <div class="col shadow">
+                        <h2 class="shadow" id="totalScore"></h2>
+                    </div>
+                    <div class="col">
+
+                    </div>
                 </div>
-                <div class="col">
-                    
-                </div>
+
+
             </div>
 
 
-        </div>
-        
-        
-        <div class="col">
-            <div class="fromRight" id="music-credits">
-                <div id="nudgeMusicText">
-                    <p>Music by BENSOUND <a href="https://www.bensound.com/royalty-free-music">https://www.bensound.com/royalty-free-music</a></p>
-                    <p>Creative Commons — Attribution 3.0 Unported— CC BY 3.0</p>
-                    <p><a href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</a></p>
-                    <p>Music promoted by Audio Library <a href="https://youtu.be/odCWcV6Jv90">https://youtu.be/odCWcV6Jv90</a></p>
+            <div class="col">
+                <div class="fromRight" id="music-credits">
+                    <div id="nudgeMusicText">
+                        <p>Music by BENSOUND <a href="https://www.bensound.com/royalty-free-music">https://www.bensound.com/royalty-free-music</a></p>
+                        <p>Creative Commons — Attribution 3.0 Unported— CC BY 3.0</p>
+                        <p><a href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</a></p>
+                        <p>Music promoted by Audio Library <a href="https://youtu.be/odCWcV6Jv90">https://youtu.be/odCWcV6Jv90</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    
-<script src="./assets/js/script.js" type="text/javascript"></script>
+
+        <script src="./assets/js/script.js" type="text/javascript"></script>
 
 
 </body>
+
 </html>

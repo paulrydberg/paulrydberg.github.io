@@ -2,160 +2,105 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="css/style8.css" /> -->
-    <!-- <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' /> -->
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.css">
-
     <link rel="stylesheet" href="./css/custom.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Akronim|Carrois+Gothic+SC|Ewert|Graduate|Homemade+Apple|Jacques+Francois+Shadow|Maiden+Orange|Montserrat|Montserrat+Subrayada|Mr+Dafoe|Rye|Sancreek|Seaweed+Script|Sedgwick+Ave+Display|Yesteryear|Zilla+Slab+Highlight"
-        rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Cousine|Cutive+Mono|Fira+Mono|IBM+Plex+Mono|Inconsolata|Nanum+Gothic+Coding|Overpass+Mono|Oxygen+Mono|PT+Mono|Roboto+Mono|Share+Tech+Mono|Source+Code+Pro|Space+Mono|Ubuntu+Mono|VT323"
-        rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Barrio|Cabin+Sketch|Fredericka+the+Great|Londrina+Shadow|Love+Ya+Like+A+Sister|Megrim|VT323|Roboto+Mono"
-        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Barrio|Cabin+Sketch|Fredericka+the+Great|Londrina+Shadow|Love+Ya+Like+A+Sister|Megrim|VT323|Roboto+Mono|Quicksand:700"
+        rel="stylesheet">
 
     <title>Paul Rydberg | Portfolio</title>
 
 </head>
 
-
 <body>
+
+
 
     <video autoplay muted loop id="myVideo">
         <source src="video.mp4" type="video/mp4">
         <!-- <p>Video Source <a href="https://youtu.be/CjBoK8f47EI"></a></p> -->
     </video>
 
-    <div class="content">
-        <div class="centerDiv fadeFont" id="changeFont">
-
-            <h1 class="center heading" id="">Paul Rydberg</h1>
-            <h6 class="center subHeading" id="">Professional Web Developer</h6>
-
-
-        </div>
-
+    <div class="video-overlay">
 
     </div>
 
 
-    <div class="content" style="top: 150px;">
 
-        <div class="container">
+    <div class="container mywrapper" id="all-content">
 
-            <div class="row">
-                <div class="col-8">
-                    <h2>Main</h2>
-                </div>
-                <div class="col">
-                    <h2>Aside</h2>
-                </div>
+
+
+
+        <div id="myNotes">
+            <p><a href="http://scrollmagic.io/examples/advanced/section_slides_manual.html">Scroll-Magic & Parallax</a></p>
+            <p><a href="https://www.youtube.com/watch?v=mb8Znxo1cKg">SCROLLBAR</a></p>
+            <p><a href="https://github.com/mattboldt/typed.js/">TypedJS GitHub</a></p>
+            <p><a href="https://mattboldt.com/typed.js/">TypedJs Documentation</a></p>
+            <p><a href="https://www.youtube.com/watch?v=0l2SdoUYB6k">TypedJs Youtube Video</a></p>
+
+
+            <p class="fade-scroll">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus
+                saepe,
+                labore possimus amet
+                eligendi earum sit minima fugit nulla fuga eos nam quibusdam tempore molestiae perferendis placeat a
+                veniam?</p>
+        </div>
+
+
+        <div id="hello-typed">
+            <p>Hey!</p>
+            <p>Hows it going?</p>
+            <p>My name is Paul.</p>
+            <p>I am a web developer.</p>
+            <!-- <p>I would like to help your company come up with the tools to help grow your business.</p> -->
+
+        </div>
+
+        <div class="center" id="helloText">
+            <span class="" id="typed2"></span>
+
+        </div>
+
+    </div>
+
+    <div class="welcome-section content-hidden">
+        <div class="content-wrap">
+            <ul class="fly-in-text center">
+                <li>P</li>
+                <li>A</li>
+                <li>U</li>
+                <li>L</li>
+                <li>'J.'</li>
+
+            </ul>
+            <ul class="fly-in-text2 center">
+                <li>R</li>
+                <li>Y</li>
+                <li>D</li>
+                <li>B</li>
+                <li>E</li>
+                <li>R</li>
+                <li>G</li>
+            </ul>
+
+            <p class="sub-heading">WEB-DEVELOPER // ENTREPRENEUR</p>
+            <a href="#" class="enter-button" id="enter-site" style=""><span id="typed"></span></a>
+
+            <div id="enter-typed">
+                <p>Enter</p>
             </div>
 
-
         </div>
     </div>
 
-    <!-- <div class="container">
-        <div class="content" id="overallMenu">
-            <ul class="ca-menu">
-                <li>
-                    <a href="#">
-                        <span class="ca-icon">F</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Exceptional Service</h2>
-                            <h3 class="ca-sub">Personalized to your needs</h3>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="ca-icon">H</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Creative Storytelling</h2>
-                            <h3 class="ca-sub">Advanced use of technology</h3>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="ca-icon" id="heart">N</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Infographical Education</h2>
-                            <h3 class="ca-sub">Understanding visually</h3>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="ca-icon">K</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Sophisticated Team</h2>
-                            <h3 class="ca-sub">Professionals in action</h3>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="ca-icon">L</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Unconditional Support</h2>
-                            <h3 class="ca-sub">24/7 for you needs</h3>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
-
-    <!-- <img class="bg" src="./background.png" alt=""> -->
-    <!-- <div class="bg"></div>
-    <div class="container relative center bigger">
-        <h1>Paul J. Rydberg</h1>
-        <h3>I am a Web Developer. My main project I've been developing for the laqst year has my trading algorith.</h3>
-    </div> -->
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
-    <!-- <script src="./jqueryPlugins/textTailor/jquery.texttailor.js"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="./javascript.js"></script>
 
-
-    <script type="text/javascript">
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAPau9vvY-PAiAHbwHqt0x3rqusKcGgw08",
-            authDomain: "classroom-test-68049.firebaseapp.com",
-            databaseURL: "https://classroom-test-68049.firebaseio.com",
-            projectId: "classroom-test-68049",
-            storageBucket: "classroom-test-68049.appspot.com",
-            messagingSenderId: "874038179323"
-        };
-        firebase.initializeApp(config);
-
-
-
-        //moment().format();
-        //https://momentjs.com/docs/#/parsing/unix-timestamp/
-    </script>
 </body>
 
 </html>
