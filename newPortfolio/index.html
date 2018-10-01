@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/custom.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="./libraries/anime/anime.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Bangers|Barrio|Cabin+Sketch|Fredericka+the+Great|Londrina+Shadow|Love+Ya+Like+A+Sister|Megrim|VT323|Roboto+Mono|Quicksand:700"
         rel="stylesheet">
@@ -19,37 +20,52 @@
 <body>
 
 
-
     <video autoplay muted loop id="myVideo">
         <source src="video.mp4" type="video/mp4">
         <!-- <p>Video Source <a href="https://youtu.be/CjBoK8f47EI"></a></p> -->
     </video>
 
-    <div class="video-overlay">
+    <div class="video-overlay"></div>
 
-    </div>
 
 
 
     <div class="container mywrapper" id="all-content">
 
-
+        <div id="main-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias soluta quasi animi vel delectus,
+            accusantium iure numquam consequatur fugit, explicabo corporis sit eligendi commodi? Illum maiores ex autem
+            tempore.
+        </div>
 
 
         <div id="myNotes">
+
+
+
             <p><a href="http://scrollmagic.io/examples/advanced/section_slides_manual.html">Scroll-Magic & Parallax</a></p>
             <p><a href="https://www.youtube.com/watch?v=mb8Znxo1cKg">SCROLLBAR</a></p>
             <p><a href="https://github.com/mattboldt/typed.js/">TypedJS GitHub</a></p>
             <p><a href="https://mattboldt.com/typed.js/">TypedJs Documentation</a></p>
             <p><a href="https://www.youtube.com/watch?v=0l2SdoUYB6k">TypedJs Youtube Video</a></p>
 
+            <br>
 
-            <p class="fade-scroll">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus
-                saepe,
-                labore possimus amet
-                eligendi earum sit minima fugit nulla fuga eos nam quibusdam tempore molestiae perferendis placeat a
-                veniam?</p>
+            <p><a href="http://animejs.com/documentation/#cssProperties">Anime Documentation</a></p>
+            <p><a href="https://www.youtube.com/watch?v=qT2Vq9V8UHA">Anime Tutorial</a></p>
+            <p><a href="https://www.youtube.com/results?search_query=anime+js">Anime Tutorials</a></p>
+            <p><a href="./libraries/anime/documentation/examples/anime-complex-properties.html">Example to modify</a></p>
+
+
+            <p><a href="https://codepen.io/ashthornton/pen/KRQbMO">Cool Distortion Transition</a></p>
+
+            <p><a href="https://codepen.io/edankwan/full/emqgpr">Realistic Globe</a></p>
+
+            <p><a href="https://css-tricks.com/creating-photorealistic-3d-graphics-web/">Crazy Shit</a></p>
+
+
         </div>
+
 
 
         <div id="hello-typed">
@@ -66,9 +82,14 @@
 
         </div>
 
+
+
     </div>
 
     <div class="welcome-section content-hidden">
+
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+        <canvas id="canvas2">Canvas is not supported in your browser.</canvas>
         <div class="content-wrap">
             <ul class="fly-in-text center">
                 <li>P</li>
@@ -94,6 +115,8 @@
             <div id="enter-typed">
                 <p>Enter</p>
             </div>
+
+
 
         </div>
     </div>

@@ -3,10 +3,21 @@
   padding: 0;
 }
 
+.notVisible {
+  color: rgba(255, 255, 255, 0.342);
+}
+
 body {
   font-family: 'Quicksand';
   margin: 0;
   /* overflow: hidden; */
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,6 +38,10 @@ body {
   bottom: 0;
   min-width: 110%;
   min-height: 110%;
+}
+
+#myNotes {
+  display: none;
 }
 
 .video-overlay {
@@ -213,6 +228,19 @@ body {
 }
 
 #helloText {
-  margin-top: 27%;
+  margin-top: 36%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 450%;
+}
+
+#helloText {
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+#main-content {
+  transition: 1s opacity;
+  opacity: 0;
+  display: none;
 }
