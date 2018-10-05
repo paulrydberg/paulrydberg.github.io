@@ -149,6 +149,50 @@ var update = function() {
 
 update();
 
+function otherMiscFunctions() {
+  hideFullFledge();
+  var specificInitialValue = anime({
+    targets: '#anythingFrom1',
+    translateX: [-850, 0],
+    delay: 1300,
+    direction: 'alternate',
+    loop: false,
+    complete: function(anim) {
+      setTimeout(showFullFledge, 200);
+    }
+  });
+}
+
+var showMainFade = () => {
+  $('.ex span').css('opacity', '1');
+};
+
+var text = 'What can I code for you?';
+// console.log(text.length);
+for (var i = 0; i < text.length; i++) {
+  $('.ex').append('<span>' + text[i] + '</span>');
+  // console.log(text[i]);
+}
+
+function hideFullFledge() {
+  var specificInitialValue = anime({
+    targets: '#anythingFrom2',
+    translateX: [-850, -850],
+    direction: 'alternate',
+    loop: false
+  });
+}
+
+function showFullFledge() {
+  var specificInitialValue = anime({
+    targets: '#anythingFrom2',
+    translateX: [-850, 0],
+    delay: 1000,
+    direction: 'alternate',
+    loop: false
+  });
+}
+
 function myNotesFunc() {
   $('#myNotes').show();
   $('#hello-typed').hide();
@@ -156,10 +200,11 @@ function myNotesFunc() {
 }
 
 function pageEnteredFast() {
-  $('#hello-typed').hide();
+  //$('#hello-typed').hide();
   $('#all-content').show();
-  $('#intro').hide();
+  //$('#intro').hide();
   fadeoutHide();
+  //otherMiscFunctions();
 }
 
 function pageEnteredLong() {
@@ -192,19 +237,25 @@ function fadeoutHello() {
 }
 
 function fadeoutHide() {
-  document.getElementById('helloText').style.display = 'none';
-  document.getElementById('main-content').style.display = 'inherit';
-  document.getElementById('main-content').style.visibility = 'hidden';
   $('#intro').hide();
+  //document.getElementById('helloText').style.display = 'none';
+  document.getElementById('main-content').style.display = 'inherit';
+  //document.getElementById('main-content').style.visibility = 'hidden';
+  //showMainFade();
+  //$('#intro').hide();
 
   setTimeout(fadeInAllContent, 100);
 }
 
 function fadeInAllContent() {
+  showMainFade();
   document.getElementById('main-content').style.visibility = 'visible';
   document.getElementById('main-content').style.opacity = '1';
-  coolText();
+  //coolText();
+  //otherMiscFunctions();
   siteEntered = 3;
+
+  //showMainFade().then(otherMiscFunctions());
 }
 
 function coolText() {
@@ -278,6 +329,7 @@ setTimeout(userTimedEnter, 4000);
 
 $(document).ready(function() {
   $('#enter-site').on('click', function() {
+    //myNotesFunc();
     regularPageLoad();
     function regularPageLoad() {
       if (introWatched === 0) {
@@ -285,6 +337,7 @@ $(document).ready(function() {
         //pageEnteredFast
         pageEnteredFast();
       } else {
+        siteEntered = 1;
         pageEnteredLong();
       }
     }
@@ -292,7 +345,7 @@ $(document).ready(function() {
 });
 //////////////////////////////////////////////////////////////////
 
-function simulateEnter() {
+function simulateClick() {
   document.getElementById('enter-site').click();
 }
 
@@ -302,7 +355,7 @@ document.addEventListener('keyup', function(event) {
   event.preventDefault();
   if (event.keyCode === 13 && siteEntered === 0) {
     siteEntered = 1;
-    simulateEnter();
+    simulateClick();
   }
 
   let key = String.fromCharCode(event.keyCode);

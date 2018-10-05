@@ -1,0 +1,155 @@
+@import url('./bootstrap/css/bootstrap.min.css');
+@import url('./fonts/mermaid/style.css');
+@import url('./fonts/vogue/style.css');
+@import url('./videoBG.css');
+@import url('./underlineMagic.css');
+@import url('./hideScroll.css');
+@import url('./introFadeIn.css');
+@import url('./canCodeFade.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand';
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+#myNotes {
+  display: none;
+}
+
+.mywrapper {
+  position: absolute;
+  color: #fff;
+  display: none;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  font-weight: lighter;
+}
+
+.center {
+  text-align: center;
+}
+
+#helloText {
+  margin-top: 30%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 450%;
+  color: #fff;
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+#main-content {
+  transition: 1s opacity;
+  opacity: 0;
+  display: none;
+}
+
+#myNavbar {
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(7%, -0%);
+}
+
+.svg-wrapper {
+  font-family: 'Vogue-Regular';
+  font-size: 1vh;
+
+  height: 60px;
+  /* margin: 0 auto;
+  position: relative; */
+  top: 50%;
+  margin-top: 35px;
+  /* transform: translateY(-50%); */
+  width: 220px;
+  display: inline-block;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -325;
+  stroke-width: 8px;
+  stroke: #ffffff5e;
+}
+
+.text {
+  text-align: center;
+  color: #fff;
+  /* font-family: 'Roboto Condensed'; */
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -46px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+#intro {
+  font-family: 'Mermaid-Bold';
+  font-size: 24px;
+}
+
+#pageTop {
+  font-family: 'Mermaid-Bold';
+  font-size: 24px;
+}
+
+#whatCanCode {
+  margin-top: 19%;
+  font-size: 52px;
+}
+
+.svgIcons {
+  margin-top: 3%;
+}
+
+#anythingFrom {
+  font-size: 40px;
+  margin-top: -10px;
+  line-height: 110%;
+}
+
+#anythingFrom1 {
+  display: inline-block;
+}
+#anythingFrom2 {
+  display: inline-block;
+  color: #00aeff;
+}
+
+#myPic {
+  float: left;
+  margin: 0;
+  margin-bottom: -4px;
+  padding-right: 10px;
+}
+
+.links {
+  display: none;
+}

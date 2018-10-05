@@ -5,23 +5,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="./css/custom.css">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script src="./libraries/anime/anime.min.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Barrio|Cabin+Sketch|Fredericka+the+Great|Londrina+Shadow|Love+Ya+Like+A+Sister|Megrim|VT323|Roboto+Mono|Quicksand:700|Slabo"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/custom.css">
     <title>Paul Rydberg | Portfolio</title>
-
 </head>
 
 <body>
 
 
     <video autoplay muted loop id="myVideo">
-        <source src="video.mp4" type="video/mp4">
+        <source src="./assets/images/video.mp4" type="video/mp4">
         <!-- <p>Video Source <a href="https://youtu.be/CjBoK8f47EI"></a></p> -->
     </video>
 
@@ -71,7 +64,7 @@
             <!-- <embed type="image/svg+xml" src="me.svg" width="30%" /> -->
             <!-- <img src="me.svg" /> -->
             <div id="intro">
-                <object type="image/svg+xml" data="me.svg" width="20%" id="myPic"></object>
+                <object type="image/svg+xml" data="./assets/images/me.svg" width="20%" id="myPic"></object>
 
                 <p>
                     I've always been very adept to learning new things and strive to be someone who is
@@ -128,88 +121,87 @@
             <!-- https://vecta.io/blog/best-way-to-embed-svg/ -->
 
 
-            <div id="pageTop">
-                <div class="row">
-                    <div class="col" id="whatCanCode">
-                        <p>What can I code for you?</p>
-                        <p id="anythingFrom">Anything from a simple landing page to a full fledged web app.</p>
-                    </div>
-                    <div class="col svgIcons">
+            <div id="pageTop" class="row">
+                <div class="col" id="whatCanCode">
+                    <p class="ex"></p>
+                    <div id="anythingFrom">
+                        <div id="anythingFrom1">Anything from a simple landing page
+                            <div id="anythingFrom2"> to a full fledged web app.</div>
+                        </div>
+                        <p><a href="https://codepen.io/fay-lisa/pen/QKWkLA">Fade In</a></p>
+                        <p><a href="https://codepen.io/drewhaas/pen/rOpERL">Other Fade In Effect</a></p>
 
-                        <embed type="image/svg+xml" src="./svg/landing-page (2).svg" width="110%" />
-                        <p class="links">Icons From <a href="https://www.flaticon.com/free-icon/optimization_821274">Here</a></p>
+
                     </div>
+
                 </div>
 
-                <br>
 
-                <br>
+                <div class="col svgIcons">
 
-                <br>
-
-                <br>
-
-                <br>
-
-
-                <a href="http://appstarter.webflow.io/">Example 1</a>
-                <a href="http://splash-template.webflow.io/">Example 2</a>
-
+                    <embed type="image/svg+xml" src="./assets/images/svg/landing-page (2).svg" width="110%" />
+                    <p class="links">Icons From <a href="https://www.flaticon.com/free-icon/optimization_821274">Here</a></p>
+                </div>
             </div>
 
 
-
-        </div>
-
-
-        <div id="myNotes">
-
-
-
-            <p><a href="http://scrollmagic.io/examples/advanced/section_slides_manual.html">Scroll-Magic & Parallax</a></p>
-            <p><a href="https://www.youtube.com/watch?v=mb8Znxo1cKg">SCROLLBAR</a></p>
-            <p><a href="https://github.com/mattboldt/typed.js/">TypedJS GitHub</a></p>
-            <p><a href="https://mattboldt.com/typed.js/">TypedJs Documentation</a></p>
-            <p><a href="https://www.youtube.com/watch?v=0l2SdoUYB6k">TypedJs Youtube Video</a></p>
-
-            <br>
-
-
-            <p><a href="https://codepen.io/seanmccaffery/pen/xBpbG">Nav Animations</a></p>
-            <p><a href="https://www.hongkiat.com/blog/svg-animations/">Other SVG Animations</a></p>
-
-            <br>
-
-            <p><a href="http://animejs.com/documentation/#cssProperties">Anime Documentation</a></p>
-            <p><a href="https://www.youtube.com/watch?v=qT2Vq9V8UHA">Anime Tutorial</a></p>
-            <p><a href="https://www.youtube.com/results?search_query=anime+js">Anime Tutorials</a></p>
-            <p><a href="./libraries/anime/documentation/examples/anime-complex-properties.html">Example to modify</a></p>
-
-
-            <p><a href="https://codepen.io/ashthornton/pen/KRQbMO">Cool Distortion Transition</a></p>
-
-            <p><a href="https://codepen.io/edankwan/full/emqgpr">Realistic Globe</a></p>
-
-            <p><a href="https://css-tricks.com/creating-photorealistic-3d-graphics-web/">Crazy Shit</a></p>
-
-
         </div>
 
 
 
-        <div id="hello-typed">
-            <p>Hey!</p>
-            <p>Hows it going?</p>
-            <p>My name is Paul.</p>
-            <p>I am a web developer.</p>
-            <!-- <p>I would like to help your company come up with the tools to help grow your business.</p> -->
+    </div>
 
-        </div>
 
-        <div class="center" id="helloText">
-            <span class="" id="typed2"></span>
+    <div id="myNotes">
 
-        </div>
+
+        <a href="http://appstarter.webflow.io/">Example 1</a>
+        <a href="http://splash-template.webflow.io/">Example 2</a>
+
+        <p><a href="http://scrollmagic.io/examples/advanced/section_slides_manual.html">Scroll-Magic & Parallax</a></p>
+        <p><a href="https://www.youtube.com/watch?v=mb8Znxo1cKg">SCROLLBAR</a></p>
+        <p><a href="https://github.com/mattboldt/typed.js/">TypedJS GitHub</a></p>
+        <p><a href="https://mattboldt.com/typed.js/">TypedJs Documentation</a></p>
+        <p><a href="https://www.youtube.com/watch?v=0l2SdoUYB6k">TypedJs Youtube Video</a></p>
+
+        <br>
+
+
+        <p><a href="https://codepen.io/seanmccaffery/pen/xBpbG">Nav Animations</a></p>
+        <p><a href="https://www.hongkiat.com/blog/svg-animations/">Other SVG Animations</a></p>
+
+        <br>
+
+        <p><a href="http://animejs.com/documentation/#cssProperties">Anime Documentation</a></p>
+        <p><a href="https://www.youtube.com/watch?v=qT2Vq9V8UHA">Anime Tutorial</a></p>
+        <p><a href="https://www.youtube.com/results?search_query=anime+js">Anime Tutorials</a></p>
+        <p><a href="./libraries/anime/documentation/examples/anime-complex-properties.html">Example to modify</a></p>
+
+
+        <p><a href="https://codepen.io/ashthornton/pen/KRQbMO">Cool Distortion Transition</a></p>
+
+        <p><a href="https://codepen.io/edankwan/full/emqgpr">Realistic Globe</a></p>
+
+        <p><a href="https://css-tricks.com/creating-photorealistic-3d-graphics-web/">Crazy Shit</a></p>
+
+
+    </div>
+
+
+
+    <div id="hello-typed">
+        <p>Hey!</p>
+        <p>Hows it going?</p>
+        <p>My name is Paul.</p>
+        <p>I am a web developer.</p>
+        <!-- <p>I would like to help your company come up with the tools to help grow your business.</p> -->
+
+    </div>
+
+    <div class="center" id="helloText">
+        <span class="" id="typed2"></span>
+
+    </div>
 
 
 
@@ -250,8 +242,12 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="./javascript.js"></script>
+    <script src="./assets/js/plugins/jquery-3.3.1.js"></script>
+    <script src="./assets/js/plugins/typed.js"></script>
+    <script src="./assets/js/plugins/animejs/anime.min.js"></script>
+    <script src="./assets/js/theMatrix.js"></script>
+    <script src="./assets/js/coolTextHighlight.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
 
