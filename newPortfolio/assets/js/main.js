@@ -1,15 +1,24 @@
 var cursorBlink = '|';
 
+let fadeDuration = 1200;
+
 function otherMiscFunctions() {
+  $('#myNavbar').fadeOut();
+  setTimeout(showNavBar, 500);
+  setTimeout(whatCanCode, 1000);
+
   hideFullFledge();
   var specificInitialValue = anime({
     targets: '#anythingFrom1',
-    translateX: [-850, 0],
-    delay: 1300,
+    translateX: [-1150, 0],
+    delay: 4500,
+    opacity: 1,
+    duration: fadeDuration,
     direction: 'alternate',
     loop: false,
     complete: function(anim) {
-      setTimeout(showFullFledge, 200);
+      //setTimeout(showFullFledge, 200);
+      showFullFledge();
     }
   });
 }
@@ -22,17 +31,23 @@ var showNavBar = () => {
   $('#myNavbar').fadeIn();
 };
 
-var text = 'What can I code for you?';
+var text = 'What can I code for you';
+var wordsArray = text.split(' ');
+
+console.log(wordsArray);
+
 // console.log(text.length);
-for (var i = 0; i < text.length; i++) {
-  $('.ex').append('<span>' + text[i] + '</span>');
+for (var i = 0; i < wordsArray.length - 1; i++) {
+  $('.ex').append('<span>' + wordsArray[i] + ' </span>');
   // console.log(text[i]);
 }
+$('.ex').append('<span>' + wordsArray[wordsArray.length - 1] + '</span>');
+$('.ex').append('<span>?</span>');
 
 function hideFullFledge() {
   var specificInitialValue = anime({
     targets: '#anythingFrom2',
-    translateX: [-850, -850],
+    translateX: [-1150, -1150],
     direction: 'alternate',
     loop: false
   });
@@ -41,10 +56,28 @@ function hideFullFledge() {
 function showFullFledge() {
   var specificInitialValue = anime({
     targets: '#anythingFrom2',
-    translateX: [-850, 0],
-    delay: 1000,
+    translateX: [-1150, 0],
+    duration: fadeDuration,
+    opacity: 1,
+    delay: 1100,
     direction: 'alternate',
     loop: false
+  });
+}
+
+function showLanding() {
+  var specificInitialValue = anime({
+    targets: '#landingPage',
+    translateX: [1150, 0],
+    duration: fadeDuration,
+    opacity: 1,
+    delay: 100,
+    direction: 'alternate',
+    loop: false,
+    complete: function(anim) {
+      //setTimeout(showFullFledge, 200);
+      showFullFledge();
+    }
   });
 }
 
@@ -106,7 +139,9 @@ function fadeInAllContent() {
   showMainFade();
   document.getElementById('main-content').style.visibility = 'visible';
   document.getElementById('main-content').style.opacity = '1';
-  coolText();
+  otherMiscFunctions();
+
+  //coolText();
   //otherMiscFunctions();
   siteEntered = 3;
 
