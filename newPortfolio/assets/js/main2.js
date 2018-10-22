@@ -7,31 +7,25 @@ $(document).ready(function() {
   $('#storyNav').click(function() {
     $('#pageTop').hide();
     $('#workShown').hide();
-    $('#blogShown').hide();
     $('#storyShown').show();
     //storyShown
   });
   $('#workNav').click(function() {
     $('#pageTop').hide();
     $('#storyShown').hide();
-    $('#blogShown').hide();
     $('#workShown').show();
     //storyShown
   });
-  $('#blogNav').click(function() {
-    $('#pageTop').hide();
-    $('#storyShown').hide();
-    $('#workShown').hide();
-    $('#blogShown').show();
-
-    //blogShown
-  });
-  // blogShown
 });
 
 let fadeDuration = 1000;
 
-function fedLeftStart() {
+function otherMiscFunctions() {
+  setTimeout(showNavBar, 500);
+  //setTimeout(whatCanCode, 1000);
+  setTimeout(showSVGfade, 5500);
+
+  hideFullFledge();
   var specificInitialValue = anime({
     targets: '#anythingFrom1',
     translateX: [-1150, 0],
@@ -46,31 +40,16 @@ function fedLeftStart() {
   });
 }
 
+var showMainFade = () => {
+  $('.ex span').css('opacity', '1');
+};
+
 var showSVGfade = () => {
   $('#svgImages').css('opacity', '1');
 };
 
-
 var showNavBar = () => {
-  $('#myNavbar')
-    .fadeIn()
-    .then(fedLeftStart())
-    .then(showSVGfade());
-};
-
-function step1(newFunc) {
-  showNavBar();
-  newFunc();
-}
-
-function otherMiscFunctions() {
-  showNavBar();
-
-  hideFullFledge();
-}
-
-var showMainFade = () => {
-  $('.ex span').css('opacity', '1');
+  $('#myNavbar').fadeIn();
 };
 
 var text = 'What can I code for you';
@@ -108,7 +87,7 @@ function showFullFledge() {
     direction: 'alternate',
     loop: false,
     complete: function(anim) {
-      showImage();
+      hideImage();
     }
   });
 }
@@ -147,6 +126,12 @@ function showLanding() {
       showFullFledge();
     }
   });
+}
+
+function myNotesFunc() {
+  $('#hello-typed').hide();
+  $('#all-content').show();
+  $('#myNotes').show();
 }
 
 function pageEnteredFast() {

@@ -12,14 +12,21 @@
   padding: 0;
 }
 
+.hideIt {
+  display: none;
+}
+
 body {
   font-family: 'Quicksand';
   margin: 0;
-  /* overflow: hidden; */
 }
 
 #myNotes {
   display: none;
+}
+
+#storyShown {
+  margin-top: 50px;
 }
 
 .mywrapper {
@@ -52,6 +59,11 @@ body {
   display: none;
 }
 
+#svgImages {
+  transition: 1s opacity;
+  opacity: 0;
+}
+
 #myNavbar {
   opacity: 1;
   top: 50%;
@@ -62,27 +74,28 @@ body {
 .svg-wrapper {
   font-family: 'Vogue-Regular';
   font-size: 1vh;
-
   height: 60px;
-  /* margin: 0 auto;
-  position: relative; */
   top: 50%;
   margin-top: 35px;
-  /* transform: translateY(-50%); */
   width: 220px;
   display: inline-block;
+}
+
+.hideIt {
+  opacity: 1;
+}
+
+.hideIt.show {
+  opacity: 1;
+  transition: 1s;
 }
 
 .svg-wrapper-active {
   font-family: 'Vogue-Regular';
   font-size: 1vh;
-
   height: 60px;
-  /* margin: 0 auto;
-  position: relative; */
   top: 50%;
   margin-top: 35px;
-  /* transform: translateY(-50%); */
   width: 220px;
   display: inline-block;
 }
@@ -98,7 +111,6 @@ body {
 .text {
   text-align: center;
   color: #fff;
-  /* font-family: 'Roboto Condensed'; */
   font-size: 22px;
   letter-spacing: 8px;
   line-height: 32px;
@@ -165,10 +177,6 @@ body {
   opacity: 0;
 }
 
-#landingPage {
-  opacity: 1;
-}
-
 #myPic {
   float: left;
   margin: 0;
@@ -178,4 +186,14 @@ body {
 
 .links {
   display: none;
+}
+
+.workThumbs {
+  width: 100%;
+  border: 3px solid #ffffff46;
+  margin-bottom: 20px;
+}
+
+#blogDate {
+  font-size: 4vh;
 }
