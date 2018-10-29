@@ -5,28 +5,39 @@ $(document).ready(function() {
     location.reload();
   });
   $('#storyNav').click(function() {
+    $('.hideFullscreen').hide();
+    $('.smallergithubBottom').hide();
     $('#pageTop').hide();
     $('#workShown').hide();
     $('#blogShown').hide();
+    $('.smallergithub').hide();
     $('#storyShown').show();
-    //storyShown
+    $('.hideFullscreen').hide();
+
   });
   $('#workNav').click(function() {
     $('#pageTop').hide();
     $('#storyShown').hide();
     $('#blogShown').hide();
+    $('.smallergithub').hide();
     $('#workShown').show();
-    //storyShown
+    $('.smallergithubBottom').show();
+    if (window.matchMedia('(max-width: 1025px)').matches) {
+      $('.hideFullscreen').show();
+    }
+    if (window.matchMedia('(max-width: 769px)').matches) {
+      $('.turtlePower').css('margin-left', '7px');
+    }
   });
   $('#blogNav').click(function() {
+    $('.hideFullscreen').hide();
+    $('.smallergithubBottom').hide();
     $('#pageTop').hide();
     $('#storyShown').hide();
     $('#workShown').hide();
+    $('.smallergithub').hide();
     $('#blogShown').show();
-
-    //blogShown
   });
-  // blogShown
 });
 
 let fadeDuration = 1000;
@@ -49,7 +60,6 @@ function fedLeftStart() {
 var showSVGfade = () => {
   $('#svgImages').css('opacity', '1');
 };
-
 
 var showNavBar = () => {
   $('#myNavbar')
@@ -212,13 +222,10 @@ setTimeout(userTimedEnter, 4000);
 
 $(document).ready(function() {
   $('#enter-site').on('click', function() {
-    //myNotesFunc();
     regularPageLoad();
 
     function regularPageLoad() {
       if (introWatched === 0) {
-        //myNotesFunc
-        //pageEnteredFast
         pageEnteredFast();
       } else {
         siteEntered = 1;

@@ -79,6 +79,7 @@ body {
   margin-top: 35px;
   width: 220px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .hideIt {
@@ -116,6 +117,10 @@ body {
   line-height: 32px;
   position: relative;
   top: -46px;
+}
+
+.hideFullscreen {
+  display: none;
 }
 
 @keyframes draw {
@@ -196,4 +201,520 @@ body {
 
 #blogDate {
   font-size: 4vh;
+}
+
+.smallergithub {
+  width: 70px;
+  float: right;
+  margin-top: 40px;
+}
+
+.smallergithubBottom {
+  display: none;
+  float: right;
+  width: 100px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  margin-top: -100px;
+}
+
+.fly-in-text {
+    margin-left: -5px;
+  }
+
+
+@media screen and (max-width: 1025px) {
+
+  .fly-in-text {
+    margin-left: 20px;
+  }
+
+  .fly-in-text2 {
+    width: 600px;
+  }
+
+
+
+  #helloText {
+    margin-top: 650px;
+  }
+
+  #south-park {
+    margin-left: 28.5px;
+  }
+
+  #myNavbar {
+    margin-left: -40px;
+  }
+
+  .smallergithub {
+    margin-right: 80px;
+    margin-top: 1030px;
+    width: 150px;
+  }
+
+  .ex {
+    width: 920px;
+    font-size: 80px;
+    text-align: center;
+  }
+
+  #anythingFrom {
+    font-size: 65px;
+    width: 920px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .svgIcons {
+    margin-top: -80px;
+    margin-left: 140px;
+  }
+
+  #fullWebApp {
+    width: 130%;
+  }
+
+  #storyShown {
+    margin-top: 10px;
+    width: 900px;
+    font-size: 25px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 30px;
+  }
+
+  #friend {
+    margin-left: 30px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    width: 900px;
+    font-size: 23px;
+  }
+
+  .smallergithubBottom {
+    margin-top: 0px;
+  }
+
+  #workShown {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+
+
+
+@media screen and (max-width: 769px) {
+
+  .fly-in-text {
+    margin-left: 35px;
+  }
+
+  .fly-in-text2 {
+    width: 600px;
+    margin-left: 30px;
+  }
+
+  #helloText {
+    margin-top: 500px;
+  }
+
+  #south-park {
+    margin-left: 7px;
+    width: 100%;
+  }
+
+  .fix-align {
+    display: inline-block;
+  }
+
+  #myNavbar {
+    margin-left: -0px;
+    margin-top: 40px;
+    width: 720px;
+  }
+
+  .svg-wrapper {
+    margin-left: -60px;
+  }
+
+  .hideSVGBUtton {
+    display: none;
+  }
+
+  .smallergithub {
+    margin-right: 500px;
+    margin-top: 730px;
+    width: 150px;
+    display: none;
+  }
+
+  .smallergithubBottom {
+    display: none;
+    width: 100px;
+    float: right;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-top: 0px;
+  }
+
+  .ex {
+    width: 720px;
+    font-size: 65px;
+    text-align: center;
+    margin-left: -15px;
+    margin-top: -150px;
+  }
+
+  #anythingFrom {
+    font-size: 45px;
+    width: 720px;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: -15px;
+  }
+
+  .svgIcons {
+    margin-top: -80px;
+    margin-left: 140px;
+  }
+
+  #fullWebApp {
+    width: 110%;
+    margin-left: -70px;
+    margin-top: 100px;
+  }
+
+  #storyShown {
+    width: 740px;
+    font-size: 25px;
+    margin-top: -50px;
+  }
+
+  #workShown {
+    margin-top: -45px;
+  }
+
+  #blogShown {
+    margin-top: -65px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 10px;
+  }
+
+  #friend {
+    margin-left: 9px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    width: 740px;
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .content-wrap {
+    margin-left: 10px;
+  }
+
+  .fly-in-text {
+    width: 360px;
+    font-size: 12px;
+    margin-left: 0px;
+
+
+  }
+
+  #helloText {
+    margin-top: 400px;
+  }
+
+
+  .fly-in-text2 {
+    width: 360px;
+    font-size: 8px;
+        margin-left: 0px;
+
+  }
+
+  .sub-heading {
+    font-size: 15px;
+  }
+
+  #myNavbar {
+    margin-left: -45px;
+    margin-top: 30px;
+    width: 200%;
+  }
+
+  .svg-wrapper {
+    margin-left: -43px;
+    height: 60px;
+    top: 50%;
+    margin-top: 30px;
+    width: 140px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .hideSVGBUtton {
+    display: none;
+  }
+
+  .smallergithub {
+    margin-right: 500px;
+    margin-top: 730px;
+    width: 150px;
+    display: none;
+  }
+
+  .smallergithubBottom {
+    display: none;
+
+    width: 100px;
+    float: right;
+  }
+
+  .ex {
+    width: 365px;
+    font-size: 45px;
+    text-align: center;
+    margin-left: -7.5px;
+    margin-top: -100px;
+  }
+
+  #anythingFrom {
+    display: inline-block;
+    font-size: 35px;
+    text-align: left;
+    width: 390px;
+    margin-top: 50px;
+    margin-left: 3px;
+  }
+
+  #anythingFrom2 {
+    display: inline;
+    color: #00aeff;
+    opacity: 0;
+  }
+
+  .svgIcons {
+    margin-top: -30px;
+    margin-left: 130px;
+  }
+
+  #fullWebApp {
+    width: 160%;
+    margin-left: -130px;
+  }
+
+  #storyShown {
+    width: 400px;
+    font-size: 16px;
+    margin-left: -5px;
+    margin-top: -65px;
+  }
+
+  #workShown {
+    margin-top: -60px;
+    margin-left: 5px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 10px;
+    margin-top: -30px;
+  }
+
+  #friend {
+    margin-left: 10px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    margin-top: -70px;
+
+    width: 400px;
+    font-size: 16px;
+    margin-left: -5px;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  .content-wrap {
+    margin-left: 10px;
+  }
+
+  .fly-in-text {
+    width: 360px;
+    font-size: 12px;
+  }
+
+  .fly-in-text2 {
+    width: 360px;
+    font-size: 8px;
+  }
+
+  #helloText {
+    margin-top: 350px;
+  }
+
+  .sub-heading {
+    font-size: 15px;
+  }
+
+  #myNavbar {
+    margin-left: -49px;
+    margin-top: 30px;
+    width: 200%;
+  }
+
+  .svg-wrapper {
+    margin-left: -44px;
+    height: 60px;
+    top: 50%;
+    margin-top: 20px;
+    width: 135px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .hideSVGBUtton {
+    display: none;
+  }
+
+  .smallergithub {
+    margin-right: 500px;
+    margin-top: 730px;
+    width: 150px;
+    display: none;
+  }
+
+  .smallergithubBottom {
+    width: 100px;
+    float: right;
+  }
+
+  .ex {
+    width: 365px;
+    font-size: 45px;
+    text-align: center;
+    margin-left: -26.5px;
+    margin-top: -100px;
+  }
+
+  #anythingFrom {
+    display: inline-block;
+    font-size: 35px;
+    text-align: left;
+    width: 370px;
+    margin-top: 50px;
+    margin-left: -16.5px;
+  }
+
+  #anythingFrom2 {
+    display: inline;
+    color: #00aeff;
+    opacity: 0;
+  }
+
+  .svgIcons {
+    margin-top: -30px;
+    margin-left: 140px;
+  }
+
+  #fullWebApp {
+    width: 170%;
+    margin-left: -130px;
+  }
+
+  #storyShown {
+    width: 370px;
+    font-size: 16px;
+    margin-left: -5px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 10px;
+    margin-top: -30px;
+  }
+
+  #friend {
+    margin-left: 10px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    width: 370px;
+    font-size: 16px;
+    margin-left: -5px;
+  }
 }

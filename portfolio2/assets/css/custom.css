@@ -14,7 +14,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   font-family: 'Quicksand';
 }
 
@@ -75,6 +75,7 @@ body {
   margin-top: 35px;
   width: 220px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .hideIt {
@@ -188,4 +189,471 @@ body {
 
 #blogDate {
   font-size: 4vh;
+}
+
+.smallergithub {
+  width: 70px;
+  float: right;
+  margin-top: 40px;
+}
+
+.hideFullscreen {
+  display: none;
+}
+
+.smallergithubBottom {
+  display: none;
+  float: right;
+  width: 100px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  margin-top: -100px;
+}
+
+@media screen and (max-width: 1025px) {
+  .fly-in-text2 {
+    width: 600px;
+  }
+
+  #helloText {
+    margin-top: 650px;
+  }
+
+  #south-park {
+    margin-left: 28.5px;
+  }
+
+  #myNavbar {
+    margin-left: -40px;
+  }
+
+  .smallergithub {
+    margin-right: 80px;
+    margin-top: 1030px;
+    width: 150px;
+  }
+
+  .ex {
+    width: 920px;
+    font-size: 80px;
+    text-align: center;
+  }
+
+  #anythingFrom {
+    font-size: 65px;
+    width: 920px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .svgIcons {
+    margin-top: -80px;
+    margin-left: 140px;
+  }
+
+  #fullWebApp {
+    width: 130%;
+  }
+
+  #storyShown {
+    margin-top: 10px;
+    width: 900px;
+    font-size: 25px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 30px;
+  }
+
+  #friend {
+    margin-left: 30px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    width: 900px;
+    font-size: 23px;
+  }
+
+  .smallergithubBottom {
+    margin-top: 0px;
+  }
+
+  #workShown {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .fly-in-text2 {
+    width: 600px;
+    margin-left: 30px;
+  }
+
+  #helloText {
+    margin-top: 500px;
+  }
+
+  #south-park {
+    margin-left: 7px;
+    width: 100%;
+  }
+
+  .fix-align {
+    display: inline-block;
+  }
+
+  #myNavbar {
+    margin-left: -0px;
+    margin-top: 40px;
+    width: 720px;
+  }
+
+  .svg-wrapper {
+    margin-left: -60px;
+  }
+
+  .hideSVGBUtton {
+    display: none;
+  }
+
+  .smallergithub {
+    margin-right: 500px;
+    margin-top: 730px;
+    width: 150px;
+    display: none;
+  }
+
+  .smallergithubBottom {
+    display: none;
+    width: 100px;
+    float: right;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-top: 0px;
+  }
+
+  .ex {
+    width: 720px;
+    font-size: 65px;
+    text-align: center;
+    margin-left: -15px;
+    margin-top: -150px;
+  }
+
+  #anythingFrom {
+    font-size: 45px;
+    width: 720px;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: -15px;
+  }
+
+  .svgIcons {
+    margin-top: -80px;
+    margin-left: 140px;
+  }
+
+  #fullWebApp {
+    width: 110%;
+    margin-left: -70px;
+    margin-top: 100px;
+  }
+
+  #storyShown {
+    width: 740px;
+    font-size: 25px;
+    margin-top: -50px;
+  }
+
+  #workShown {
+    margin-top: -45px;
+  }
+
+  #blogShown {
+    margin-top: -65px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 10px;
+  }
+
+  #friend {
+    margin-left: 9px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    width: 740px;
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  #myNavbar {
+    margin-left: -0px;
+    margin-top: 50px;
+    width: 600px;
+  }
+
+  #typed2 {
+    margin-top: 20px;
+  }
+
+  .smallergithubBottom {
+    display: inherit;
+    width: 100px;
+    float: right;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-top: 0px;
+    margin-right: -235px;
+  }
+
+  .svg-wrapper {
+    margin-left: -50px;
+    height: 60px;
+    top: 50%;
+    margin-top: 20px;
+    width: 180px;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .hideSVGBUtton {
+    display: none;
+  }
+
+  .smallergithub {
+    display: none;
+  }
+
+  .ex {
+    width: 600px;
+    font-size: 45px;
+    text-align: center;
+    margin-left: -26.5px;
+    margin-top: -20px;
+  }
+
+  #anythingFrom {
+    display: inline-block;
+    font-size: 35px;
+    text-align: left;
+    width: 500px;
+    margin-top: 120px;
+    margin-left: 40px;
+  }
+
+  #anythingFrom2 {
+    display: inline-block;
+    color: #00aeff;
+    opacity: 1;
+  }
+
+  .svgIcons {
+    margin-top: -30px;
+    margin-left: 140px;
+  }
+
+  #fullWebApp {
+    width: 520px;
+    margin-left: -115px;
+    margin-top: 70px;
+  }
+
+  #storyShown {
+    width: 600px;
+    font-size: 26px;
+    margin-left: -5px;
+    margin-top: -45px;
+  }
+  #workShown {
+    width: 600px;
+    font-size: 26px;
+    margin-left: -5px;
+    margin-top: -30px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 10px;
+    margin-top: -30px;
+  }
+
+  #friend {
+    margin-left: 10px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    width: 600px;
+    font-size: 26px;
+    margin-left: -5px;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  #myNavbar {
+    margin-left: -0px;
+    margin-top: 50px;
+    width: 600px;
+  }
+
+  .smallergithubBottom {
+    display: inherit;
+    width: 100px;
+    float: right;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-top: 0px;
+    margin-right: -235px;
+  }
+
+  .svg-wrapper {
+    margin-left: -50px;
+    height: 60px;
+    top: 50%;
+    margin-top: 20px;
+    width: 180px;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .hideSVGBUtton {
+    display: none;
+  }
+
+  .smallergithub {
+    display: none;
+  }
+
+  .ex {
+    width: 600px;
+    font-size: 45px;
+    text-align: center;
+    margin-left: -26.5px;
+    margin-top: -20px;
+  }
+
+  #anythingFrom {
+    display: inline-block;
+    font-size: 35px;
+    text-align: left;
+    width: 500px;
+    margin-top: 120px;
+    margin-left: 40px;
+  }
+
+  #anythingFrom2 {
+    display: inline-block;
+    color: #00aeff;
+    opacity: 1;
+  }
+
+  .svgIcons {
+    margin-top: -30px;
+    margin-left: 140px;
+  }
+
+  #fullWebApp {
+    width: 520px;
+    margin-left: -115px;
+    margin-top: 70px;
+  }
+
+  #storyShown {
+    width: 600px;
+    font-size: 26px;
+    margin-left: -5px;
+    margin-top: -45px;
+  }
+  #workShown {
+    width: 600px;
+    font-size: 26px;
+    margin-left: -5px;
+    margin-top: -30px;
+  }
+
+  .workThumbs {
+    width: 200%;
+  }
+
+  #burger {
+    margin-left: 10px;
+    margin-top: -30px;
+  }
+
+  #friend {
+    margin-left: 10px;
+  }
+
+  #clicky {
+    margin-left: -450px;
+    padding-top: 1000px;
+    display: none;
+  }
+
+  #giphy {
+    margin-left: 30px;
+
+    display: none;
+  }
+
+  #blogShown {
+    width: 600px;
+    font-size: 26px;
+    margin-left: -5px;
+    margin-top: -50px;
+  }
 }

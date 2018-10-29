@@ -1,0 +1,199 @@
+@import url('./bootstrap/css/bootstrap.min.css');
+@import url('./fonts/mermaid/style.css');
+@import url('./fonts/vogue/style.css');
+@import url('./videoBG.css');
+@import url('./underlineMagic.css');
+@import url('./hideScroll.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Quicksand';
+}
+
+#myNotes {
+  display: none;
+}
+
+#storyShown {
+  margin-top: 50px;
+}
+
+.mywrapper {
+  position: absolute;
+  color: #fff;
+  display: none;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  font-weight: lighter;
+}
+
+.center {
+  text-align: center;
+}
+
+#helloText {
+  margin-top: 30%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 450%;
+  color: #fff;
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+#main-content {
+  transition: 1s opacity;
+  opacity: 1;
+}
+
+#svgImages {
+  transition: 1s opacity;
+  opacity: 1;
+}
+
+#myNavbar {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(7%, -0%);
+}
+
+.svg-wrapper {
+  font-family: 'Vogue-Regular';
+  font-size: 1vh;
+  height: 60px;
+  top: 50%;
+  margin-top: 35px;
+  width: 220px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hideIt {
+  opacity: 1;
+}
+
+.hideIt.show {
+  opacity: 1;
+  transition: 1s;
+}
+
+.svg-wrapper-active {
+  font-family: 'Vogue-Regular';
+  font-size: 1vh;
+  height: 60px;
+  top: 50%;
+  margin-top: 35px;
+  width: 220px;
+  display: inline-block;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -325;
+  stroke-width: 8px;
+  stroke: #ffffff5e;
+}
+
+.text {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -46px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper-active .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+#intro {
+  font-family: 'Mermaid-Bold';
+  font-size: 24px;
+}
+
+#pageTop {
+  font-family: 'Mermaid-Bold';
+  font-size: 24px;
+  top: 200px;
+}
+
+#whatCanCode {
+  margin-top: 19%;
+  font-size: 52px;
+}
+
+.svgIcons {
+  margin-top: 3%;
+}
+
+#anythingFrom {
+  font-size: 40px;
+  margin-top: -10px;
+  line-height: 110%;
+}
+
+#anythingFrom1 {
+  display: inline-block;
+  opacity: 1;
+}
+#anythingFrom2 {
+  display: inline-block;
+  color: #00aeff;
+  opacity: 1;
+}
+
+#myPic {
+  float: left;
+  margin: 0;
+  margin-bottom: -4px;
+  padding-right: 10px;
+}
+
+.workThumbs {
+  width: 100%;
+  border: 3px solid #ffffff46;
+  margin-bottom: 20px;
+}
+
+#blogDate {
+  font-size: 4vh;
+}
+
+.smallergithub {
+  width: 70px;
+  float: right;
+  margin-top: 40px;
+}
+

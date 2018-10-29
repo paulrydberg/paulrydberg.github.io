@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+
     <video autoplay muted loop id="myVideo">
         <source src="./assets/images/video.mp4" type="video/mp4">
         <!-- <p>Video Source <a href="https://youtu.be/CjBoK8f47EI"></a></p> -->
@@ -18,38 +20,50 @@
 
     <div class="video-overlay"></div>
 
+
+
+
     <div class="container-fluid mywrapper" id="all-content">
+
+
         <div class="container" id="main-content">
+
+
 
             <div id="myNavbar">
                 <div class="svg-wrapper" id="introNav">
-                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hideSVGBUtton" height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" height="60" width="220" />
                     </svg>
-                    <div class="text">HOME</div>
+                    <div class="text">INTRO</div>
                 </div>
 
                 <div class="svg-wrapper" id="storyNav">
-                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hideSVGBUtton" height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" height="60" width="220" />
                     </svg>
                     <div class="text">STORY</div>
                 </div>
 
                 <div class="svg-wrapper" id="workNav">
-                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hideSVGBUtton" height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" height="60" width="220" />
                     </svg>
                     <div class="text">WORK</div>
                 </div>
 
                 <div class="svg-wrapper" id="blogNav">
-                    <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hideSVGBUtton" height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" height="60" width="220" />
                     </svg>
                     <div class="text">BLOG</div>
                 </div>
+                <a href="https://github.com/paulrydberg" target="_blank"><img class="smallergithub" src="http://icons-for-free.com/free-icons/png/512/1033167.png"
+                        alt="githubIcon"></a>
             </div>
+
+
+
 
             <div id="intro">
                 <object type="image/svg+xml" data="./assets/images/me.svg" width="20%" id="myPic"></object>
@@ -101,32 +115,54 @@
                     use my newfound skill as a web-developer with the goal of creating products and services that will
                     cater to the needs of businesses and their clients.
                 </p>
+
+                <p><a href="https://freefrontend.com/css-text-effects/">Text Effects</a></p>
+
+                <p><a href="https://codepen.io/soulwire/pen/mErPAK">Text Scramble Effect</a></p>
             </div>
 
+
+
             <div id="pageTop" class="row">
+
+
                 <div class="col" id="whatCanCode">
                     <p class="ex"></p>
                     <div id="anythingFrom">
                         <div id="anythingFrom1">Anything from a simple landing page
                             <div id="anythingFrom2"> to a full fledged web app.</div>
                         </div>
+
+
+
                     </div>
+
                 </div>
 
-                <div class="col svgIcons" id="svgImages"></div>
+
+                <div class="col svgIcons" id="svgImages">
+
+                </div>
             </div>
+
+
+
         </div>
 
+
+
+
         <div class="container hideIt" id="storyShown">
+
+
             <object type="image/svg+xml" data="./assets/images/me.svg" width="20%" id="myPic"></object>
+
             <p>
-                I've always been very adept to learning new things and strive to be someone who is
-                consistently
-                learning.
-                <span class="underline--magical"> Having a student mentality is what allows me to stay humble and
-                    the top of my game.
-                </span>
+                I've always been very adept to learning new things and strive to be someone who is consistently
+                learning. <span class="underline--magical"> Having a student mentality is what allows me to stay humble
+                    and the top of my game. </span>
             </p>
+
             <p>In 1995 my mother bought our first family computer. I didn't know any better so I
                 figured it was a
                 vending machine... Yup, I stuck nickels and quarters in the floppy drive. After expressing my
@@ -136,7 +172,9 @@
                     understanding how to troubleshoot various hardware and software issues on other peoples
                     computers.</span>
             </p>
-            <p>Never truly having embraced my inner nerd, <span class="underline--magical">I got a door-to-door
+
+            <p>Never truly having embraced my inner nerd, <span class="underline--magical">I got a
+                    door-to-door
                     sales job in my early
                     20s selling
                     deregulated energy service to small businesses.</span> Every job I've ever worked I put 110%
@@ -147,6 +185,7 @@
                 started getting offers for positions exclusively as a sales manager/trainer but there was just one
                 problem, I wanted to make more of an impact than just teaching people how to finagle signatures
                 from strangers.</p>
+
             <p>I've always wanted to
                 become the next mogul, the next real estate developer, the next 'Mr. Money Bags', <span class="underline--magical">the
                     next Mark
@@ -163,28 +202,48 @@
                 use my newfound skill as a web-developer with the goal of creating products and services that will
                 cater to the needs of businesses and their clients.
             </p>
+
+
         </div>
 
         <div class="container hideIt" id="workShown">
             <div class="row">
                 <div class="col">
-                    <a href="https://intense-harbor-15723.herokuapp.com/"> <img class="workThumbs" src="./assets/images/folioShow/thumb/burgers.png"
-                            alt="Bobs Burgers">
+                    <a href="https://intense-harbor-15723.herokuapp.com/" target="_blank" id="burger"> <img class="workThumbs"
+                            src="./assets/images/folioShow/thumb/burgers.png" alt="Bobs Burgers">
                     </a>
-                    <a href="https://mysterious-island-72642.herokuapp.com/"> <img class="workThumbs" src="./assets/images/folioShow/thumb/finder.png"
-                            alt="Friend Finder">
+
+                    <a href="https://mysterious-island-72642.herokuapp.com/" target="_blank" id="friend"> <img class="workThumbs"
+                            src="./assets/images/folioShow/thumb/finder.png" alt="Friend Finder">
                     </a>
+
+
+                    <a class="hideFullscreen fix-align" id="south-park" href="https://frozen-meadow-90389.herokuapp.com/"
+                        id="clicky" target="_blank">
+                        <img class="workThumbs" src="./assets/images/folioShow/thumb/clicky.png" alt="Clicky Game">
+                    </a>
+
+                    <a class="hideFullscreen fix-align turtlePower" href="https://paulrydberg.github.io/Giphy/index.html"
+                        id="giphy" target="_blank">
+                        <img class="workThumbs" src="./assets/images/folioShow/thumb/giphy.png" alt="Giphy Game">
+                    </a>
+
+
                 </div>
 
                 <div class="col">
-                    <a href="https://frozen-meadow-90389.herokuapp.com/"> <img class="workThumbs" src="./assets/images/folioShow/thumb/clicky.png"
-                            alt="Clicky Game">
+                    <a href="https://frozen-meadow-90389.herokuapp.com/" id="clicky" target="_blank"> <img class="workThumbs"
+                            src="./assets/images/folioShow/thumb/clicky.png" alt="Clicky Game">
                     </a>
-                    <a href="https://paulrydberg.github.io/Giphy/index.html"> <img class="workThumbs" src="./assets/images/folioShow/thumb/giphy.png"
-                            alt="Giphy Game">
+
+                    <a href="https://paulrydberg.github.io/Giphy/index.html" id="giphy" target="_blank"> <img class="workThumbs"
+                            src="./assets/images/folioShow/thumb/giphy.png" alt="Giphy Game">
                     </a>
+
                 </div>
             </div>
+
+
         </div>
 
         <div class="container hideIt" id="blogShown">
@@ -230,11 +289,74 @@
 
             </div>
         </div>
+
+        <a href="https://github.com/paulrydberg" target="_blank"><img class="smallergithubBottom" src="http://icons-for-free.com/free-icons/png/512/1033167.png"
+                alt="githubIcon"></a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="center" id="helloText">
+        <span class="" id="typed2"></span>
+
+    </div>
+
+
+
+
+
+    <div class="welcome-section content-hidden">
+
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+        <canvas id="canvas2"></canvas>
+        <div class="content-wrap">
+            <ul class="fly-in-text center">
+                <li>P</li>
+                <li>A</li>
+                <li>U</li>
+                <li>L</li>
+                <li>'J.'</li>
+
+            </ul>
+            <ul class="fly-in-text2 center">
+                <li>R</li>
+                <li>Y</li>
+                <li>D</li>
+                <li>B</li>
+                <li>E</li>
+                <li>R</li>
+                <li>G</li>
+            </ul>
+
+            <p class="sub-heading">WEB-DEVELOPER // ENTREPRENEUR</p>
+            <a href="#" class="enter-button" id="enter-site" style=""><span id="typed"></span></a>
+
+            <div id="enter-typed">
+                <p>Enter</p>
+            </div>
+
+
+
+        </div>
     </div>
 
     <script src="./assets/js/plugins/jquery-3.3.1.js"></script>
+    <script src="./assets/js/plugins/typed.js"></script>
+    <script src="./assets/js/plugins/animejs/anime.min.js"></script>
+    <script src="./assets/js/theMatrix.js"></script>
     <script src="./assets/js/coolTextHighlight.js"></script>
     <script src="./assets/js/main.js"></script>
+
+
+
 
 </body>
 
