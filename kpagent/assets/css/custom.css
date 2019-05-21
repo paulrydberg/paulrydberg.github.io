@@ -19,6 +19,7 @@
 body {
   font-family: 'Quicksand';
   margin: 0;
+  background-color: black;
 }
 
 #myNotes {

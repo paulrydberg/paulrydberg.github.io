@@ -1,6 +1,17 @@
 var cursorBlink = '|';
 
 $(document).ready(function() {
+  $(function() {
+    $('#bgndVideo').YTPlayer();
+  });
+
+  var filters = {
+    brightness: 50
+  };
+  //More filters in link
+  //https://github.com/pupunzi/jquery.mb.YTPlayer/wiki
+  $('#bgndVideo').YTPApplyFilters(filters);
+
   $('#introNav').click(function() {
     location.reload();
   });
@@ -13,7 +24,6 @@ $(document).ready(function() {
     $('.smallergithub').hide();
     $('#storyShown').show();
     $('.hideFullscreen').hide();
-
   });
   $('#workNav').click(function() {
     $('#pageTop').hide();
