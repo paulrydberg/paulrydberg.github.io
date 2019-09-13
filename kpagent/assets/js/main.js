@@ -6,7 +6,7 @@ $(document).ready(function() {
   });
 
   var filters = {
-    brightness: 50
+    brightness: 45
   };
   //More filters in link
   //https://github.com/pupunzi/jquery.mb.YTPlayer/wiki
@@ -15,6 +15,7 @@ $(document).ready(function() {
   $('#introNav').click(function() {
     location.reload();
   });
+
   $('#storyNav').click(function() {
     $('.hideFullscreen').hide();
     $('.smallergithubBottom').hide();

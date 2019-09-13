@@ -223,6 +223,18 @@ body {
   margin-left: -5px;
 }
 
+.fly-in-text2 {
+  margin-left: -5px;
+}
+
+.sub-header-move {
+  margin-left: -40px;
+}
+
+.moveDaThing {
+  margin-left: -20px;
+}
+
 @media screen and (max-width: 1025px) {
   .fly-in-text {
     margin-left: 20px;
@@ -230,6 +242,15 @@ body {
 
   .fly-in-text2 {
     width: 600px;
+    margin-left: 20px;
+  }
+
+  .sub-header-move {
+    margin-left: -5px;
+  }
+
+  .moveDaThing {
+    margin-left: 0px;
   }
 
   #helloText {
@@ -318,6 +339,24 @@ body {
 }
 
 @media screen and (max-width: 769px) {
+/* 
+  .fly-in-text {
+    margin-left: -5px;
+  }
+  
+  .fly-in-text2 {
+    margin-left: -5px;
+  }
+  
+  .sub-header-move {
+    margin-left: -40px;
+  }
+  
+  .moveDaThing {
+    margin-left: -20px;
+  }
+   */
+
   .fly-in-text {
     margin-left: 35px;
   }
@@ -448,7 +487,7 @@ body {
 
   .fly-in-text {
     width: 360px;
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 0px;
   }
 
@@ -592,7 +631,7 @@ body {
 
   .fly-in-text {
     width: 360px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .fly-in-text2 {
