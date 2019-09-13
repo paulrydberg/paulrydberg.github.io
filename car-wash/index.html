@@ -31,7 +31,7 @@
       }
 
       .contact {
-        font-size: 1.5vmax;
+        font-size: 1.7vmax;
 
         margin: 0.5vmin;
         padding: 0.1vmin;
@@ -47,7 +47,7 @@
       }
 
       #makeTop {
-        margin-top: -5%;
+        margin-top: 0%;
       }
 
       #showcase {
@@ -58,7 +58,6 @@
   <body>
     <div id="makeTop">
       <div id="box">
-        <h1 style="color:#FFF">#box</h1>
         <img
           src="https://paulrydberg.github.io/car-wash/header.png"
           alt="Header"
@@ -68,9 +67,6 @@
       </div>
 
       <div id="box1">
-        <p>
-          SUBJECT: Something of interest?
-        </p>
         <p>
           Hi "prospect's first name",
         </p>
@@ -171,7 +167,6 @@
       </div>
 
       <div id="box2">
-        <h1 style="color:#FFF">#box2</h1>
         <img
           src="https://paulrydberg.github.io/car-wash/footer.png"
           alt="Footer"
@@ -190,9 +185,9 @@
       r$.settings().useMediaQuery = false;
       r$.breakpoints(300, 374, 376, 767, 1280, 1600);
 
-      width.interval().applyTo('#box');
-      width.interval().applyTo('#box1');
-      width.interval().applyTo('#box2');
+      width.interval().applyTo('.box');
+      width.interval().applyTo('.box1');
+      width.interval().applyTo('.box2');
       r$.start();
 
       $(document).ready(function() {
