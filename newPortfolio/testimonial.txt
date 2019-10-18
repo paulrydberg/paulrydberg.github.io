@@ -1,0 +1,91 @@
+                  <!-- Testimonials -->
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                      <div class="block-title">
+                        <h3>Testimonials</h3>
+                      </div>
+
+
+                      <div class="testimonials owl-carousel block">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-item">
+                          <!-- Testimonial Author -->
+                          <div class="testimonial-credits">
+                            <!-- Picture -->
+                            <div class="testimonial-picture">
+                              <img src="images/testimonials/testimonial_photo_1.jpg" alt="">
+                            </div>              
+                            <!-- /Picture -->
+                            <!-- Testimonial author information -->
+                            <div class="testimonial-author-info">
+                              <p class="testimonial-author">Maria Richardson</p>
+                              <p class="testimonial-firm">Lindsley's Lumber</p>
+                            </div>
+                          </div>
+                          <!-- /Testimonial author information -->
+                          <!-- Testimonial Content -->
+                          <div class="testimonial-content">
+                            <div class="testimonial-text">
+                              <p>"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros. Sed sed ipsum sed massa."</p>
+                            </div>
+                          </div>            
+                          <!-- /Testimonial Content -->                
+                        </div>
+                        <!-- End of Testimonial 1 -->
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-item">
+                          <!-- Testimonial Author -->
+                          <div class="testimonial-credits">
+                            <!-- Picture -->
+                            <div class="testimonial-picture">
+                              <img src="images/testimonials/testimonial_photo_2.jpg" alt="">
+                            </div>              
+                            <!-- /Picture -->
+                            <!-- Testimonial author information -->
+                            <div class="testimonial-author-info">
+                              <p class="testimonial-author">John Doe</p>
+                              <p class="testimonial-firm">Apple Inc.</p>
+                            </div>
+                          </div>
+                          <!-- /Testimonial author information -->
+                          <!-- Testimonial Content -->
+                          <div class="testimonial-content">
+                            <div class="testimonial-text">
+                              <p>"Vivamus porta dapibus tristique. Suspendisse et arcu eget nisi convallis eleifend nec ac lorem.</p>
+                            </div>
+                          </div>            
+                          <!-- /Testimonial Content -->                
+                        </div>
+                        <!-- End of Testimonial 2 -->
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-item">
+                          <!-- Testimonial Author -->
+                          <div class="testimonial-credits">
+                            <!-- Picture -->
+                            <div class="testimonial-picture">
+                              <img src="images/testimonials/testimonial_photo_3.jpg" alt="">
+                            </div>              
+                            <!-- /Picture -->
+                            <!-- Testimonial author information -->
+                            <div class="testimonial-author-info">
+                              <p class="testimonial-author">George McQueen</p>
+                              <p class="testimonial-firm">Harmony House</p>
+                            </div>
+                          </div>
+                          <!-- /Testimonial author information -->
+                          <!-- Testimonial Content -->
+                          <div class="testimonial-content">
+                            <div class="testimonial-text">
+                              <p>"Aliquam congue auctor lectus sed fermentum. Nulla ultricies tellus quis sapien lacinia egestas."</p>
+                            </div>
+                          </div>            
+                          <!-- /Testimonial Content -->                
+                        </div>
+                        <!-- End of Testimonial 3 -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Testimonials -->
+
